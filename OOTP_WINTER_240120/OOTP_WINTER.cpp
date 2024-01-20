@@ -98,11 +98,11 @@ int All_hitter_stat[300][10] = {
 
 
 double All_pitcher_stat[300][10] = {
-{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
-{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
-{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
-{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
-{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
@@ -128,11 +128,11 @@ double All_pitcher_stat[300][10] = {
 {2, 3, 50, 60, 60, 60, 60, 60, 60, 60},
 {2, 3, 30, 60, 60, 60, 60, 60, 60, 60},
 {3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
-{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
-{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
-{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
-{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
-{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
@@ -420,7 +420,7 @@ public:
 
 			if (Get_Isfull_2()) // 2루가 차있다면
 			{
-				if (base_2_spd >= rand() % 240 + 26)
+				if (base_2_spd >= rand() % 200 + 26)
 				{
 					Set_now_scoreboard(1);
 					RBI++;
@@ -438,7 +438,7 @@ public:
 
 			if (Get_Isfull_1())
 			{
-				if (base_1_spd >= rand() % 240 + 26)
+				if (base_1_spd >= rand() % 200 + 26)
 				{
 					Set_now_scoreboard(1);
 					RBI++;
@@ -480,7 +480,7 @@ public:
 
 			if (Get_Isfull_1())
 			{
-				if (base_1_spd >= rand() % 240 + 26)
+				if (base_1_spd >= rand() % 200 + 26)
 				{
 					Set_now_scoreboard(1);
 					RBI++;
@@ -1536,7 +1536,7 @@ private:
 	bool recording = false;
 	bool music = true;
 	bool condition = true;
-	bool auto_play = false;
+	bool auto_play = true;
 	int my_team = 0;
 	int sleep_time = 60;
 
@@ -1878,7 +1878,7 @@ void show_team_manage(bool Isingame, int value, team& selected_team)
 		if (Isingame)
 		{
 			cur(1, 1);
-			cout << " [ Backspace : 나가기 ] [ [4] : 투수 교체 ] ";
+			cout << " [ Backspace : 나가기 ] [ [4] : 투수 교체 ]   [ 현재 투수 : "; selected_team.Show_pitcher_name(selected_team.Get_now_pitcher()); cout << " ] ";
 			cur(9, 4);
 		}
 
@@ -2046,12 +2046,12 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 								if (attack_team.Get_team_sigvalue() == Option.Get_my_team())
 								{
 									change_pitcher(true, attack_team);
-									show_team_manage(true, 4, attack_team);
+									break;
 								}
 								else
 								{
 									change_pitcher(true, defence_team);
-									show_team_manage(true, 4, defence_team);
+									break;
 								}
 
 							}
@@ -2292,7 +2292,7 @@ int battle_hit_power_result(bool hit, int Save_hitter_index[], int Save_pitcher_
 	{
 		if (result > 0)
 		{
-			if (Scoreboard.Get_base_3_spd() > rand() % 250 + 31 && Scoreboard.Get_out_count() != 2) return 61;
+			if (Scoreboard.Get_base_3_spd() > rand() % 200 + 31 && Scoreboard.Get_out_count() != 2) return 61;
 			else return 6;
 		}
 
@@ -2353,7 +2353,7 @@ int update_game_record(int value, bool update_value, int& now_pitcher_hp, option
 	int out = 0;
 
 	// 출장경기 타석 타수 안타 2루타 3루타 홈런 / 볼넷 삼진 득점 타점 도루 병살 실책
-	// 출장경기 이닝 삼진 볼넷 실점 땅볼 뜬공 / 피안타 피2루타 피3루타 피홈런 타석
+	// 출장경기 이닝 삼진 볼넷 실점 땅볼 뜬공 / 피안타 피2루타 피3루타 피홈런 타수
 
 	// 0 파울 1 삼진 2 볼넷
 
@@ -2381,19 +2381,19 @@ int update_game_record(int value, bool update_value, int& now_pitcher_hp, option
 	case 10:
 		attack_team.Set_hitter_record(attack_team.Get_now_hitter(), 0, 1, 1, 1, 0, 0, 0, /**/  0, 0, 0, 0, 0, 0, 0);
 		defence_team.Set_pitcher_record(defence_team.Get_now_pitcher(), 0, 0, 0, 0, 0, 0, 0, /**/  1, 0, 0, 0, 0, 0, 0);
-		now_pitcher_hp -= 2; break;
+		now_pitcher_hp -= 1; break;
 	case 20:
 		attack_team.Set_hitter_record(attack_team.Get_now_hitter(), 0, 1, 1, 1, 1, 0, 0, /**/  0, 0, 0, 0, 0, 0, 0);
 		defence_team.Set_pitcher_record(defence_team.Get_now_pitcher(), 0, 0, 0, 0, 0, 0, 0, /**/  0, 1, 0, 0, 0, 0, 0);
-		now_pitcher_hp -= 3; break;
+		now_pitcher_hp -= 2; break;
 	case 30:
 		attack_team.Set_hitter_record(attack_team.Get_now_hitter(), 0, 1, 1, 1, 0, 1, 0, /**/  0, 0, 0, 0, 0, 0, 0);
 		defence_team.Set_pitcher_record(defence_team.Get_now_pitcher(), 0, 0, 0, 0, 0, 0, 0, /**/  0, 0, 1, 0, 0, 0, 0);
-		now_pitcher_hp -= 4; break;
+		now_pitcher_hp -= 3; break;
 	case 40:
 		attack_team.Set_hitter_record(attack_team.Get_now_hitter(), 0, 1, 1, 1, 0, 0, 1, /**/  0, 0, 0, 0, 0, 0, 0);
 		defence_team.Set_pitcher_record(defence_team.Get_now_pitcher(), 0, 0, 0, 0, 0, 0, 0, /**/  0, 0, 0, 1, 0, 0, 0);
-		now_pitcher_hp = now_pitcher_hp - 3; break;
+		now_pitcher_hp = now_pitcher_hp - 2; break;
 	case 52: case 53:
 		attack_team.Set_hitter_record(attack_team.Get_now_hitter(), 0, 1, 1, 0, 0, 0, 0, /**/  0, 0, 0, 0, 0, 1, 0);
 		defence_team.Set_pitcher_record(defence_team.Get_now_pitcher(), 0, 2, 0, 0, 0, 1, 0, /**/  0, 0, 0, 0, 1, 0, 0);
@@ -2404,7 +2404,7 @@ int update_game_record(int value, bool update_value, int& now_pitcher_hp, option
 		out = 1; break;
 	}
 
-	now_pitcher_hp -= update_result(value, true, Option, attack_team, defence_team, Scoreboard) * 2;
+	now_pitcher_hp -= update_result(value, true, Option, attack_team, defence_team, Scoreboard) * 3;
 	show_hit_result(false, false, 0, value, Scoreboard, attack_team, defence_team, Option);
 
 
@@ -2448,36 +2448,7 @@ void battle(team& attack_team, team& defence_team, option Option, scoreboard& Sc
 		return;
 	}
 
-	if (attack_team.Get_Ischange_pitcher())
-	{
-		attack_team.Set_Ischange_pitcher(false);
-		now_pitcher_home_hp = attack_team.Change_now_pitcher(true, Option.Get_Onauto_play(),
-			show_hit_result(false, true, 1, 0, Scoreboard, defence_team, attack_team, Option),
-			attack_team.Get_change_pitcher_num() - 1, now_pitcher_home_hp);
-	}
 
-	if (defence_team.Get_Ischange_pitcher())
-	{
-		defence_team.Set_Ischange_pitcher(false);
-		now_pitcher_away_hp = defence_team.Change_now_pitcher(true, Option.Get_Onauto_play(),
-			show_hit_result(false, true, 1, 0, Scoreboard, defence_team, attack_team, Option),
-			defence_team.Get_change_pitcher_num() - 1, now_pitcher_away_hp);
-	}
-
-	if (now_pitcher_away_hp <= 0)
-	{
-		now_pitcher_away_hp = defence_team.Change_now_pitcher(false, Option.Get_Onauto_play(),
-			show_hit_result(false, true, 1, 0, Scoreboard, defence_team, attack_team, Option), 0, now_pitcher_away_hp);
-
-	}
-
-
-	if (now_pitcher_home_hp <= 0)
-	{
-		now_pitcher_home_hp = defence_team.Change_now_pitcher(false, Option.Get_Onauto_play(),
-			show_hit_result(false, true, 1, 0, Scoreboard, defence_team, attack_team, Option), 0, now_pitcher_home_hp);
-
-	}
 
 
 	if (Scoreboard.Get_Ishome())
@@ -2499,6 +2470,8 @@ void battle(team& attack_team, team& defence_team, option Option, scoreboard& Sc
 		Save_hitter_index[i] = attack_team.Get_hitter_stat(attack_team.Get_now_hitter(), i);
 		Save_pitcher_index[i] = defence_team.Get_pitcher_stat(defence_team.Get_now_pitcher(), i);
 	}
+
+
 
 	if (!Option.Get_Onauto_play())
 	{
@@ -2567,6 +2540,39 @@ void battle(team& attack_team, team& defence_team, option Option, scoreboard& Sc
 	if (Ishome) now_pitcher_away_hp -= pitching_value;
 	else now_pitcher_home_hp -= pitching_value;
 
+	if (attack_team.Get_Ischange_pitcher())
+	{
+		attack_team.Set_Ischange_pitcher(false);
+		now_pitcher_home_hp = attack_team.Change_now_pitcher(true, Option.Get_Onauto_play(),
+			show_hit_result(false, true, 1, 0, Scoreboard, defence_team, attack_team, Option),
+			attack_team.Get_change_pitcher_num() - 1, now_pitcher_home_hp);
+
+	}
+
+	if (defence_team.Get_Ischange_pitcher())
+	{
+		defence_team.Set_Ischange_pitcher(false);
+		now_pitcher_away_hp = defence_team.Change_now_pitcher(true, Option.Get_Onauto_play(),
+			show_hit_result(false, true, 1, 0, Scoreboard, defence_team, attack_team, Option),
+			defence_team.Get_change_pitcher_num() - 1, now_pitcher_away_hp);
+
+	}
+
+	if (now_pitcher_away_hp <= 0)
+	{
+		now_pitcher_away_hp = defence_team.Change_now_pitcher(false, Option.Get_Onauto_play(),
+			show_hit_result(false, true, 1, 0, Scoreboard, defence_team, attack_team, Option), 0, now_pitcher_away_hp);
+
+	}
+
+
+	if (now_pitcher_home_hp <= 0)
+	{
+		now_pitcher_home_hp = defence_team.Change_now_pitcher(false, Option.Get_Onauto_play(),
+			show_hit_result(false, true, 1, 0, Scoreboard, defence_team, attack_team, Option), 0, now_pitcher_home_hp);
+
+	}
+
 	Scoreboard.Set_out_count(out);
 }
 
@@ -2578,7 +2584,7 @@ void playball(team& home_team, team& away_team, scoreboard& Scoreboard, option O
 
 	system("cls");
 
-	while (game < 1)
+	while (game < 14400)
 	{
 		initialize = true;
 
@@ -2595,12 +2601,12 @@ void playball(team& home_team, team& away_team, scoreboard& Scoreboard, option O
 
 		for (int i = 0; i < 9; i++)
 		{
+			away_team.Set_Ischange_pitcher(false);
+			home_team.Set_Ischange_pitcher(false);
 			Scoreboard.Initialize_base();
 			Scoreboard.Initialize_out_count();
 			Scoreboard.Set_Ishome(false);
 			show_hit_result(true, false, 0, 0, Scoreboard, home_team, away_team, Option);
-			away_team.Set_Ischange_pitcher(false);
-			home_team.Set_Ischange_pitcher(false);
 			if (!Option.Get_Onauto_play())
 				system("cls");
 
@@ -2612,12 +2618,12 @@ void playball(team& home_team, team& away_team, scoreboard& Scoreboard, option O
 				initialize = false;
 			}
 
+			away_team.Set_Ischange_pitcher(false);
+			home_team.Set_Ischange_pitcher(false);
 			Scoreboard.Initialize_base();
 			Scoreboard.Initialize_out_count();
 			Scoreboard.Set_Ishome(true);
 			show_hit_result(true, false, 0, 0, Scoreboard, home_team, away_team, Option);
-			away_team.Set_Ischange_pitcher(false);
-			home_team.Set_Ischange_pitcher(false);
 			if (!Option.Get_Onauto_play())
 				system("cls");
 
@@ -2634,6 +2640,7 @@ void playball(team& home_team, team& away_team, scoreboard& Scoreboard, option O
 
 		}
 
+		
 		home_team.Set_game_result(true, Scoreboard.Get_away_score(), Scoreboard.Get_home_score(), away_team.Get_team_sigvalue());
 		away_team.Set_game_result(false, Scoreboard.Get_away_score(), Scoreboard.Get_home_score(), home_team.Get_team_sigvalue());
 		home_team.Set_pitched_ball(0);
