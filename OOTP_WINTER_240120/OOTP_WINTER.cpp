@@ -42,7 +42,7 @@ int All_hitter_stat[300][10] = {
 {9, 3, 46, 88, 52, 70, 60, 60, 60, 60},
 {9, 3, 68, 88, 63, 65, 60, 60, 60, 60},
 {7, 3, 56, 70, 66, 52, 60, 60, 60, 60},
-{2, 3, 71, 68, 67, 48, 60, 60, 60, 60},
+{2, 3, 71, 68, 65, 48, 60, 60, 60, 60},
 {3, 3, 53, 37, 78, 45, 60, 60, 60, 60},
 {5, 3, 57, 63, 45, 73, 60, 60, 60, 60},
 {8, 3, 48, 71, 50, 63, 69, 60, 60, 60},
@@ -159,7 +159,7 @@ int All_hitter_stat[300][10] = {
 {4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {7, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {9, 3, 90, 82, 50, 63, 60, 60, 60, 60}, // LG
-{8, 3, 54, 69, 53, 73, 60, 60, 60, 60},
+{8, 3, 54, 69, 53, 76, 60, 60, 60, 60},
 {7, 3, 67, 70, 55, 54, 60, 60, 60, 60},
 {3, 3, 62, 78, 76, 57, 60, 60, 60, 60},
 {6, 3, 73, 56, 66, 69, 60, 60, 60, 60},
@@ -173,7 +173,7 @@ int All_hitter_stat[300][10] = {
 {3, 3, 60, 64, 54, 53, 60, 60, 60, 60},
 {6, 3, 30, 40, 53, 60, 60, 60, 60, 60},
 {2, 3, 60, 30, 40, 63, 60, 60, 60, 60},
-{9, 3, 68, 71, 47, 55, 60, 60, 60, 60},
+{9, 3, 70, 64, 48, 47, 60, 60, 60, 60},
 {2, 3, 45, 44, 47, 54, 60, 60, 60, 60},
 {4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {4, 3, 30, 30, 30, 30, 30, 60, 60, 60},
@@ -1386,7 +1386,7 @@ public:
 			for (int j = 0; j < 10; j++)
 				hitter_stat[i][j] = All_hitter_stat[i + team_sigvalue * 30][j];
 
-			hitter_stat[i][7] = (hitter_stat[i][2] * 1.4 + hitter_stat[i][3] * 2 + hitter_stat[i][4] * 0.7 + hitter_stat[i][5] * 0.4 + hitter_stat[i][6] * 0.5) / 5;
+			hitter_stat[i][7] = (hitter_stat[i][2] * 1.3 + hitter_stat[i][3] * 2 + hitter_stat[i][4] * 0.7 + hitter_stat[i][5] * 0.5 + hitter_stat[i][6] * 0.5) / 5;
 		}
 
 		for (int i = 0; i < pitcher.size(); i++)
@@ -2196,8 +2196,8 @@ private:
 	bool recording = false;
 	bool music = true;
 	bool condition = true;
-	bool auto_play = true;
-	int my_team = 4;
+	bool auto_play = false;
+	int my_team = 0;
 	int sleep_time = 60;
 
 public:
@@ -2644,18 +2644,22 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 		cur(60, line * 2 + 19);
 		switch (result) {
 		case 1: cout << "  [ 삼진 ]";
-			if (Scoreboard.Get_out_count() == 2) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 25); cout << " [ 공수교대 ] "; change_skip = true; } break;
+			if (Scoreboard.Get_out_count() == 2) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 10); cout << " [ 공수교대 ] ";
+			Sleep(Option.Get_sleep_time() * 10); change_skip = true; } break;
 		case 2: cout << "  [ 볼넷 ]"; break;
 		case 5: cout << "  [ 땅볼 ]";
-			if (Scoreboard.Get_out_count() == 2) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 25); cout << " [ 공수교대 ] "; change_skip = true; } break;
+			if (Scoreboard.Get_out_count() == 2) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 10); cout << " [ 공수교대 ] ";
+			Sleep(Option.Get_sleep_time() * 10); change_skip = true; } break;
 		case 6: cout << "  [ 뜬공 ]";
-			if (Scoreboard.Get_out_count() == 2) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 25); cout << " [ 공수교대 ] ";  change_skip = true; } break;
+			if (Scoreboard.Get_out_count() == 2) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 10); cout << " [ 공수교대 ] ";
+			Sleep(Option.Get_sleep_time() * 10); change_skip = true; } break;
 		case 10: cout << "  [ 안타 ]"; break;
 		case 20: cout << "  [ 2루타 ]"; break;
 		case 30: cout << "  [ 3루타 ]"; break;
 		case 40: cout << "  [ 홈런 ]  [ "; cout << attack_team.Get_now_hitter_hr(); cout << "호 ]"; break;
 		case 52: case 53: cout << "  [ 병살 ]";
-			if (Scoreboard.Get_out_count() == 1) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 25); cout << " [ 공수교대 ] ";  change_skip = true; } break;
+			if (Scoreboard.Get_out_count() == 1) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 10); cout << " [ 공수교대 ] ";
+			Sleep(Option.Get_sleep_time() * 10); change_skip = true; } break;
 		case 61: cout << "  [ 희플 ]"; break;
 
 		}
@@ -3329,14 +3333,13 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 	{
 		system("cls");
 
-		for (int game_test = 0; game_test < 144; game_test++)
+		for (int game_test = 0; game_test < 1; game_test++)
 		{
 			if (acc_game % 2 == 0)
 			{
 				switch (acc_game % 18)
 				{
-				case 0:
-					acc_game++;
+				case 0:					
 					playball(acc_game, Samsung, Lotte, Scoreboard, Option);
 					playball(acc_game, NC, KT, Scoreboard, Option);
 					playball(acc_game, LG, SSG, Scoreboard, Option);
@@ -3344,7 +3347,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, Doosan, Kiwoom, Scoreboard, Option);
 					break;
 				case 2:
-					acc_game++;
 					playball(acc_game, Samsung, NC, Scoreboard, Option);
 					playball(acc_game, Lotte, LG, Scoreboard, Option);
 					playball(acc_game, Doosan, KIA, Scoreboard, Option);
@@ -3352,7 +3354,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, Kiwoom, KT, Scoreboard, Option);
 					break;
 				case 4:
-					acc_game++;
 					playball(acc_game, Samsung, LG, Scoreboard, Option);
 					playball(acc_game, NC, KIA, Scoreboard, Option);
 					playball(acc_game, Lotte, SSG, Scoreboard, Option);
@@ -3360,7 +3361,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, Kiwoom, Hanwha, Scoreboard, Option);
 					break;
 				case 6:
-					acc_game++;
 					playball(acc_game, Samsung, KIA, Scoreboard, Option);
 					playball(acc_game, LG, KT, Scoreboard, Option);
 					playball(acc_game, NC, SSG, Scoreboard, Option);
@@ -3368,7 +3368,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, Doosan, Hanwha, Scoreboard, Option);
 					break;
 				case 8:
-					acc_game++;
 					playball(acc_game, Samsung, SSG, Scoreboard, Option);
 					playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
 					playball(acc_game, LG, NC, Scoreboard, Option);
@@ -3376,7 +3375,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, Lotte, Doosan, Scoreboard, Option);
 					break;
 				case 10:
-					acc_game++;
 					playball(acc_game, Samsung, Doosan, Scoreboard, Option);
 					playball(acc_game, KIA, LG, Scoreboard, Option);
 					playball(acc_game, NC, Hanwha, Scoreboard, Option);
@@ -3384,7 +3382,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, SSG, Kiwoom, Scoreboard, Option);
 					break;
 				case 12:
-					acc_game++;
 					playball(acc_game, Samsung, KT, Scoreboard, Option);
 					playball(acc_game, Doosan, LG, Scoreboard, Option);
 					playball(acc_game, KIA, SSG, Scoreboard, Option);
@@ -3392,7 +3389,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, Lotte, Hanwha, Scoreboard, Option);
 					break;
 				case 14:
-					acc_game++;
 					playball(acc_game, Samsung, Hanwha, Scoreboard, Option);
 					playball(acc_game, KT, SSG, Scoreboard, Option);
 					playball(acc_game, LG, Kiwoom, Scoreboard, Option);
@@ -3400,7 +3396,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, NC, Doosan, Scoreboard, Option);
 					break;
 				case 16:
-					acc_game++;
 					playball(acc_game, Samsung, Kiwoom, Scoreboard, Option);
 					playball(acc_game, Doosan, SSG, Scoreboard, Option);
 					playball(acc_game, KT, KIA, Scoreboard, Option);
@@ -3417,7 +3412,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 				switch (acc_game % 18)
 				{
 				case 1:
-					acc_game++;
 					playball(acc_game, Lotte, Samsung, Scoreboard, Option);
 					playball(acc_game, KT, NC, Scoreboard, Option);
 					playball(acc_game, SSG, LG, Scoreboard, Option);
@@ -3425,7 +3419,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, Kiwoom, Doosan, Scoreboard, Option);
 					break;
 				case 3:
-					acc_game++;
 					playball(acc_game, NC, Samsung, Scoreboard, Option);
 					playball(acc_game, LG, Lotte, Scoreboard, Option);
 					playball(acc_game, KIA, Doosan, Scoreboard, Option);
@@ -3433,7 +3426,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, KT, Kiwoom, Scoreboard, Option);
 					break;
 				case 5:
-					acc_game++;
 					playball(acc_game, LG, Samsung, Scoreboard, Option);
 					playball(acc_game, KIA, NC, Scoreboard, Option);
 					playball(acc_game, SSG, Lotte, Scoreboard, Option);
@@ -3441,7 +3433,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, Hanwha, Kiwoom, Scoreboard, Option);
 					break;
 				case 7:
-					acc_game++;
 					playball(acc_game, KIA, Samsung, Scoreboard, Option);
 					playball(acc_game, KT, LG, Scoreboard, Option);
 					playball(acc_game, SSG, NC, Scoreboard, Option);
@@ -3449,7 +3440,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, Hanwha, Doosan, Scoreboard, Option);
 					break;
 				case 9:
-					acc_game++;
 					playball(acc_game, SSG, Samsung, Scoreboard, Option);
 					playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
 					playball(acc_game, NC, LG, Scoreboard, Option);
@@ -3457,7 +3447,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, Doosan, Lotte, Scoreboard, Option);
 					break;
 				case 11:
-					acc_game++;
 					playball(acc_game, Doosan, Samsung, Scoreboard, Option);
 					playball(acc_game, LG, KIA, Scoreboard, Option);
 					playball(acc_game, Hanwha, NC, Scoreboard, Option);
@@ -3465,7 +3454,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, Kiwoom, SSG, Scoreboard, Option);
 					break;
 				case 13:
-					acc_game++;
 					playball(acc_game, KT, Samsung, Scoreboard, Option);
 					playball(acc_game, LG, Doosan, Scoreboard, Option);
 					playball(acc_game, SSG, KIA, Scoreboard, Option);
@@ -3473,7 +3461,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, Hanwha, Lotte, Scoreboard, Option);
 					break;
 				case 15:
-					acc_game++;
 					playball(acc_game, Hanwha, Samsung, Scoreboard, Option);
 					playball(acc_game, SSG, KT, Scoreboard, Option);
 					playball(acc_game, Kiwoom, LG, Scoreboard, Option);
@@ -3481,7 +3468,6 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 					playball(acc_game, Doosan, NC, Scoreboard, Option);
 					break;
 				case 17:
-					acc_game++;
 					playball(acc_game, Kiwoom, Samsung, Scoreboard, Option);
 					playball(acc_game, SSG, Doosan, Scoreboard, Option);
 					playball(acc_game, KIA, KT, Scoreboard, Option);
@@ -3494,6 +3480,8 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 		}
 	}
 
+	acc_game++;
+	system("PAUSE");
 }
 
 
