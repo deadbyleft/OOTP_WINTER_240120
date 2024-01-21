@@ -1069,8 +1069,6 @@ public:
 			{
 				if (base_1_spd >= rand() % 200 + 26)
 				{
-					Set_now_scoreboard(1);
-					RBI++;
 					Set_Isfull_3(true);
 					Set_Base_spd(3, base_1_spd);
 				}
@@ -3272,7 +3270,8 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 			Scoreboard.Initialize_out_count();
 			Scoreboard.Set_Ishome(true);
 			show_hit_result(true, false, 0, 0, Scoreboard, home_team, away_team, Option);
-			if (!Option.Get_Onauto_play() && Option.Check_Onauto_play(home_team.Get_team_sigvalue(), away_team.Get_team_sigvalue()))
+			if (!Option.Get_Onauto_play() && Option.Check_Onauto_play(home_team.Get_team_sigvalue(), away_team.Get_team_sigvalue())
+				&& !(i == 8 && (Scoreboard.Get_home_score() > Scoreboard.Get_away_score())))
 				system("cls");
 
 
