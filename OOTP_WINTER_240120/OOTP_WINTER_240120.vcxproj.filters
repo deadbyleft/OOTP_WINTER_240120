@@ -18,5 +18,11 @@
     <ClCompile Include="OOTP_WINTER.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="OOTP_PREV.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="team_select.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

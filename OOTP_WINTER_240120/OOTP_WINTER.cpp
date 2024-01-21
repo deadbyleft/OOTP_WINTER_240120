@@ -3171,7 +3171,6 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 	int game = 0;
 	bool initialize = true;
 
-	system("cls");
 
 	while (game < 1)
 	{
@@ -3272,178 +3271,169 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 
 	if (value == 1)
 	{
-		if (acc_game % 2 == 0)
-		{
-			switch (acc_game % 9)
-			{
-			case 0:
-				acc_game++;
-				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
-				playball(acc_game, NC, Doosan, Scoreboard, Option);
-				playball(acc_game, LG, SSG, Scoreboard, Option);
-				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
-				playball(acc_game, KT, Hanwha, Scoreboard, Option);
-				break;
-			case 1:
-				acc_game++;
-				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
-				playball(acc_game, NC, Doosan, Scoreboard, Option);
-				playball(acc_game, LG, SSG, Scoreboard, Option);
-				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
-				playball(acc_game, KT, Hanwha, Scoreboard, Option);
-				break;
-			case 2:
-				acc_game++;
-				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
-				playball(acc_game, NC, Doosan, Scoreboard, Option);
-				playball(acc_game, LG, SSG, Scoreboard, Option);
-				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
-				playball(acc_game, KT, Hanwha, Scoreboard, Option);
-				break;
-			case 3:
-				acc_game++;
-				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
-				playball(acc_game, NC, Doosan, Scoreboard, Option);
-				playball(acc_game, LG, SSG, Scoreboard, Option);
-				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
-				playball(acc_game, KT, Hanwha, Scoreboard, Option);
-				break;
-			case 4:
-				acc_game++;
-				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
-				playball(acc_game, NC, Doosan, Scoreboard, Option);
-				playball(acc_game, LG, SSG, Scoreboard, Option);
-				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
-				playball(acc_game, KT, Hanwha, Scoreboard, Option);
-				break;
-			case 5:
-				acc_game++;
-				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
-				playball(acc_game, NC, Doosan, Scoreboard, Option);
-				playball(acc_game, LG, SSG, Scoreboard, Option);
-				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
-				playball(acc_game, KT, Hanwha, Scoreboard, Option);
-				break;
-			case 6:
-				acc_game++;
-				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
-				playball(acc_game, NC, Doosan, Scoreboard, Option);
-				playball(acc_game, LG, SSG, Scoreboard, Option);
-				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
-				playball(acc_game, KT, Hanwha, Scoreboard, Option);
-				break;
-			case 7:
-				acc_game++;
-				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
-				playball(acc_game, NC, Doosan, Scoreboard, Option);
-				playball(acc_game, LG, SSG, Scoreboard, Option);
-				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
-				playball(acc_game, KT, Hanwha, Scoreboard, Option);
-				break;
-			case 8:
-				acc_game++;
-				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
-				playball(acc_game, NC, Doosan, Scoreboard, Option);
-				playball(acc_game, LG, SSG, Scoreboard, Option);
-				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
-				playball(acc_game, KT, Hanwha, Scoreboard, Option);
-				break;
-			case 9:
-				acc_game++;
-				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
-				playball(acc_game, NC, Doosan, Scoreboard, Option);
-				playball(acc_game, LG, SSG, Scoreboard, Option);
-				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
-				playball(acc_game, KT, Hanwha, Scoreboard, Option);
-				break;
+		system("cls");
 
+		for (int game_test = 0; game_test < 144; game_test++)
+		{
+			if (acc_game % 2 == 0)
+			{
+				switch (acc_game % 18)
+				{
+				case 0:
+					acc_game++;
+					playball(acc_game, Samsung, Lotte, Scoreboard, Option);
+					playball(acc_game, NC, Doosan, Scoreboard, Option);
+					playball(acc_game, LG, SSG, Scoreboard, Option);
+					playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
+					playball(acc_game, KT, Hanwha, Scoreboard, Option);
+					break;
+				case 2:
+					acc_game++;
+					playball(acc_game, Samsung, NC, Scoreboard, Option);
+					playball(acc_game, Lotte, LG, Scoreboard, Option);
+					playball(acc_game, Doosan, KIA, Scoreboard, Option);
+					playball(acc_game, SSG, KT, Scoreboard, Option);
+					playball(acc_game, Kiwoom, Hanwha, Scoreboard, Option);
+					break;
+				case 4:
+					acc_game++;
+					playball(acc_game, Samsung, LG, Scoreboard, Option);
+					playball(acc_game, NC, KIA, Scoreboard, Option);
+					playball(acc_game, Lotte, SSG, Scoreboard, Option);
+					playball(acc_game, Doosan, KT, Scoreboard, Option);
+					playball(acc_game, Kiwoom, Hanwha, Scoreboard, Option);
+					break;
+				case 6:
+					acc_game++;
+					playball(acc_game, Samsung, KIA, Scoreboard, Option);
+					playball(acc_game, LG, KT, Scoreboard, Option);
+					playball(acc_game, NC, SSG, Scoreboard, Option);
+					playball(acc_game, Lotte, Kiwoom, Scoreboard, Option);
+					playball(acc_game, Doosan, Hanwha, Scoreboard, Option);
+					break;
+				case 8:
+					acc_game++;
+					playball(acc_game, Samsung, SSG, Scoreboard, Option);
+					playball(acc_game, KIA, Hanwha, Scoreboard, Option);
+					playball(acc_game, LG, NC, Scoreboard, Option);
+					playball(acc_game, KT, Kiwoom, Scoreboard, Option);
+					playball(acc_game, Lotte, Doosan, Scoreboard, Option);
+					break;
+				case 10:
+					acc_game++;
+					playball(acc_game, Samsung, Doosan, Scoreboard, Option);
+					playball(acc_game, KIA, LG, Scoreboard, Option);
+					playball(acc_game, NC, Kiwoom, Scoreboard, Option);
+					playball(acc_game, Lotte, KT, Scoreboard, Option);
+					playball(acc_game, SSG, Hanwha, Scoreboard, Option);
+					break;
+				case 12:
+					acc_game++;
+					playball(acc_game, Samsung, KT, Scoreboard, Option);
+					playball(acc_game, Doosan, LG, Scoreboard, Option);
+					playball(acc_game, KIA, SSG, Scoreboard, Option);
+					playball(acc_game, NC, Hanwha, Scoreboard, Option);
+					playball(acc_game, Lotte, Kiwoom, Scoreboard, Option);
+					break;
+				case 14:
+					acc_game++;
+					playball(acc_game, Samsung, Hanwha, Scoreboard, Option);
+					playball(acc_game, KT, SSG, Scoreboard, Option);
+					playball(acc_game, LG, Kiwoom, Scoreboard, Option);
+					playball(acc_game, KIA, Lotte, Scoreboard, Option);
+					playball(acc_game, NC, Doosan, Scoreboard, Option);
+					break;
+				case 16:
+					acc_game++;
+					playball(acc_game, Samsung, Kiwoom, Scoreboard, Option);
+					playball(acc_game, Hanwha, SSG, Scoreboard, Option);
+					playball(acc_game, KT, NC, Scoreboard, Option);
+					playball(acc_game, LG, Doosan, Scoreboard, Option);
+					playball(acc_game, KIA, Lotte, Scoreboard, Option);
+					break;
+
+
+				}
 			}
-		}
 
-		else
-		{
-			switch (acc_game % 9)
+			else
 			{
-			case 0:
-				acc_game++;
-				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
-				playball(acc_game, Doosan, NC, Scoreboard, Option);
-				playball(acc_game, SSG, LG, Scoreboard, Option);
-				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
-				playball(acc_game, Hanwha, KT, Scoreboard, Option);
-				break;
-			case 1:
-				acc_game++;
-				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
-				playball(acc_game, Doosan, NC, Scoreboard, Option);
-				playball(acc_game, SSG, LG, Scoreboard, Option);
-				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
-				playball(acc_game, Hanwha, KT, Scoreboard, Option);
-				break;
-			case 2:
-				acc_game++;
-				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
-				playball(acc_game, Doosan, NC, Scoreboard, Option);
-				playball(acc_game, SSG, LG, Scoreboard, Option);
-				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
-				playball(acc_game, Hanwha, KT, Scoreboard, Option);
-				break;
-			case 3:
-				acc_game++;
-				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
-				playball(acc_game, Doosan, NC, Scoreboard, Option);
-				playball(acc_game, SSG, LG, Scoreboard, Option);
-				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
-				playball(acc_game, Hanwha, KT, Scoreboard, Option);
-			case 4:
-				acc_game++;
-				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
-				playball(acc_game, Doosan, NC, Scoreboard, Option);
-				playball(acc_game, SSG, LG, Scoreboard, Option);
-				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
-				playball(acc_game, Hanwha, KT, Scoreboard, Option);
-			case 5:
-				acc_game++;
-				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
-				playball(acc_game, Doosan, NC, Scoreboard, Option);
-				playball(acc_game, SSG, LG, Scoreboard, Option);
-				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
-				playball(acc_game, Hanwha, KT, Scoreboard, Option);
-				break;
-			case 6:
-				acc_game++;
-				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
-				playball(acc_game, Doosan, NC, Scoreboard, Option);
-				playball(acc_game, SSG, LG, Scoreboard, Option);
-				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
-				playball(acc_game, Hanwha, KT, Scoreboard, Option);
-				break;
-			case 7:
-				acc_game++;
-				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
-				playball(acc_game, Doosan, NC, Scoreboard, Option);
-				playball(acc_game, SSG, LG, Scoreboard, Option);
-				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
-				playball(acc_game, Hanwha, KT, Scoreboard, Option);
-				break;
-			case 8:
-				acc_game++;
-				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
-				playball(acc_game, Doosan, NC, Scoreboard, Option);
-				playball(acc_game, SSG, LG, Scoreboard, Option);
-				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
-				playball(acc_game, Hanwha, KT, Scoreboard, Option);
-				break;
-			case 9:
-				acc_game++;
-				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
-				playball(acc_game, Doosan, NC, Scoreboard, Option);
-				playball(acc_game, SSG, LG, Scoreboard, Option);
-				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
-				playball(acc_game, Hanwha, KT, Scoreboard, Option);
-				break;
-				break;
-				break;
+				switch (acc_game % 18)
+				{
+				case 1:
+					acc_game++;
+					playball(acc_game, Lotte, Samsung, Scoreboard, Option);
+					playball(acc_game, Doosan, NC, Scoreboard, Option);
+					playball(acc_game, SSG, LG, Scoreboard, Option);
+					playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
+					playball(acc_game, Hanwha, KT, Scoreboard, Option);
+					break;
+				case 3:
+					acc_game++;
+					playball(acc_game, NC, Samsung, Scoreboard, Option);
+					playball(acc_game, LG, Lotte, Scoreboard, Option);
+					playball(acc_game, KIA, Doosan, Scoreboard, Option);
+					playball(acc_game, KT, SSG, Scoreboard, Option);
+					playball(acc_game, Hanwha, Kiwoom, Scoreboard, Option);
+					break;
+				case 5:
+					acc_game++;
+					playball(acc_game, LG, Samsung, Scoreboard, Option);
+					playball(acc_game, KIA, NC, Scoreboard, Option);
+					playball(acc_game, SSG, Lotte, Scoreboard, Option);
+					playball(acc_game, KT, Doosan, Scoreboard, Option);
+					playball(acc_game, Hanwha, Kiwoom, Scoreboard, Option);
+					break;
+				case 7:
+					acc_game++;
+					playball(acc_game, KIA, Samsung, Scoreboard, Option);
+					playball(acc_game, KT, LG, Scoreboard, Option);
+					playball(acc_game, SSG, NC, Scoreboard, Option);
+					playball(acc_game, Kiwoom, Lotte, Scoreboard, Option);
+					playball(acc_game, Hanwha, Doosan, Scoreboard, Option);
+					break;
+				case 9:
+					acc_game++;
+					playball(acc_game, SSG, Samsung, Scoreboard, Option);
+					playball(acc_game, Hanwha, KIA, Scoreboard, Option);
+					playball(acc_game, NC, LG, Scoreboard, Option);
+					playball(acc_game, Kiwoom, KT, Scoreboard, Option);
+					playball(acc_game, Doosan, Lotte, Scoreboard, Option);
+					break;
+				case 11:
+					acc_game++;
+					playball(acc_game, Doosan, Samsung, Scoreboard, Option);
+					playball(acc_game, LG, KIA, Scoreboard, Option);
+					playball(acc_game, Kiwoom, NC, Scoreboard, Option);
+					playball(acc_game, KT, Lotte, Scoreboard, Option);
+					playball(acc_game, Hanwha, SSG, Scoreboard, Option);
+					break;
+				case 13:
+					acc_game++;
+					playball(acc_game, KT, Samsung, Scoreboard, Option);
+					playball(acc_game, LG, Doosan, Scoreboard, Option);
+					playball(acc_game, SSG, KIA, Scoreboard, Option);
+					playball(acc_game, Hanwha, NC, Scoreboard, Option);
+					playball(acc_game, Kiwoom, Lotte, Scoreboard, Option);
+					break;
+				case 15:
+					acc_game++;
+					playball(acc_game, Hanwha, Samsung, Scoreboard, Option);
+					playball(acc_game, SSG, KT, Scoreboard, Option);
+					playball(acc_game, Kiwoom, LG, Scoreboard, Option);
+					playball(acc_game, Lotte, KIA, Scoreboard, Option);
+					playball(acc_game, Doosan, NC, Scoreboard, Option);
+					break;
+				case 17:
+					acc_game++;
+					playball(acc_game, Kiwoom, Samsung, Scoreboard, Option);
+					playball(acc_game, SSG, Hanwha, Scoreboard, Option);
+					playball(acc_game, NC, KT, Scoreboard, Option);
+					playball(acc_game, Doosan, LG, Scoreboard, Option);
+					playball(acc_game, Lotte, KIA, Scoreboard, Option);
+					break;
+
+				}
 			}
 		}
 	}
@@ -3881,3 +3871,4 @@ int main()
 	Initialize_setting();
 	return 0;
 }
+
