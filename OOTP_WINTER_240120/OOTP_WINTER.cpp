@@ -85,7 +85,259 @@ int All_hitter_stat[300][10] = {
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {6, 3, 60, 60, 60, 60, 60, 60, 60, 60},
-0,
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{6, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{6, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{6, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{6, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{6, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 75, 70, 40, 85, 60, 60, 60, 60}, // NC
+{9, 3, 46, 88, 52, 70, 60, 60, 60, 60},
+{9, 3, 68, 88, 63, 65, 60, 60, 60, 60},
+{7, 3, 56, 70, 66, 52, 60, 60, 60, 60},
+{2, 3, 71, 68, 67, 48, 60, 60, 60, 60},
+{3, 3, 53, 37, 78, 45, 60, 60, 60, 60},
+{5, 3, 57, 63, 45, 73, 60, 60, 60, 60},
+{8, 3, 48, 71, 50, 63, 69, 60, 60, 60},
+{6, 3, 62, 54, 65, 65, 60, 60, 60, 60},
+{2, 3, 71, 33, 55, 46, 60, 60, 60, 60}, // NC 벤치
+{7, 3, 50, 60, 67, 43, 60, 60, 60, 60},
+{8, 3, 36, 45, 60, 57, 60, 60, 60, 60},
+{5, 3, 51, 42, 45, 64, 60, 60, 60, 60},
+{4, 3, 46, 63, 50, 66, 60, 60, 60, 60},
+{5, 3, 49, 35, 64, 58, 60, 60, 60, 60},
+{5, 3, 47, 53, 50, 62, 60, 60, 60, 60},
+{8, 3, 45, 44, 47, 54, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{9, 3, 30, 30, 30, 30, 30, 60, 60, 60},
+{3, 3, 40, 40, 40, 40, 40, 60, 60, 60},
+{4, 3, 50, 50, 50, 50, 50, 60, 60, 60},
+{5, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{6, 3, 70, 70, 70, 70, 70, 60, 60, 60},
+{7, 3, 80, 80, 80, 80, 80, 60, 60, 60},
+{8, 3, 90, 90, 90, 90, 90, 60, 60, 60},
+{9, 3, 70, 50, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{7, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 75, 70, 40, 85, 60, 60, 60, 60}, // 두산
+{9, 3, 46, 88, 52, 70, 60, 60, 60, 60},
+{9, 3, 68, 88, 63, 65, 60, 60, 60, 60},
+{7, 3, 56, 70, 66, 52, 60, 60, 60, 60},
+{2, 3, 71, 68, 67, 48, 60, 60, 60, 60},
+{3, 3, 53, 37, 78, 45, 60, 60, 60, 60},
+{5, 3, 57, 63, 45, 73, 60, 60, 60, 60},
+{8, 3, 48, 71, 50, 63, 69, 60, 60, 60},
+{6, 3, 62, 54, 65, 65, 60, 60, 60, 60},
+{2, 3, 71, 33, 55, 46, 60, 60, 60, 60}, // 두산 벤치
+{7, 3, 50, 60, 67, 43, 60, 60, 60, 60},
+{8, 3, 36, 45, 60, 57, 60, 60, 60, 60},
+{5, 3, 51, 42, 45, 64, 60, 60, 60, 60},
+{4, 3, 46, 63, 50, 66, 60, 60, 60, 60},
+{5, 3, 49, 35, 64, 58, 60, 60, 60, 60},
+{5, 3, 47, 53, 50, 62, 60, 60, 60, 60},
+{8, 3, 45, 44, 47, 54, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{9, 3, 30, 30, 30, 30, 30, 60, 60, 60},
+{3, 3, 40, 40, 40, 40, 40, 60, 60, 60},
+{4, 3, 50, 50, 50, 50, 50, 60, 60, 60},
+{5, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{6, 3, 70, 70, 70, 70, 70, 60, 60, 60},
+{7, 3, 80, 80, 80, 80, 80, 60, 60, 60},
+{8, 3, 90, 90, 90, 90, 90, 60, 60, 60},
+{9, 3, 70, 50, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{7, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 75, 70, 40, 85, 60, 60, 60, 60}, // LG
+{9, 3, 46, 88, 52, 70, 60, 60, 60, 60},
+{9, 3, 68, 88, 63, 65, 60, 60, 60, 60},
+{7, 3, 56, 70, 66, 52, 60, 60, 60, 60},
+{2, 3, 71, 68, 67, 48, 60, 60, 60, 60},
+{3, 3, 53, 37, 78, 45, 60, 60, 60, 60},
+{5, 3, 57, 63, 45, 73, 60, 60, 60, 60},
+{8, 3, 48, 71, 50, 63, 69, 60, 60, 60},
+{6, 3, 62, 54, 65, 65, 60, 60, 60, 60},
+{2, 3, 71, 33, 55, 46, 60, 60, 60, 60}, // LG 벤치
+{7, 3, 50, 60, 67, 43, 60, 60, 60, 60},
+{8, 3, 36, 45, 60, 57, 60, 60, 60, 60},
+{5, 3, 51, 42, 45, 64, 60, 60, 60, 60},
+{4, 3, 46, 63, 50, 66, 60, 60, 60, 60},
+{5, 3, 49, 35, 64, 58, 60, 60, 60, 60},
+{5, 3, 47, 53, 50, 62, 60, 60, 60, 60},
+{8, 3, 45, 44, 47, 54, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{9, 3, 30, 30, 30, 30, 30, 60, 60, 60},
+{3, 3, 40, 40, 40, 40, 40, 60, 60, 60},
+{4, 3, 50, 50, 50, 50, 50, 60, 60, 60},
+{5, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{6, 3, 70, 70, 70, 70, 70, 60, 60, 60},
+{7, 3, 80, 80, 80, 80, 80, 60, 60, 60},
+{8, 3, 90, 90, 90, 90, 90, 60, 60, 60},
+{9, 3, 70, 50, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{7, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 75, 70, 40, 85, 60, 60, 60, 60}, // SSG
+{9, 3, 46, 88, 52, 70, 60, 60, 60, 60},
+{9, 3, 68, 88, 63, 65, 60, 60, 60, 60},
+{7, 3, 56, 70, 66, 52, 60, 60, 60, 60},
+{2, 3, 71, 68, 67, 48, 60, 60, 60, 60},
+{3, 3, 53, 37, 78, 45, 60, 60, 60, 60},
+{5, 3, 57, 63, 45, 73, 60, 60, 60, 60},
+{8, 3, 48, 71, 50, 63, 69, 60, 60, 60},
+{6, 3, 62, 54, 65, 65, 60, 60, 60, 60},
+{2, 3, 71, 33, 55, 46, 60, 60, 60, 60}, // SSG 벤치
+{7, 3, 50, 60, 67, 43, 60, 60, 60, 60},
+{8, 3, 36, 45, 60, 57, 60, 60, 60, 60},
+{5, 3, 51, 42, 45, 64, 60, 60, 60, 60},
+{4, 3, 46, 63, 50, 66, 60, 60, 60, 60},
+{5, 3, 49, 35, 64, 58, 60, 60, 60, 60},
+{5, 3, 47, 53, 50, 62, 60, 60, 60, 60},
+{8, 3, 45, 44, 47, 54, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{9, 3, 30, 30, 30, 30, 30, 60, 60, 60},
+{3, 3, 40, 40, 40, 40, 40, 60, 60, 60},
+{4, 3, 50, 50, 50, 50, 50, 60, 60, 60},
+{5, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{6, 3, 70, 70, 70, 70, 70, 60, 60, 60},
+{7, 3, 80, 80, 80, 80, 80, 60, 60, 60},
+{8, 3, 90, 90, 90, 90, 90, 60, 60, 60},
+{9, 3, 70, 50, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{7, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 75, 70, 40, 85, 60, 60, 60, 60}, // KIA
+{9, 3, 46, 88, 52, 70, 60, 60, 60, 60},
+{9, 3, 68, 88, 63, 65, 60, 60, 60, 60},
+{7, 3, 56, 70, 66, 52, 60, 60, 60, 60},
+{2, 3, 71, 68, 67, 48, 60, 60, 60, 60},
+{3, 3, 53, 37, 78, 45, 60, 60, 60, 60},
+{5, 3, 57, 63, 45, 73, 60, 60, 60, 60},
+{8, 3, 48, 71, 50, 63, 69, 60, 60, 60},
+{6, 3, 62, 54, 65, 65, 60, 60, 60, 60},
+{2, 3, 71, 33, 55, 46, 60, 60, 60, 60}, // KIA 벤치
+{7, 3, 50, 60, 67, 43, 60, 60, 60, 60},
+{8, 3, 36, 45, 60, 57, 60, 60, 60, 60},
+{5, 3, 51, 42, 45, 64, 60, 60, 60, 60},
+{4, 3, 46, 63, 50, 66, 60, 60, 60, 60},
+{5, 3, 49, 35, 64, 58, 60, 60, 60, 60},
+{5, 3, 47, 53, 50, 62, 60, 60, 60, 60},
+{8, 3, 45, 44, 47, 54, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{9, 3, 30, 30, 30, 30, 30, 60, 60, 60},
+{3, 3, 40, 40, 40, 40, 40, 60, 60, 60},
+{4, 3, 50, 50, 50, 50, 50, 60, 60, 60},
+{5, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{6, 3, 70, 70, 70, 70, 70, 60, 60, 60},
+{7, 3, 80, 80, 80, 80, 80, 60, 60, 60},
+{8, 3, 90, 90, 90, 90, 90, 60, 60, 60},
+{9, 3, 70, 50, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{7, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 75, 70, 40, 85, 60, 60, 60, 60}, // 키움
+{9, 3, 46, 88, 52, 70, 60, 60, 60, 60},
+{9, 3, 68, 88, 63, 65, 60, 60, 60, 60},
+{7, 3, 56, 70, 66, 52, 60, 60, 60, 60},
+{2, 3, 71, 68, 67, 48, 60, 60, 60, 60},
+{3, 3, 53, 37, 78, 45, 60, 60, 60, 60},
+{5, 3, 57, 63, 45, 73, 60, 60, 60, 60},
+{8, 3, 48, 71, 50, 63, 69, 60, 60, 60},
+{6, 3, 62, 54, 65, 65, 60, 60, 60, 60},
+{2, 3, 71, 33, 55, 46, 60, 60, 60, 60}, // 키움 벤치
+{7, 3, 50, 60, 67, 43, 60, 60, 60, 60},
+{8, 3, 36, 45, 60, 57, 60, 60, 60, 60},
+{5, 3, 51, 42, 45, 64, 60, 60, 60, 60},
+{4, 3, 46, 63, 50, 66, 60, 60, 60, 60},
+{5, 3, 49, 35, 64, 58, 60, 60, 60, 60},
+{5, 3, 47, 53, 50, 62, 60, 60, 60, 60},
+{8, 3, 45, 44, 47, 54, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{9, 3, 30, 30, 30, 30, 30, 60, 60, 60},
+{3, 3, 40, 40, 40, 40, 40, 60, 60, 60},
+{4, 3, 50, 50, 50, 50, 50, 60, 60, 60},
+{5, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{6, 3, 70, 70, 70, 70, 70, 60, 60, 60},
+{7, 3, 80, 80, 80, 80, 80, 60, 60, 60},
+{8, 3, 90, 90, 90, 90, 90, 60, 60, 60},
+{9, 3, 70, 50, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{7, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 75, 70, 40, 85, 60, 60, 60, 60}, // KT
+{9, 3, 46, 88, 52, 70, 60, 60, 60, 60},
+{9, 3, 68, 88, 63, 65, 60, 60, 60, 60},
+{7, 3, 56, 70, 66, 52, 60, 60, 60, 60},
+{2, 3, 71, 68, 67, 48, 60, 60, 60, 60},
+{3, 3, 53, 37, 78, 45, 60, 60, 60, 60},
+{5, 3, 57, 63, 45, 73, 60, 60, 60, 60},
+{8, 3, 48, 71, 50, 63, 69, 60, 60, 60},
+{6, 3, 62, 54, 65, 65, 60, 60, 60, 60},
+{2, 3, 71, 33, 55, 46, 60, 60, 60, 60}, // KT 벤치
+{7, 3, 50, 60, 67, 43, 60, 60, 60, 60},
+{8, 3, 36, 45, 60, 57, 60, 60, 60, 60},
+{5, 3, 51, 42, 45, 64, 60, 60, 60, 60},
+{4, 3, 46, 63, 50, 66, 60, 60, 60, 60},
+{5, 3, 49, 35, 64, 58, 60, 60, 60, 60},
+{5, 3, 47, 53, 50, 62, 60, 60, 60, 60},
+{8, 3, 45, 44, 47, 54, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{9, 3, 30, 30, 30, 30, 30, 60, 60, 60},
+{3, 3, 40, 40, 40, 40, 40, 60, 60, 60},
+{4, 3, 50, 50, 50, 50, 50, 60, 60, 60},
+{5, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{6, 3, 70, 70, 70, 70, 70, 60, 60, 60},
+{7, 3, 80, 80, 80, 80, 80, 60, 60, 60},
+{8, 3, 90, 90, 90, 90, 90, 60, 60, 60},
+{9, 3, 70, 50, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{7, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 75, 70, 40, 85, 60, 60, 60, 60}, // 한화
+{9, 3, 46, 88, 52, 70, 60, 60, 60, 60},
+{9, 3, 68, 88, 63, 65, 60, 60, 60, 60},
+{7, 3, 56, 70, 66, 52, 60, 60, 60, 60},
+{2, 3, 71, 68, 67, 48, 60, 60, 60, 60},
+{3, 3, 53, 37, 78, 45, 60, 60, 60, 60},
+{5, 3, 57, 63, 45, 73, 60, 60, 60, 60},
+{8, 3, 48, 71, 50, 63, 69, 60, 60, 60},
+{6, 3, 62, 54, 65, 65, 60, 60, 60, 60},
+{2, 3, 71, 33, 55, 46, 60, 60, 60, 60}, // 한화 벤치
+{7, 3, 50, 60, 67, 43, 60, 60, 60, 60},
+{8, 3, 36, 45, 60, 57, 60, 60, 60, 60},
+{5, 3, 51, 42, 45, 64, 60, 60, 60, 60},
+{4, 3, 46, 63, 50, 66, 60, 60, 60, 60},
+{5, 3, 49, 35, 64, 58, 60, 60, 60, 60},
+{5, 3, 47, 53, 50, 62, 60, 60, 60, 60},
+{8, 3, 45, 44, 47, 54, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{9, 3, 30, 30, 30, 30, 30, 60, 60, 60},
+{3, 3, 40, 40, 40, 40, 40, 60, 60, 60},
+{4, 3, 50, 50, 50, 50, 50, 60, 60, 60},
+{5, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{6, 3, 70, 70, 70, 70, 70, 60, 60, 60},
+{7, 3, 80, 80, 80, 80, 80, 60, 60, 60},
+{8, 3, 90, 90, 90, 90, 90, 60, 60, 60},
+{9, 3, 70, 50, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{7, 3, 60, 60, 60, 60, 60, 60, 60, 60}
 };
 
 
@@ -95,15 +347,13 @@ int All_hitter_stat[300][10] = {
 
 
 
-
-
 double All_pitcher_stat[300][10] = {
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60}, // 삼성 선발
 {1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
 {1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
 {1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
 {1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
-{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
-{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60}, // 삼성 중계
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
@@ -128,12 +378,12 @@ double All_pitcher_stat[300][10] = {
 {2, 3, 50, 60, 60, 60, 60, 60, 60, 60},
 {2, 3, 30, 60, 60, 60, 60, 60, 60, 60},
 {3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60}, // 롯데 선발
 {1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
 {1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
 {1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
 {1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
-{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
-{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60}, // 롯데 중계
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
@@ -146,11 +396,336 @@ double All_pitcher_stat[300][10] = {
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
-
-0,
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60}, // NC 선발
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60}, // NC 중계
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 80, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 90, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 30, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60}, // 두산 선발
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60}, // 두산 중계
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 80, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 90, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 30, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60}, // LG 선발
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60}, // LG 중계
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 80, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 90, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 30, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60}, // SSG 선발
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60}, // SSG 중계
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 80, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 90, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 30, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60}, // KIA 선발
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60}, // KIA 중계
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 80, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 90, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 30, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60}, // 키움 선발
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60}, // 키움 중계
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 80, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 90, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 30, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60}, // KT 선발
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60}, // KT 중계
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 80, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 90, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 30, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60}, // 한화 선발
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 70, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60}, // 한화 중계
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{1, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 70, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 80, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 90, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 50, 60, 60, 60, 60, 60, 60, 60},
+{2, 3, 30, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 };
 
 
+void Initialize_member_name(vector <pair<string, bool>>& All_hitter_name, vector <pair<string, bool>>& All_pitcher_name)
+{
+	for (int i = 0; i < 300; i++)
+	{
+		All_hitter_name.push_back(make_pair("타자", false));
+		All_pitcher_name.push_back(make_pair("투수", false));
+	}
+	All_hitter_name[0].first = "김지찬";
+	All_hitter_name[1].first = "김성윤";
+	All_hitter_name[2].first = "구자욱";
+	All_hitter_name[3].first = "피렐라";
+	All_hitter_name[4].first = "강민호";
+	All_hitter_name[5].first = "오재일";
+	All_hitter_name[6].first = "류지혁";
+	All_hitter_name[7].first = "김현준";
+	All_hitter_name[8].first = "이재현";
+	All_hitter_name[9].first = "김재성";
+	All_hitter_name[10].first = "김동엽";
+	All_hitter_name[11].first = "이성규";
+	All_hitter_name[12].first = "강한울";
+	All_hitter_name[13].first = "김동진";
+	All_hitter_name[14].first = "김영웅";
+	All_hitter_name[15].first = "안주형";
+	All_hitter_name[16].first = "김호재";
+
+	All_hitter_name[30].first = "안권수";
+	All_hitter_name[31].first = "김민석";
+	All_hitter_name[32].first = "안치홍";
+	All_hitter_name[33].first = "전준우";
+	All_hitter_name[34].first = "정  훈";
+	All_hitter_name[35].first = "구드럼";
+	All_hitter_name[36].first = "유강남";
+	All_hitter_name[37].first = "노진혁";
+	All_hitter_name[38].first = "윤동희";
+	All_hitter_name[39].first = "박승욱";
+	All_hitter_name[40].first = "고승민";
+	All_hitter_name[41].first = "이정훈";
+	All_hitter_name[42].first = "구드럼";
+	All_hitter_name[43].first = "황성빈";
+	All_hitter_name[44].first = "정보근";
+	All_hitter_name[45].first = "손성빈";
+	All_hitter_name[46].first = "이학주";
+
+
+	All_pitcher_name[0].first = "뷰캐넌";
+	All_pitcher_name[1].first = "원태인";
+	All_pitcher_name[2].first = "수아레";
+	All_pitcher_name[3].first = "백정현";
+	All_pitcher_name[4].first = "최채흥";
+	All_pitcher_name[5].first = "이승현";
+	All_pitcher_name[6].first = "우규민";
+	All_pitcher_name[7].first = "최충연";
+	All_pitcher_name[8].first = "양창섭";
+	All_pitcher_name[9].first = "김대우";
+	All_pitcher_name[10].first = "장필준";
+	All_pitcher_name[11].first = "황동재";
+	All_pitcher_name[12].first = "오승환";
+
+	All_pitcher_name[30].first = "반  즈";
+	All_pitcher_name[31].first = "박세웅";
+	All_pitcher_name[32].first = "윌커슨";
+	All_pitcher_name[33].first = "나균안";
+	All_pitcher_name[34].first = "한현희";
+	All_pitcher_name[35].first = "김상수";
+	All_pitcher_name[36].first = "최준용";
+	All_pitcher_name[37].first = "심재민";
+	All_pitcher_name[38].first = "진승현";
+	All_pitcher_name[39].first = "김진욱";
+	All_pitcher_name[40].first = "신정락";
+	All_pitcher_name[41].first = "김도규";
+	All_pitcher_name[42].first = "김원중";
+
+
+
+}
 
 class scoreboard
 {
@@ -593,6 +1168,8 @@ private:
 	vector <pair<string, bool>> hitter; // 이름, 좌/우타
 	vector <pair<string, bool>> pitcher;
 
+	vector <int> used_pitcher;
+
 	string team_stadium = "야구장";
 	string team_name = "팀 이름";
 
@@ -622,12 +1199,9 @@ private:
 	int pitched_ball = 0;
 
 	int dominated_hitter = 0;
-	int domanated_pitcher = 0;
 
 	int team_sigvalue = 0;
 	int playground = 0;
-
-
 
 	int played_game = 0;
 
@@ -639,7 +1213,7 @@ private:
 	int lose_team[10] = { 0, };
 	int draw_team[10] = { 0, };
 
-	vector <int> used_pitcher;
+
 
 	// At_game At_plate At_bat hit_1 hit_2 hit_3 hr bb so avg obp slg ops 
 	// r rbi clu stl stl_fail err
@@ -846,14 +1420,14 @@ public:
 		{
 		case 0: cout << " [ 삼성 라이온즈 ]"; break;
 		case 1: cout << " [ 롯데 자이언츠 ]"; break;
-		case 2: cout << " [   LG 트윈스   ]"; break;
-		case 3: cout << " [  한화 이글스  ]"; break;
-		case 4: cout << " [  NC  다이노스 ]"; break;
+		case 2: cout << " [  NC  다이노스 ]"; break;
+		case 3: cout << " [  두산 베어스  ]"; break;
+		case 4: cout << " [   LG 트윈스   ]"; break;
 		case 5: cout << " [   SSG 랜더스  ]"; break;
-		case 6: cout << " [  두산 베어스  ]"; break;
-		case 7: cout << " [ KIA  타이거즈 ]"; break;
+		case 6: cout << " [ KIA  타이거즈 ]"; break;
+		case 7: cout << " [ 키움 히어로즈 ]"; break;
 		case 8: cout << " [    kt  위즈   ]"; break;
-		case 9: cout << " [ 키움 히어로즈 ]"; break;
+		case 9: cout << " [  한화 이글스  ]"; break;
 		}
 
 		Set_FontColor(15);
@@ -874,6 +1448,14 @@ public:
 		{
 		case 0: cout << " 삼성 "; break;
 		case 1: cout << " 롯데 "; break;
+		case 2: cout << "  NC  "; break;
+		case 3: cout << " 두산 "; break;
+		case 4: cout << "  LG  "; break;
+		case 5: cout << " SSG "; break;
+		case 6: cout << " KIA "; break;
+		case 7: cout << " 키움 "; break;
+		case 8: cout << "  kt  "; break;
+		case 9: cout << " 한화 "; break;
 		}
 
 		Set_FontColor(15);
@@ -889,6 +1471,14 @@ public:
 		{
 		case 0: cout << " [ 삼성 라이온즈 ]"; break;
 		case 1: cout << " [ 롯데 자이언츠 ]"; break;
+		case 2: cout << " [  NC  다이노스 ]"; break;
+		case 3: cout << " [  두산 베어스  ]"; break;
+		case 4: cout << " [   LG 트윈스   ]"; break;
+		case 5: cout << " [   SSG 랜더스  ]"; break;
+		case 6: cout << " [ KIA  타이거즈 ]"; break;
+		case 7: cout << " [ 키움 히어로즈 ]"; break;
+		case 8: cout << " [    kt  위즈   ]"; break;
+		case 9: cout << " [  한화 이글스  ]"; break;
 		}
 
 		col += 2; cur(row, col);
@@ -1548,10 +2138,10 @@ public:
 	int Get_my_team() { return my_team; }
 	int Get_sleep_time() { return sleep_time; }
 
-	bool Set_Onauto_play(bool value) { auto_play = value; }
-	bool Set_Onrecording(bool value) { recording = value; }
-	bool Set_Oncondition(bool value) { condition = value; }
-	bool Set_Onmusic(bool value) { music = value; }
+	void Set_Onauto_play(bool value) { auto_play = value; }
+	void Set_Onrecording(bool value) { recording = value; }
+	void Set_Oncondition(bool value) { condition = value; }
+	void Set_Onmusic(bool value) { music = value; }
 	void Set_my_team(int value) { my_team = value; }
 	void Set_sleep_time(int value) { sleep_time = value; }
 };
@@ -1976,18 +2566,18 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 		cur(60, line * 2 + 19);
 		switch (result) {
 		case 1: cout << "  [ 삼진 ]";
-			if (Scoreboard.Get_out_count() == 2) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 15); cout << " [ 공수교대 ] "; change_skip = true; } break;
+			if (Scoreboard.Get_out_count() == 2) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 25); cout << " [ 공수교대 ] "; change_skip = true; } break;
 		case 2: cout << "  [ 볼넷 ]"; break;
 		case 5: cout << "  [ 땅볼 ]";
-			if (Scoreboard.Get_out_count() == 2) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 15); cout << " [ 공수교대 ] "; change_skip = true; } break;
+			if (Scoreboard.Get_out_count() == 2) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 25); cout << " [ 공수교대 ] "; change_skip = true; } break;
 		case 6: cout << "  [ 뜬공 ]";
-			if (Scoreboard.Get_out_count() == 2) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 15); cout << " [ 공수교대 ] ";  change_skip = true; } break;
+			if (Scoreboard.Get_out_count() == 2) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 25); cout << " [ 공수교대 ] ";  change_skip = true; } break;
 		case 10: cout << "  [ 안타 ]"; break;
 		case 20: cout << "  [ 2루타 ]"; break;
 		case 30: cout << "  [ 3루타 ]"; break;
 		case 40: cout << "  [ 홈런 ]  [ "; cout << attack_team.Get_now_hitter_hr(); cout << "호 ]"; break;
 		case 52: case 53: cout << "  [ 병살 ]";
-			if (Scoreboard.Get_out_count() == 1) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 15); cout << " [ 공수교대 ] ";  change_skip = true; } break;
+			if (Scoreboard.Get_out_count() == 1) { cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 25); cout << " [ 공수교대 ] ";  change_skip = true; } break;
 		case 61: cout << "  [ 희플 ]"; break;
 
 		}
@@ -2292,7 +2882,7 @@ int battle_hit_power_result(bool hit, int Save_hitter_index[], int Save_pitcher_
 	{
 		if (result > 0)
 		{
-			if (Scoreboard.Get_base_3_spd() > rand() % 200 + 31 && Scoreboard.Get_out_count() != 2) return 61;
+			if (Scoreboard.Get_Isfull_3() && Scoreboard.Get_base_3_spd() > rand() % 200 + 31 && Scoreboard.Get_out_count() != 2) return 61;
 			else return 6;
 		}
 
@@ -2576,15 +3166,14 @@ void battle(team& attack_team, team& defence_team, option Option, scoreboard& Sc
 	Scoreboard.Set_out_count(out);
 }
 
-void playball(team& home_team, team& away_team, scoreboard& Scoreboard, option Option) // 홈팀 경기인가 아닌가
+void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Scoreboard, option Option) // 홈팀 경기인가 아닌가
 {
 	int game = 0;
-	static int acc_game = 0;
 	bool initialize = true;
 
 	system("cls");
 
-	while (game < 14400)
+	while (game < 1)
 	{
 		initialize = true;
 
@@ -2640,7 +3229,7 @@ void playball(team& home_team, team& away_team, scoreboard& Scoreboard, option O
 
 		}
 
-		
+
 		home_team.Set_game_result(true, Scoreboard.Get_away_score(), Scoreboard.Get_home_score(), away_team.Get_team_sigvalue());
 		away_team.Set_game_result(false, Scoreboard.Get_away_score(), Scoreboard.Get_home_score(), home_team.Get_team_sigvalue());
 		home_team.Set_pitched_ball(0);
@@ -2651,14 +3240,12 @@ void playball(team& home_team, team& away_team, scoreboard& Scoreboard, option O
 		away_team.Update_hitter_condition(); away_team.Update_pitcher_condition();
 
 		game++;
-		acc_game++;
 
 	}
 
 	home_team.Set_played_game(1);
 	away_team.Set_played_game(1);
 
-	return;
 }
 
 int show_game_select()
@@ -2678,14 +3265,187 @@ int show_game_select()
 	return sel(row + 24, col_initial, 4, 4);
 }
 
-void game_select(int value, team& home_team, team& away_team, scoreboard& Scoreboard, option Option)
+void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, team& LG,
+	team& SSG, team& KIA, team& Kiwoom, team& KT, team& Hanwha, scoreboard& Scoreboard, option Option)
 {
+	static int acc_game = 0;
+
 	if (value == 1)
 	{
-		if (home_team.IsHomeTeam())
-			playball(home_team, away_team, Scoreboard, Option);
+		if (acc_game % 2 == 0)
+		{
+			switch (acc_game % 9)
+			{
+			case 0:
+				acc_game++;
+				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
+				playball(acc_game, NC, Doosan, Scoreboard, Option);
+				playball(acc_game, LG, SSG, Scoreboard, Option);
+				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
+				playball(acc_game, KT, Hanwha, Scoreboard, Option);
+				break;
+			case 1:
+				acc_game++;
+				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
+				playball(acc_game, NC, Doosan, Scoreboard, Option);
+				playball(acc_game, LG, SSG, Scoreboard, Option);
+				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
+				playball(acc_game, KT, Hanwha, Scoreboard, Option);
+				break;
+			case 2:
+				acc_game++;
+				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
+				playball(acc_game, NC, Doosan, Scoreboard, Option);
+				playball(acc_game, LG, SSG, Scoreboard, Option);
+				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
+				playball(acc_game, KT, Hanwha, Scoreboard, Option);
+				break;
+			case 3:
+				acc_game++;
+				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
+				playball(acc_game, NC, Doosan, Scoreboard, Option);
+				playball(acc_game, LG, SSG, Scoreboard, Option);
+				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
+				playball(acc_game, KT, Hanwha, Scoreboard, Option);
+				break;
+			case 4:
+				acc_game++;
+				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
+				playball(acc_game, NC, Doosan, Scoreboard, Option);
+				playball(acc_game, LG, SSG, Scoreboard, Option);
+				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
+				playball(acc_game, KT, Hanwha, Scoreboard, Option);
+				break;
+			case 5:
+				acc_game++;
+				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
+				playball(acc_game, NC, Doosan, Scoreboard, Option);
+				playball(acc_game, LG, SSG, Scoreboard, Option);
+				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
+				playball(acc_game, KT, Hanwha, Scoreboard, Option);
+				break;
+			case 6:
+				acc_game++;
+				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
+				playball(acc_game, NC, Doosan, Scoreboard, Option);
+				playball(acc_game, LG, SSG, Scoreboard, Option);
+				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
+				playball(acc_game, KT, Hanwha, Scoreboard, Option);
+				break;
+			case 7:
+				acc_game++;
+				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
+				playball(acc_game, NC, Doosan, Scoreboard, Option);
+				playball(acc_game, LG, SSG, Scoreboard, Option);
+				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
+				playball(acc_game, KT, Hanwha, Scoreboard, Option);
+				break;
+			case 8:
+				acc_game++;
+				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
+				playball(acc_game, NC, Doosan, Scoreboard, Option);
+				playball(acc_game, LG, SSG, Scoreboard, Option);
+				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
+				playball(acc_game, KT, Hanwha, Scoreboard, Option);
+				break;
+			case 9:
+				acc_game++;
+				playball(acc_game, Samsung, Lotte, Scoreboard, Option);
+				playball(acc_game, NC, Doosan, Scoreboard, Option);
+				playball(acc_game, LG, SSG, Scoreboard, Option);
+				playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
+				playball(acc_game, KT, Hanwha, Scoreboard, Option);
+				break;
+
+			}
+		}
+
 		else
-			playball(away_team, home_team, Scoreboard, Option);
+		{
+			switch (acc_game % 9)
+			{
+			case 0:
+				acc_game++;
+				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
+				playball(acc_game, Doosan, NC, Scoreboard, Option);
+				playball(acc_game, SSG, LG, Scoreboard, Option);
+				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
+				playball(acc_game, Hanwha, KT, Scoreboard, Option);
+				break;
+			case 1:
+				acc_game++;
+				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
+				playball(acc_game, Doosan, NC, Scoreboard, Option);
+				playball(acc_game, SSG, LG, Scoreboard, Option);
+				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
+				playball(acc_game, Hanwha, KT, Scoreboard, Option);
+				break;
+			case 2:
+				acc_game++;
+				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
+				playball(acc_game, Doosan, NC, Scoreboard, Option);
+				playball(acc_game, SSG, LG, Scoreboard, Option);
+				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
+				playball(acc_game, Hanwha, KT, Scoreboard, Option);
+				break;
+			case 3:
+				acc_game++;
+				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
+				playball(acc_game, Doosan, NC, Scoreboard, Option);
+				playball(acc_game, SSG, LG, Scoreboard, Option);
+				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
+				playball(acc_game, Hanwha, KT, Scoreboard, Option);
+			case 4:
+				acc_game++;
+				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
+				playball(acc_game, Doosan, NC, Scoreboard, Option);
+				playball(acc_game, SSG, LG, Scoreboard, Option);
+				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
+				playball(acc_game, Hanwha, KT, Scoreboard, Option);
+			case 5:
+				acc_game++;
+				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
+				playball(acc_game, Doosan, NC, Scoreboard, Option);
+				playball(acc_game, SSG, LG, Scoreboard, Option);
+				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
+				playball(acc_game, Hanwha, KT, Scoreboard, Option);
+				break;
+			case 6:
+				acc_game++;
+				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
+				playball(acc_game, Doosan, NC, Scoreboard, Option);
+				playball(acc_game, SSG, LG, Scoreboard, Option);
+				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
+				playball(acc_game, Hanwha, KT, Scoreboard, Option);
+				break;
+			case 7:
+				acc_game++;
+				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
+				playball(acc_game, Doosan, NC, Scoreboard, Option);
+				playball(acc_game, SSG, LG, Scoreboard, Option);
+				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
+				playball(acc_game, Hanwha, KT, Scoreboard, Option);
+				break;
+			case 8:
+				acc_game++;
+				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
+				playball(acc_game, Doosan, NC, Scoreboard, Option);
+				playball(acc_game, SSG, LG, Scoreboard, Option);
+				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
+				playball(acc_game, Hanwha, KT, Scoreboard, Option);
+				break;
+			case 9:
+				acc_game++;
+				playball(acc_game, Lotte, Samsung, Scoreboard, Option);
+				playball(acc_game, Doosan, NC, Scoreboard, Option);
+				playball(acc_game, SSG, LG, Scoreboard, Option);
+				playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
+				playball(acc_game, Hanwha, KT, Scoreboard, Option);
+				break;
+				break;
+				break;
+			}
+		}
 	}
 
 }
@@ -2815,17 +3575,27 @@ void pixel_art(int my_team)
 
 }
 
-void show_lobby_inf(int value, team Samsung, team Lotte)
+void show_lobby_inf(int value, team Samsung, team Lotte, team NC, team Doosan, team LG,
+	team SSG, team KIA, team Kiwoom, team KT, team Hanwha)
 {
 	switch (value)
 	{
 	case 0: Samsung.Show_lobby_record(); break;
 	case 1: Lotte.Show_lobby_record(); break;
+	case 2: NC.Show_lobby_record(); break;
+	case 3: Doosan.Show_lobby_record(); break;
+	case 4: LG.Show_lobby_record(); break;
+	case 5: SSG.Show_lobby_record(); break;
+	case 6: KIA.Show_lobby_record(); break;
+	case 7: Kiwoom.Show_lobby_record(); break;
+	case 8: KT.Show_lobby_record(); break;
+	case 9: Hanwha.Show_lobby_record(); break;
 	}
 
 }
 
-int show_mainmenu(option Option, team Samsung, team Lotte)
+int show_game_setting(option Option, team Samsung, team Lotte, team NC, team Doosan, team LG,
+	team SSG, team KIA, team Kiwoom, team KT, team Hanwha)
 {
 	int row = 15, col = 8, col_gap = 4, col_initial = 0;
 
@@ -2843,12 +3613,32 @@ int show_mainmenu(option Option, team Samsung, team Lotte)
 	return sel(row + 24, col_initial, 4, 5);
 }
 
-int setting_mainmenu(option Option, team Samsung, team Lotte)
+int show_mainmenu(option Option, team Samsung, team Lotte, team NC, team Doosan, team LG,
+	team SSG, team KIA, team Kiwoom, team KT, team Hanwha)
+{
+	int row = 15, col = 8, col_gap = 4, col_initial = 0;
+
+	col_initial = col + col_gap;
+
+	cur(row, col);
+	cout << " [     메 뉴     ]"; col += col_gap; cur(row, col);
+	cout << " [ 1 ] 경기 시작"; col += col_gap; cur(row, col);
+	cout << " [ 2 ] 선수 관리"; col += col_gap; cur(row, col);
+	cout << " [ 3 ] 선수 영입"; col += col_gap; cur(row, col);
+	cout << " [ 4 ] 게임 설정"; col += col_gap; cur(row, col);
+	cout << " [ 5 ] 게임 종료"; col += col_gap; cur(row, col);
+
+
+	return sel(row + 24, col_initial, 4, 5);
+}
+
+int setting_mainmenu(option Option, team Samsung, team Lotte, team NC, team Doosan, team LG,
+	team SSG, team KIA, team Kiwoom, team KT, team Hanwha)
 {
 	system("cls");
 	pixel_art(Option.Get_my_team());
-	show_lobby_inf(Option.Get_my_team(), Samsung, Lotte);
-	return show_mainmenu(Option, Samsung, Lotte);
+	show_lobby_inf(Option.Get_my_team(), Samsung, Lotte, NC, Doosan, LG, SSG, KIA, Kiwoom, KT, Hanwha);
+	return show_mainmenu(Option, Samsung, Lotte, NC, Doosan, LG, SSG, KIA, Kiwoom, KT, Hanwha);
 
 }
 
@@ -2887,84 +3677,7 @@ void control_team_manage(team& selected_team)
 
 }
 
-void Initialize_member_name(vector <pair<string, bool>>& All_hitter_name, vector <pair<string, bool>>& All_pitcher_name)
-{
-	for (int i = 0; i < 300; i++)
-	{
-		All_hitter_name.push_back(make_pair("타자", false));
-		All_pitcher_name.push_back(make_pair("투수", false));
-	}
-
-	All_hitter_name[0].first = "김지찬";
-	All_hitter_name[1].first = "김성윤";
-	All_hitter_name[2].first = "구자욱";
-	All_hitter_name[3].first = "피렐라";
-	All_hitter_name[4].first = "강민호";
-	All_hitter_name[5].first = "오재일";
-	All_hitter_name[6].first = "류지혁";
-	All_hitter_name[7].first = "김현준";
-	All_hitter_name[8].first = "이재현";
-	All_hitter_name[9].first = "김재성";
-	All_hitter_name[10].first = "김동엽";
-	All_hitter_name[11].first = "이성규";
-	All_hitter_name[12].first = "강한울";
-	All_hitter_name[13].first = "김동진";
-	All_hitter_name[14].first = "김영웅";
-	All_hitter_name[15].first = "안주형";
-	All_hitter_name[16].first = "김호재";
-
-	All_hitter_name[30].first = "안권수";
-	All_hitter_name[31].first = "김민석";
-	All_hitter_name[32].first = "안치홍";
-	All_hitter_name[33].first = "전준우";
-	All_hitter_name[34].first = "정  훈";
-	All_hitter_name[35].first = "구드럼";
-	All_hitter_name[36].first = "유강남";
-	All_hitter_name[37].first = "노진혁";
-	All_hitter_name[38].first = "윤동희";
-	All_hitter_name[39].first = "박승욱";
-	All_hitter_name[40].first = "고승민";
-	All_hitter_name[41].first = "이정훈";
-	All_hitter_name[42].first = "구드럼";
-	All_hitter_name[43].first = "황성빈";
-	All_hitter_name[44].first = "정보근";
-	All_hitter_name[45].first = "손성빈";
-	All_hitter_name[46].first = "이학주";
-
-
-	All_pitcher_name[0].first = "뷰캐넌";
-	All_pitcher_name[1].first = "원태인";
-	All_pitcher_name[2].first = "수아레";
-	All_pitcher_name[3].first = "백정현";
-	All_pitcher_name[4].first = "최채흥";
-	All_pitcher_name[5].first = "이승현";
-	All_pitcher_name[6].first = "우규민";
-	All_pitcher_name[7].first = "최충연";
-	All_pitcher_name[8].first = "양창섭";
-	All_pitcher_name[9].first = "김대우";
-	All_pitcher_name[10].first = "장필준";
-	All_pitcher_name[11].first = "황동재";
-	All_pitcher_name[12].first = "오승환";
-
-	All_pitcher_name[30].first = "반  즈";
-	All_pitcher_name[31].first = "박세웅";
-	All_pitcher_name[32].first = "윌커슨";
-	All_pitcher_name[33].first = "나균안";
-	All_pitcher_name[34].first = "한현희";
-	All_pitcher_name[35].first = "김상수";
-	All_pitcher_name[36].first = "최준용";
-	All_pitcher_name[37].first = "심재민";
-	All_pitcher_name[38].first = "진승현";
-	All_pitcher_name[39].first = "김진욱";
-	All_pitcher_name[40].first = "신정락";
-	All_pitcher_name[41].first = "김도규";
-	All_pitcher_name[42].first = "김원중";
-
-
-
-}
-
-void show_game_setting_menu()
+bool show_music_setting()
 {
 	for (int i = 8; i < 50; i++)
 	{
@@ -2977,31 +3690,145 @@ void show_game_setting_menu()
 	col_initial = col + col_gap;
 
 	cur(row, col);
-	cout << " [    메 뉴    ]"; col += col_gap; cur(row, col);
-	cout << " [ 1 ] 경기 시작"; col += col_gap; cur(row, col);
-	cout << " [ 2 ] 선수 관리"; col += col_gap; cur(row, col);
-	cout << " [ 3 ] 선수 영입"; col += col_gap; cur(row, col);
-	cout << " [ 4 ] 게임 설정"; col += col_gap; cur(row, col);
-	cout << " [ 5 ] 게임 종료"; col += col_gap; cur(row, col);
+	cout << " [   음악 설정   ]"; col += col_gap; cur(row, col);
+	cout << " [ 1 ] 켜기"; col += col_gap; cur(row, col);
+	cout << " [ 2 ] 끄기"; col += col_gap; cur(row, col);
 
-	system("PAUSE");
+	return !(sel(row + 24, col_initial, 4, 2) - 1);
+}
+
+bool show_game_condition_setting()
+{
+	for (int i = 8; i < 50; i++)
+	{
+		cur(15, i);
+		cout << "                         ";
+	}
+
+	int row = 15, col = 8, col_gap = 4, col_initial = 0;
+
+	col_initial = col + col_gap;
+
+	cur(row, col);
+	cout << " [  컨디션 설정  ]"; col += col_gap; cur(row, col);
+	cout << " [ 1 ] 켜기"; col += col_gap; cur(row, col);
+	cout << " [ 2 ] 끄기"; col += col_gap; cur(row, col);
+
+	return !(sel(row + 24, col_initial, 4, 2) - 1);
+}
+
+int show_game_speed_setting()
+{
+	for (int i = 8; i < 50; i++)
+	{
+		cur(15, i);
+		cout << "                         ";
+	}
+
+	int row = 15, col = 8, col_gap = 4, col_initial = 0;
+
+	col_initial = col + col_gap;
+
+	cur(row, col);
+	cout << " [   게임 속도   ]"; col += col_gap; cur(row, col);
+	cout << " [ 1 ] 매우 빠름"; col += col_gap; cur(row, col);
+	cout << " [ 2 ] 빠름"; col += col_gap; cur(row, col);
+	cout << " [ 3 ] 보통"; col += col_gap; cur(row, col);
+	cout << " [ 4 ] 느림"; col += col_gap; cur(row, col);
+	cout << " [ 5 ] 매우 느림"; col += col_gap; cur(row, col);
+
+	return sel(row + 24, col_initial, 4, 5) * 20;
+}
+
+int show_team_change()
+{
+	for (int i = 8; i < 50; i++)
+	{
+		cur(15, i);
+		cout << "                         ";
+	}
+
+	int row = 15, col = 8, col_gap = 4, col_initial = 0;
+
+	col_initial = col + col_gap;
+
+	cur(row, col);
+	cout << " [    팀 선택    ]"; col += col_gap; cur(row, col);
+	cout << " [ 1 ] 삼성"; col += col_gap; cur(row, col);
+	cout << " [ 2 ] 롯데"; col += col_gap; cur(row, col);
+	cout << " [ 3 ] NC"; col += col_gap; cur(row, col);
+	cout << " [ 4 ] 두산"; col += col_gap; cur(row, col);
+	cout << " [ 5 ] LG"; col += col_gap; cur(row, col);
+	cout << " [ 6 ] SSG"; col += col_gap; cur(row, col);
+	cout << " [ 7 ] KIA"; col += col_gap; cur(row, col);
+	cout << " [ 8 ] 키움"; col += col_gap; cur(row, col);
+	cout << " [ 9 ] KT"; col += col_gap; cur(row, col);
+	cout << " [ 10 ] 한화"; col += col_gap; cur(row, col);
+
+	return sel(row + 24, col_initial, 4, 10) - 1;
+}
+
+int show_game_setting_menu()
+{
+	for (int i = 8; i < 50; i++)
+	{
+		cur(15, i);
+		cout << "                         ";
+	}
+
+	int row = 15, col = 8, col_gap = 4, col_initial = 0;
+
+	col_initial = col + col_gap;
+
+	cur(row, col);
+	cout << " [     설 정     ]"; col += col_gap; cur(row, col);
+	cout << " [ 1 ] 팀 변경"; col += col_gap; cur(row, col);
+	cout << " [ 2 ] 음악 설정"; col += col_gap; cur(row, col);
+	cout << " [ 3 ] 게임 속도"; col += col_gap; cur(row, col);
+	cout << " [ 4 ] 컨디션 사용"; col += col_gap; cur(row, col);
+	cout << " [ 5 ] 뒤로 가기"; col += col_gap; cur(row, col);
+
+	return sel(row + 24, col_initial, 4, 5);
+}
+
+void game_setting(option& Option)
+{
+	int setting_num = 0;
+
+
+	setting_num = show_game_setting_menu();
+	switch (setting_num)
+	{
+	case 1: Option.Set_my_team(show_team_change()); break;
+	case 2: Option.Set_Onmusic(show_music_setting()); break;
+	case 3: Option.Set_sleep_time(show_game_speed_setting()); break;
+	case 4: Option.Set_Oncondition(show_game_condition_setting()); break;
+	case 5: break;
+	}
+
+
 }
 
 void Initialize_setting()
 {
 	srand((unsigned)time(NULL));
 
-	team Samsung;
-	team Lotte;
-
-	scoreboard Scoreboard;
-
-	option Option;
-
 	int menu_choice = 0;
 
-	CursorView(false);
-	Set_FontColor(15);
+	team Samsung;
+	team Lotte;
+	team NC;
+	team Doosan;
+	team LG;
+	team SSG;
+	team KIA;
+	team Kiwoom;
+	team KT;
+	team Hanwha;
+
+	scoreboard Scoreboard; option Option;
+
+	CursorView(false); Set_FontColor(15);
 
 	vector <pair<string, bool>> All_hitter_name;
 	vector <pair<string, bool>> All_pitcher_name;
@@ -3010,15 +3837,40 @@ void Initialize_setting()
 
 	Samsung.Initialize_teamset(0, 1, All_hitter_name, All_pitcher_name);
 	Lotte.Initialize_teamset(1, 1, All_hitter_name, All_pitcher_name);
+	NC.Initialize_teamset(2, 1, All_hitter_name, All_pitcher_name);
+	Doosan.Initialize_teamset(3, 1, All_hitter_name, All_pitcher_name);
+	LG.Initialize_teamset(4, 1, All_hitter_name, All_pitcher_name);
+	SSG.Initialize_teamset(5, 1, All_hitter_name, All_pitcher_name);
+	KIA.Initialize_teamset(6, 1, All_hitter_name, All_pitcher_name);
+	Kiwoom.Initialize_teamset(7, 1, All_hitter_name, All_pitcher_name);
+	KT.Initialize_teamset(8, 1, All_hitter_name, All_pitcher_name);
+	Hanwha.Initialize_teamset(9, 1, All_hitter_name, All_pitcher_name);
+
 
 	while (1)
 	{
 		CursorView(false);
-		menu_choice = setting_mainmenu(Option, Samsung, Lotte);
-		if (menu_choice == 1) game_select(show_game_select(), Samsung, Lotte, Scoreboard, Option);
-		else if (menu_choice == 2) control_team_manage(Samsung);
-		else if (menu_choice == 3) control_team_manage(Lotte);
-		else if (menu_choice == 4) show_game_setting_menu();
+		menu_choice = setting_mainmenu(Option, Samsung, Lotte, NC, Doosan, LG, SSG, KIA, Kiwoom, KT, Hanwha);
+		if (menu_choice == 1) game_select(show_game_select(), Samsung, Lotte,
+			NC, Doosan, LG, SSG, KIA, Kiwoom, KT, Hanwha, Scoreboard, Option);
+		else if (menu_choice == 2)
+		{
+			switch (Option.Get_my_team())
+			{
+			case 0: control_team_manage(Samsung); break;
+			case 1: control_team_manage(Lotte); break;
+			case 2: control_team_manage(NC); break;
+			case 3: control_team_manage(Doosan); break;
+			case 4: control_team_manage(LG); break;
+			case 5: control_team_manage(SSG); break;
+			case 6: control_team_manage(KIA); break;
+			case 7: control_team_manage(Kiwoom); break;
+			case 8: control_team_manage(KT); break;
+			case 9: control_team_manage(Hanwha); break;
+			}
+		}
+		//else if (menu_choice == 3) control_team_manage(Lotte);
+		else if (menu_choice == 4) game_setting(Option);
 		else if (menu_choice == 5) break;
 	}
 
