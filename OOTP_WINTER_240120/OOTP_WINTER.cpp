@@ -19,23 +19,23 @@ void cur(short x, short y);
 
 // 41 »ï¼º 71 ·Ôµ¥
 
-//All_hitter_name[30].first = "¾È±Ç¼ö";
-//All_hitter_name[31].first = "±è¹Î¼®";
-//All_hitter_name[32].first = "¾ÈÄ¡È«";
-//All_hitter_name[33].first = "ÀüÁØ¿ì";
-//All_hitter_name[34].first = "Á¤  ÈÆ";
-//All_hitter_name[35].first = "±¸µå·³";
-//All_hitter_name[36].first = "À¯°­³²";
-//All_hitter_name[37].first = "³ëÁøÇõ";
-//All_hitter_name[38].first = "À±µ¿Èñ";
-//All_hitter_name[39].first = "¹Ú½Â¿í";
-//All_hitter_name[40].first = "°í½Â¹Î";
-//All_hitter_name[41].first = "ÀÌÁ¤ÈÆ";
-//All_hitter_name[42].first = "±¸µå·³";
-//All_hitter_name[43].first = "È²¼ººó";
-//All_hitter_name[44].first = "Á¤º¸±Ù";
-//All_hitter_name[45].first = "¼Õ¼ººó";
-//All_hitter_name[46].first = "ÀÌÇÐÁÖ";
+//All_hitter_name[60].first = "È«Ã¢±â";
+//All_hitter_name[61].first = "¹ÚÇØ¹Î";
+//All_hitter_name[62].first = "±èÇö¼ö";
+//All_hitter_name[63].first = "¿À½ºÆ¾";
+//All_hitter_name[64].first = "¿ÀÁöÈ¯";
+//All_hitter_name[65].first = "¹®º¸°æ";
+//All_hitter_name[66].first = "¹Úµ¿¿ø";
+//All_hitter_name[67].first = "¹®¼ºÁÖ";
+//All_hitter_name[68].first = "½Å¹ÎÀç";
+//All_hitter_name[69].first = "±è¹Î¼º";
+//All_hitter_name[70].first = "ÀÌÀç¿ø";
+//All_hitter_name[71].first = "¼­°ÇÃ¢";
+//All_hitter_name[72].first = "Á¤ÁÖÇö";
+//All_hitter_name[73].first = "¼ÕÈ£¿µ";
+//All_hitter_name[74].first = "ÇãµµÈ¯";
+//All_hitter_name[75].first = "¾ÈÀÍÈÆ";
+//All_hitter_name[76].first = "±è±â¿¬";
 
 int All_hitter_stat[300][10] = {
 {4, 3, 75, 70, 40, 85, 60, 60, 60, 60}, // »ï¼º
@@ -158,32 +158,32 @@ int All_hitter_stat[300][10] = {
 {3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {7, 3, 60, 60, 60, 60, 60, 60, 60, 60},
-{4, 3, 75, 70, 40, 85, 60, 60, 60, 60}, // LG
-{9, 3, 46, 88, 52, 70, 60, 60, 60, 60},
-{9, 3, 68, 88, 63, 65, 60, 60, 60, 60},
-{7, 3, 56, 70, 66, 52, 60, 60, 60, 60},
-{2, 3, 71, 68, 67, 48, 60, 60, 60, 60},
-{3, 3, 53, 37, 78, 45, 60, 60, 60, 60},
-{5, 3, 57, 63, 45, 73, 60, 60, 60, 60},
-{8, 3, 48, 71, 50, 63, 69, 60, 60, 60},
-{6, 3, 62, 54, 65, 65, 60, 60, 60, 60},
-{2, 3, 71, 33, 55, 46, 60, 60, 60, 60}, // LG º¥Ä¡
-{7, 3, 50, 60, 67, 43, 60, 60, 60, 60},
-{8, 3, 36, 45, 60, 57, 60, 60, 60, 60},
-{5, 3, 51, 42, 45, 64, 60, 60, 60, 60},
-{4, 3, 46, 63, 50, 66, 60, 60, 60, 60},
-{5, 3, 49, 35, 64, 58, 60, 60, 60, 60},
-{5, 3, 47, 53, 50, 62, 60, 60, 60, 60},
-{8, 3, 45, 44, 47, 54, 60, 60, 60, 60},
-{2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
-{9, 3, 30, 30, 30, 30, 30, 60, 60, 60},
-{3, 3, 40, 40, 40, 40, 40, 60, 60, 60},
+{9, 3, 90, 82, 50, 63, 60, 60, 60, 60}, // LG
+{8, 3, 54, 69, 53, 73, 60, 60, 60, 60},
+{7, 3, 67, 70, 55, 54, 60, 60, 60, 60},
+{3, 3, 62, 78, 76, 57, 60, 60, 60, 60},
+{6, 3, 73, 56, 66, 69, 60, 60, 60, 60},
+{5, 3, 64, 74, 67, 59, 60, 60, 60, 60},
+{2, 3, 63, 52, 79, 45, 60, 60, 60, 60},
+{7, 3, 83, 65, 53, 73, 60, 60, 60, 60},
+{4, 3, 60, 65, 40, 85, 60, 60, 60, 60},
+{4, 3, 55, 56, 65, 54, 60, 60, 60, 60}, // LG º¥Ä¡
+{7, 3, 45, 30, 75, 61, 60, 60, 60, 60},
+{4, 3, 57, 36, 57, 57, 60, 60, 60, 60},
+{3, 3, 60, 64, 54, 53, 60, 60, 60, 60},
+{6, 3, 30, 40, 53, 60, 60, 60, 60, 60},
+{2, 3, 60, 30, 40, 63, 60, 60, 60, 60},
+{9, 3, 68, 71, 47, 55, 60, 60, 60, 60},
+{2, 3, 45, 44, 47, 54, 60, 60, 60, 60},
+{4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{4, 3, 30, 30, 30, 30, 30, 60, 60, 60},
+{7, 3, 40, 40, 40, 40, 40, 60, 60, 60},
 {4, 3, 50, 50, 50, 50, 50, 60, 60, 60},
-{5, 3, 60, 60, 60, 60, 60, 60, 60, 60},
+{3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {6, 3, 70, 70, 70, 70, 70, 60, 60, 60},
-{7, 3, 80, 80, 80, 80, 80, 60, 60, 60},
-{8, 3, 90, 90, 90, 90, 90, 60, 60, 60},
-{9, 3, 70, 50, 60, 60, 60, 60, 60, 60},
+{2, 3, 80, 80, 80, 80, 80, 60, 60, 60},
+{9, 3, 90, 90, 90, 90, 90, 60, 60, 60},
+{2, 3, 70, 50, 60, 60, 60, 60, 60, 60},
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {3, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
@@ -693,6 +693,60 @@ void Initialize_member_name(vector <pair<string, bool>>& All_hitter_name, vector
 	All_hitter_name[44].first = "Á¤º¸±Ù";
 	All_hitter_name[45].first = "¼Õ¼ººó";
 	All_hitter_name[46].first = "ÀÌÇÐÁÖ";
+
+	All_hitter_name[60].first = "¾È±Ç¼ö";
+	All_hitter_name[61].first = "±è¹Î¼®";
+	All_hitter_name[62].first = "¾ÈÄ¡È«";
+	All_hitter_name[63].first = "ÀüÁØ¿ì";
+	All_hitter_name[64].first = "Á¤  ÈÆ";
+	All_hitter_name[65].first = "±¸µå·³";
+	All_hitter_name[66].first = "À¯°­³²";
+	All_hitter_name[67].first = "³ëÁøÇõ";
+	All_hitter_name[68].first = "À±µ¿Èñ";
+	All_hitter_name[69].first = "¹Ú½Â¿í";
+	All_hitter_name[70].first = "°í½Â¹Î";
+	All_hitter_name[71].first = "ÀÌÁ¤ÈÆ";
+	All_hitter_name[72].first = "±¸µå·³";
+	All_hitter_name[73].first = "È²¼ººó";
+	All_hitter_name[74].first = "Á¤º¸±Ù";
+	All_hitter_name[75].first = "¼Õ¼ººó";
+	All_hitter_name[76].first = "ÀÌÇÐÁÖ";
+
+	All_hitter_name[90].first = "¾È±Ç¼ö";
+	All_hitter_name[91].first = "±è¹Î¼®";
+	All_hitter_name[92].first = "¾ÈÄ¡È«";
+	All_hitter_name[93].first = "ÀüÁØ¿ì";
+	All_hitter_name[94].first = "Á¤  ÈÆ";
+	All_hitter_name[95].first = "±¸µå·³";
+	All_hitter_name[96].first = "À¯°­³²";
+	All_hitter_name[97].first = "³ëÁøÇõ";
+	All_hitter_name[98].first = "À±µ¿Èñ";
+	All_hitter_name[99].first = "¹Ú½Â¿í";
+	All_hitter_name[100].first = "°í½Â¹Î";
+	All_hitter_name[101].first = "ÀÌÁ¤ÈÆ";
+	All_hitter_name[102].first = "±¸µå·³";
+	All_hitter_name[103].first = "È²¼ººó";
+	All_hitter_name[104].first = "Á¤º¸±Ù";
+	All_hitter_name[105].first = "¼Õ¼ººó";
+	All_hitter_name[106].first = "ÀÌÇÐÁÖ";
+
+	All_hitter_name[120].first = "È«Ã¢±â";
+	All_hitter_name[121].first = "¹ÚÇØ¹Î";
+	All_hitter_name[122].first = "±èÇö¼ö";
+	All_hitter_name[123].first = "¿À½ºÆ¾";
+	All_hitter_name[124].first = "¿ÀÁöÈ¯";
+	All_hitter_name[125].first = "¹®º¸°æ";
+	All_hitter_name[126].first = "¹Úµ¿¿ø";
+	All_hitter_name[127].first = "¹®¼ºÁÖ";
+	All_hitter_name[128].first = "½Å¹ÎÀç";
+	All_hitter_name[129].first = "±è¹Î¼º";
+	All_hitter_name[130].first = "ÀÌÀç¿ø";
+	All_hitter_name[131].first = "¼­°ÇÃ¢";
+	All_hitter_name[132].first = "Á¤ÁÖÇö";
+	All_hitter_name[133].first = "¼ÕÈ£¿µ";
+	All_hitter_name[134].first = "ÇãµµÈ¯";
+	All_hitter_name[135].first = "¾ÈÀÍÈÆ";
+	All_hitter_name[136].first = "±è±â¿¬";
 
 
 	All_pitcher_name[0].first = "ºäÄ³³Í";
@@ -2143,7 +2197,7 @@ private:
 	bool music = true;
 	bool condition = true;
 	bool auto_play = true;
-	int my_team = 0;
+	int my_team = 4;
 	int sleep_time = 60;
 
 public:
@@ -3831,7 +3885,7 @@ void Initialize_setting()
 	Lotte.Initialize_teamset(1, 1, All_hitter_name, All_pitcher_name);
 	NC.Initialize_teamset(2, 1, All_hitter_name, All_pitcher_name);
 	Doosan.Initialize_teamset(3, 1, All_hitter_name, All_pitcher_name);
-	LG.Initialize_teamset(4, 1, All_hitter_name, All_pitcher_name);
+	LG.Initialize_teamset(4, 2, All_hitter_name, All_pitcher_name);
 	SSG.Initialize_teamset(5, 1, All_hitter_name, All_pitcher_name);
 	KIA.Initialize_teamset(6, 1, All_hitter_name, All_pitcher_name);
 	Kiwoom.Initialize_teamset(7, 1, All_hitter_name, All_pitcher_name);
