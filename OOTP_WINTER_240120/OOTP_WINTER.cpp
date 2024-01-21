@@ -2835,29 +2835,7 @@ void show_scoreboard(bool Ishome, int strike, int ball, int out, int now_pitcher
 
 }
 
-int battle_hit_run_result(bool hit, int type, int Save_hitter_index[], int Save_pitcher_index[])
-{
-	// 타자 : 0 포지션 1 컨디션 2 선구안 3 정확도 4 파워 5 스피드 6 수비 7 오버롤
-	// 투수 : 0 포지션 1 컨디션 2 제  구 3 구  위 4 체  력 5 구  속 6 멘  탈 7 오버롤
-
-	// 0 파울 1 삼진 2 볼넷
-
-	// 1 1루타 2 2루타 3 3루타 4 홈런 5 땅볼 6 뜬공 7 번트 8 실책 9 도루
-
-	int hitter_speed = get_hitter_rand_stat(0, 5, Save_hitter_index) + get_hitter_rand_stat(0, 5, Save_hitter_index); // 상대 수비수의 수비력은 차후 추가
-
-	if (type == 1)
-		if (hitter_speed > 60) return 11;
-		else return 10;
-
-	if (type == 2)
-		if (hitter_speed > 60) return 21;
-		else return 20;
-
-
-}
-
-int battle_hit_power_result(bool hit, int Save_hitter_index[], int Save_pitcher_index[], scoreboard& Scoreboard)
+int battle_hit_power_run_result(bool hit, int Save_hitter_index[], int Save_pitcher_index[], scoreboard& Scoreboard)
 {
 	int result = (get_hitter_rand_stat(0, 4, Save_hitter_index)) - (get_pitcher_rand_stat(10, 3, Save_pitcher_index));
 
@@ -2908,10 +2886,10 @@ int battle_hit_result(int Save_hitter_index[], int Save_pitcher_index[], scorebo
 	int compare_value = get_hitter_rand_stat(0, 3, Save_hitter_index) - get_pitcher_rand_stat(17, 3, Save_pitcher_index);
 
 	if (compare_value > 0)
-		return battle_hit_power_result(true, Save_hitter_index, Save_pitcher_index, Scoreboard); // 안타 종류 반환
+		return battle_hit_power_run_result(true, Save_hitter_index, Save_pitcher_index, Scoreboard); // 안타 종류 반환
 
 	else
-		return battle_hit_power_result(false, Save_hitter_index, Save_pitcher_index, Scoreboard);
+		return battle_hit_power_run_result(false, Save_hitter_index, Save_pitcher_index, Scoreboard);
 
 }
 
@@ -3282,18 +3260,18 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 				case 0:
 					acc_game++;
 					playball(acc_game, Samsung, Lotte, Scoreboard, Option);
-					playball(acc_game, NC, Doosan, Scoreboard, Option);
+					playball(acc_game, NC, KT, Scoreboard, Option);
 					playball(acc_game, LG, SSG, Scoreboard, Option);
-					playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
-					playball(acc_game, KT, Hanwha, Scoreboard, Option);
+					playball(acc_game, KIA, Hanwha, Scoreboard, Option);
+					playball(acc_game, Doosan, Kiwoom, Scoreboard, Option);
 					break;
 				case 2:
 					acc_game++;
 					playball(acc_game, Samsung, NC, Scoreboard, Option);
 					playball(acc_game, Lotte, LG, Scoreboard, Option);
 					playball(acc_game, Doosan, KIA, Scoreboard, Option);
-					playball(acc_game, SSG, KT, Scoreboard, Option);
-					playball(acc_game, Kiwoom, Hanwha, Scoreboard, Option);
+					playball(acc_game, SSG, Hanwha, Scoreboard, Option);
+					playball(acc_game, Kiwoom, KT, Scoreboard, Option);
 					break;
 				case 4:
 					acc_game++;
@@ -3314,26 +3292,26 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 				case 8:
 					acc_game++;
 					playball(acc_game, Samsung, SSG, Scoreboard, Option);
-					playball(acc_game, KIA, Hanwha, Scoreboard, Option);
+					playball(acc_game, KIA, Kiwoom, Scoreboard, Option);
 					playball(acc_game, LG, NC, Scoreboard, Option);
-					playball(acc_game, KT, Kiwoom, Scoreboard, Option);
+					playball(acc_game, KT, Hanwha, Scoreboard, Option);
 					playball(acc_game, Lotte, Doosan, Scoreboard, Option);
 					break;
 				case 10:
 					acc_game++;
 					playball(acc_game, Samsung, Doosan, Scoreboard, Option);
 					playball(acc_game, KIA, LG, Scoreboard, Option);
-					playball(acc_game, NC, Kiwoom, Scoreboard, Option);
+					playball(acc_game, NC, Hanwha, Scoreboard, Option);
 					playball(acc_game, Lotte, KT, Scoreboard, Option);
-					playball(acc_game, SSG, Hanwha, Scoreboard, Option);
+					playball(acc_game, SSG, Kiwoom, Scoreboard, Option);
 					break;
 				case 12:
 					acc_game++;
 					playball(acc_game, Samsung, KT, Scoreboard, Option);
 					playball(acc_game, Doosan, LG, Scoreboard, Option);
 					playball(acc_game, KIA, SSG, Scoreboard, Option);
-					playball(acc_game, NC, Hanwha, Scoreboard, Option);
-					playball(acc_game, Lotte, Kiwoom, Scoreboard, Option);
+					playball(acc_game, NC, Kiwoom, Scoreboard, Option);
+					playball(acc_game, Lotte, Hanwha, Scoreboard, Option);
 					break;
 				case 14:
 					acc_game++;
@@ -3346,10 +3324,10 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 				case 16:
 					acc_game++;
 					playball(acc_game, Samsung, Kiwoom, Scoreboard, Option);
-					playball(acc_game, Hanwha, SSG, Scoreboard, Option);
-					playball(acc_game, KT, NC, Scoreboard, Option);
-					playball(acc_game, LG, Doosan, Scoreboard, Option);
-					playball(acc_game, KIA, Lotte, Scoreboard, Option);
+					playball(acc_game, Doosan, SSG, Scoreboard, Option);
+					playball(acc_game, KT, KIA, Scoreboard, Option);
+					playball(acc_game, LG, Hanwha, Scoreboard, Option);
+					playball(acc_game, NC, Lotte, Scoreboard, Option);
 					break;
 
 
@@ -3363,18 +3341,18 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 				case 1:
 					acc_game++;
 					playball(acc_game, Lotte, Samsung, Scoreboard, Option);
-					playball(acc_game, Doosan, NC, Scoreboard, Option);
+					playball(acc_game, KT, NC, Scoreboard, Option);
 					playball(acc_game, SSG, LG, Scoreboard, Option);
-					playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
-					playball(acc_game, Hanwha, KT, Scoreboard, Option);
+					playball(acc_game, Hanwha, KIA, Scoreboard, Option);
+					playball(acc_game, Kiwoom, Doosan, Scoreboard, Option);
 					break;
 				case 3:
 					acc_game++;
 					playball(acc_game, NC, Samsung, Scoreboard, Option);
 					playball(acc_game, LG, Lotte, Scoreboard, Option);
 					playball(acc_game, KIA, Doosan, Scoreboard, Option);
-					playball(acc_game, KT, SSG, Scoreboard, Option);
-					playball(acc_game, Hanwha, Kiwoom, Scoreboard, Option);
+					playball(acc_game, Hanwha, SSG, Scoreboard, Option);
+					playball(acc_game, KT, Kiwoom, Scoreboard, Option);
 					break;
 				case 5:
 					acc_game++;
@@ -3395,26 +3373,26 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 				case 9:
 					acc_game++;
 					playball(acc_game, SSG, Samsung, Scoreboard, Option);
-					playball(acc_game, Hanwha, KIA, Scoreboard, Option);
+					playball(acc_game, Kiwoom, KIA, Scoreboard, Option);
 					playball(acc_game, NC, LG, Scoreboard, Option);
-					playball(acc_game, Kiwoom, KT, Scoreboard, Option);
+					playball(acc_game, Hanwha, KT, Scoreboard, Option);
 					playball(acc_game, Doosan, Lotte, Scoreboard, Option);
 					break;
 				case 11:
 					acc_game++;
 					playball(acc_game, Doosan, Samsung, Scoreboard, Option);
 					playball(acc_game, LG, KIA, Scoreboard, Option);
-					playball(acc_game, Kiwoom, NC, Scoreboard, Option);
+					playball(acc_game, Hanwha, NC, Scoreboard, Option);
 					playball(acc_game, KT, Lotte, Scoreboard, Option);
-					playball(acc_game, Hanwha, SSG, Scoreboard, Option);
+					playball(acc_game, Kiwoom, SSG, Scoreboard, Option);
 					break;
 				case 13:
 					acc_game++;
 					playball(acc_game, KT, Samsung, Scoreboard, Option);
 					playball(acc_game, LG, Doosan, Scoreboard, Option);
 					playball(acc_game, SSG, KIA, Scoreboard, Option);
-					playball(acc_game, Hanwha, NC, Scoreboard, Option);
-					playball(acc_game, Kiwoom, Lotte, Scoreboard, Option);
+					playball(acc_game, Kiwoom, NC, Scoreboard, Option);
+					playball(acc_game, Hanwha, Lotte, Scoreboard, Option);
 					break;
 				case 15:
 					acc_game++;
@@ -3427,10 +3405,10 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 				case 17:
 					acc_game++;
 					playball(acc_game, Kiwoom, Samsung, Scoreboard, Option);
-					playball(acc_game, SSG, Hanwha, Scoreboard, Option);
-					playball(acc_game, NC, KT, Scoreboard, Option);
-					playball(acc_game, Doosan, LG, Scoreboard, Option);
-					playball(acc_game, Lotte, KIA, Scoreboard, Option);
+					playball(acc_game, SSG, Doosan, Scoreboard, Option);
+					playball(acc_game, KIA, KT, Scoreboard, Option);
+					playball(acc_game, Hanwha, LG, Scoreboard, Option);
+					playball(acc_game, Lotte, NC, Scoreboard, Option);
 					break;
 
 				}
