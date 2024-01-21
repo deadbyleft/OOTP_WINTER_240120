@@ -1413,6 +1413,14 @@ public:
 			{
 			case 0: Set_FontColor(9); break;
 			case 1: Set_FontColor(12); break;
+			case 2: Set_FontColor(1); break;
+			case 3: Set_FontColor(1); break;
+			case 4: Set_FontColor(12); break;
+			case 5: Set_FontColor(12); break;
+			case 6: Set_FontColor(12); break;
+			case 7: Set_FontColor(4); break;
+			case 8: Set_FontColor(15); break;
+			case 9: Set_FontColor(6); break;
 			}
 		}
 
@@ -1441,6 +1449,14 @@ public:
 			{
 			case 0: Set_FontColor(9); break;
 			case 1: Set_FontColor(12); break;
+			case 2: Set_FontColor(1); break;
+			case 3: Set_FontColor(1); break;
+			case 4: Set_FontColor(12); break;
+			case 5: Set_FontColor(12); break;
+			case 6: Set_FontColor(12); break;
+			case 7: Set_FontColor(4); break;
+			case 8: Set_FontColor(15); break;
+			case 9: Set_FontColor(6); break;
 			}
 		}
 
@@ -2138,6 +2154,14 @@ public:
 	int Get_my_team() { return my_team; }
 	int Get_sleep_time() { return sleep_time; }
 
+	bool Check_Onauto_play(int team_sigvalue_home, int team_sigvalue_away) 
+	{ 
+		if (my_team == team_sigvalue_home || my_team == team_sigvalue_away) 
+			return true; 
+		else 
+			return false; 
+	}
+
 	void Set_Onauto_play(bool value) { auto_play = value; }
 	void Set_Onrecording(bool value) { recording = value; }
 	void Set_Oncondition(bool value) { condition = value; }
@@ -2561,7 +2585,7 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 		return 0;
 	}
 
-	if (!Option.Get_Onauto_play())
+	if (!Option.Get_Onauto_play() && Option.Check_Onauto_play(attack_team.Get_team_sigvalue(), defence_team.Get_team_sigvalue()))
 	{
 		cur(60, line * 2 + 19);
 		switch (result) {
@@ -3041,7 +3065,7 @@ void battle(team& attack_team, team& defence_team, option Option, scoreboard& Sc
 
 
 
-	if (!Option.Get_Onauto_play())
+	if (!Option.Get_Onauto_play() && Option.Check_Onauto_play(attack_team.Get_team_sigvalue(), defence_team.Get_team_sigvalue()))
 	{
 		if (!Ishome) show_scoreboard(Ishome, strike, ball, out, now_pitcher_home_hp, attack_team, defence_team, Scoreboard, Option);
 		else show_scoreboard(Ishome, strike, ball, out, now_pitcher_away_hp, defence_team, attack_team, Scoreboard, Option);
@@ -3173,7 +3197,7 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 			Scoreboard.Initialize_out_count();
 			Scoreboard.Set_Ishome(false);
 			show_hit_result(true, false, 0, 0, Scoreboard, home_team, away_team, Option);
-			if (!Option.Get_Onauto_play())
+			if (!Option.Get_Onauto_play() && Option.Check_Onauto_play(home_team.Get_team_sigvalue(), away_team.Get_team_sigvalue()))
 				system("cls");
 
 			Scoreboard.Set_now_inning(i);
@@ -3190,7 +3214,7 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 			Scoreboard.Initialize_out_count();
 			Scoreboard.Set_Ishome(true);
 			show_hit_result(true, false, 0, 0, Scoreboard, home_team, away_team, Option);
-			if (!Option.Get_Onauto_play())
+			if (!Option.Get_Onauto_play() && Option.Check_Onauto_play(home_team.Get_team_sigvalue(), away_team.Get_team_sigvalue()))
 				system("cls");
 
 
@@ -3233,7 +3257,7 @@ int show_game_select()
 
 	system("cls");
 	cur(row, col);
-	cout << " [    메 뉴    ]"; col += col_gap; cur(row, col);
+	cout << " [     메 뉴     ]"; col += col_gap; cur(row, col);
 	cout << " [ 1 ] 리그 경기"; col += col_gap; cur(row, col);
 	cout << " [ 2 ] 친선 경기"; col += col_gap; cur(row, col);
 	cout << " [ 3 ] 단판 경기"; col += col_gap; cur(row, col);
@@ -3716,7 +3740,7 @@ int show_team_change()
 		cout << "                         ";
 	}
 
-	int row = 15, col = 8, col_gap = 4, col_initial = 0;
+	int row = 15, col = 8, col_gap = 3, col_initial = 0;
 
 	col_initial = col + col_gap;
 
@@ -3733,7 +3757,7 @@ int show_team_change()
 	cout << " [ 9 ] KT"; col += col_gap; cur(row, col);
 	cout << " [ 10 ] 한화"; col += col_gap; cur(row, col);
 
-	return sel(row + 24, col_initial, 4, 10) - 1;
+	return sel(row + 24, col_initial, 3, 10) - 1;
 }
 
 int show_game_setting_menu()
