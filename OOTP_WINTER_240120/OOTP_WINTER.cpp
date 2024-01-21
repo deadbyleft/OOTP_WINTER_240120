@@ -173,7 +173,7 @@ int All_hitter_stat[300][10] = {
 {3, 3, 60, 64, 54, 53, 60, 60, 60, 60},
 {6, 3, 30, 40, 53, 60, 60, 60, 60, 60},
 {2, 3, 60, 30, 40, 63, 60, 60, 60, 60},
-{9, 3, 70, 64, 48, 47, 60, 60, 60, 60},
+{9, 3, 69, 64, 48, 47, 60, 60, 60, 60},
 {2, 3, 45, 44, 47, 54, 60, 60, 60, 60},
 {4, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {4, 3, 30, 30, 30, 30, 30, 60, 60, 60},
@@ -3313,7 +3313,12 @@ int show_game_select()
 
 	col_initial = col + col_gap;
 
-	system("cls");
+	for (int i = 8; i < 50; i++)
+	{
+		cur(15, i);
+		cout << "                         ";
+	}
+
 	cur(row, col);
 	cout << " [     메 뉴     ]"; col += col_gap; cur(row, col);
 	cout << " [ 1 ] 리그 경기"; col += col_gap; cur(row, col);
@@ -3328,12 +3333,30 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 	team& SSG, team& KIA, team& Kiwoom, team& KT, team& Hanwha, scoreboard& Scoreboard, option Option)
 {
 	static int acc_game = 0;
+	int game_num = 1;
 
 	if (value == 1)
 	{
-		system("cls");
+		
 
-		for (int game_test = 0; game_test < 1; game_test++)
+		if (Option.Get_Onauto_play())
+		{
+			for (int i = 8; i < 50; i++)
+			{
+				cur(15, i);
+				cout << "                         ";
+			}
+
+			cur(15, 20);
+			cout << "플레이할 경기 수 입력 : ";
+			cin >> game_num;
+		}
+
+		else
+			system("cls");
+		
+
+		for (int game_test = 0; game_test < game_num; game_test++)
 		{
 			if (acc_game % 2 == 0)
 			{
