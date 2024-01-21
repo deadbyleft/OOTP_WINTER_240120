@@ -2196,7 +2196,7 @@ private:
 	bool recording = false;
 	bool music = true;
 	bool condition = true;
-	bool auto_play = false;
+	bool auto_play = true;
 	int my_team = 0;
 	int sleep_time = 60;
 
@@ -3478,10 +3478,14 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 				}
 			}
 		}
+
+		acc_game++;
+
+		cur(50, 38);  
+		if (!Option.Get_Onauto_play()) system("PAUSE");
 	}
 
-	acc_game++;
-	system("PAUSE");
+
 }
 
 
