@@ -3847,9 +3847,30 @@ int show_game_setting_menu()
 	cout << " [ 2 ] 음악 설정"; col += col_gap; cur(row, col);
 	cout << " [ 3 ] 게임 속도"; col += col_gap; cur(row, col);
 	cout << " [ 4 ] 컨디션 사용"; col += col_gap; cur(row, col);
-	cout << " [ 5 ] 뒤로 가기"; col += col_gap; cur(row, col);
+	cout << " [ 5 ] 게임 자동진행"; col += col_gap; cur(row, col);
+	cout << " [ 6 ] 뒤로 가기"; col += col_gap; cur(row, col);
 
-	return sel(row + 24, col_initial, 4, 5);
+	return sel(row + 24, col_initial, 4, 6);
+}
+
+bool show_game_auto_setting(option& Option)
+{
+	for (int i = 8; i < 50; i++)
+	{
+		cur(15, i);
+		cout << "                         ";
+	}
+
+	int row = 15, col = 8, col_gap = 4, col_initial = 0;
+
+	col_initial = col + col_gap;
+
+	cur(row, col);
+	cout << " [ 자동진행 설정  ]"; col += col_gap; cur(row, col);
+	cout << " [ 1 ] 켜기"; col += col_gap; cur(row, col);
+	cout << " [ 2 ] 끄기"; col += col_gap; cur(row, col);
+
+	return !(sel(row + 24, col_initial, 4, 2) - 1);
 }
 
 void game_setting(option& Option)
@@ -3864,7 +3885,8 @@ void game_setting(option& Option)
 	case 2: Option.Set_Onmusic(show_music_setting()); break;
 	case 3: Option.Set_sleep_time(show_game_speed_setting()); break;
 	case 4: Option.Set_Oncondition(show_game_condition_setting()); break;
-	case 5: break;
+	case 5: Option.Set_Onauto_play(show_game_auto_setting(Option)); break;
+	case 6: break;
 	}
 
 
