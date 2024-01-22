@@ -1600,7 +1600,7 @@ public:
 		case 2: case 3:
 			Set_FontColor(10); cout << " ¡â ";  Set_FontColor(15); break;
 		case 4: case 5: case 6: case 7:
-			cout << "    ";  break;
+			cout << "   ";  break;
 		case 8: case 9:
 			Set_FontColor(8); cout << " ¡ä ";  Set_FontColor(15); break;
 		case 10:
