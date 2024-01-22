@@ -1049,7 +1049,7 @@ public:
 
 			if (Get_Isfull_2()) // 2루가 차있다면
 			{
-				if (base_2_spd >= rand() % 200 + 26)
+				if (base_2_spd >= rand() % 150 + 16)
 				{
 					Set_now_scoreboard(1);
 					RBI++;
@@ -1067,7 +1067,7 @@ public:
 
 			if (Get_Isfull_1())
 			{
-				if (base_1_spd >= rand() % 200 + 26)
+				if (base_1_spd >= rand() % 150 + 16)
 				{
 					Set_Isfull_3(true);
 					Set_Base_spd(3, base_1_spd);
@@ -1107,7 +1107,7 @@ public:
 
 			if (Get_Isfull_1())
 			{
-				if (base_1_spd >= rand() % 200 + 26)
+				if (base_1_spd >= rand() % 150 + 16)
 				{
 					Set_now_scoreboard(1);
 					RBI++;
@@ -1155,6 +1155,12 @@ public:
 			Set_Isfull_3(false);
 			break;
 
+		case 51: // 병살
+
+			Set_Isfull_3(false);
+			Set_now_scoreboard(1);
+			RBI++;
+			break;
 
 		case 52: // 병살
 
@@ -2940,7 +2946,9 @@ int battle_hit_power_run_result(bool hit, int Save_hitter_index[], int Save_pitc
 	{
 		if (result > 0)
 		{
-			if (Scoreboard.Get_Isfull_3() && Scoreboard.Get_base_3_spd() > rand() % 200 + 31 && Scoreboard.Get_out_count() != 2) return 61;
+			if (Scoreboard.Get_Isfull_3() && Scoreboard.Get_base_3_spd() > rand() % 100 + 11 && 
+				(get_hitter_rand_stat(0, 5, Save_hitter_index)) > 30 &&
+				Scoreboard.Get_out_count() != 2) return 61;
 			else return 6;
 		}
 
@@ -2953,6 +2961,8 @@ int battle_hit_power_run_result(bool hit, int Save_hitter_index[], int Save_pitc
 				if (Scoreboard.Get_out_count() == 1) return 52;
 				else return 53;
 			}
+			else if (Scoreboard.Get_base_3_spd() > rand() % 100 + 16 && Scoreboard.Get_out_count() != 2)
+				return 51;
 			else
 				return 5;
 		}
@@ -3042,6 +3052,10 @@ int update_game_record(int value, bool update_value, int& now_pitcher_hp, option
 		attack_team.Set_hitter_record(attack_team.Get_now_hitter(), 0, 1, 1, 1, 0, 0, 1, /**/  0, 0, 0, 0, 0, 0, 0);
 		defence_team.Set_pitcher_record(defence_team.Get_now_pitcher(), 0, 0, 0, 0, 0, 0, 0, /**/  0, 0, 0, 1, 0, 0, 0);
 		now_pitcher_hp = now_pitcher_hp - 2; break;
+	case 51:
+		attack_team.Set_hitter_record(attack_team.Get_now_hitter(), 0, 1, 1, 0, 0, 0, 0, /**/  0, 0, 0, 0, 0, 0, 0);
+		defence_team.Set_pitcher_record(defence_team.Get_now_pitcher(), 0, 1, 0, 0, 0, 1, 0, /**/  0, 0, 0, 0, 1, 0, 0);
+		out = 1; break;
 	case 52: case 53:
 		attack_team.Set_hitter_record(attack_team.Get_now_hitter(), 0, 1, 1, 0, 0, 0, 0, /**/  0, 0, 0, 0, 0, 1, 0);
 		defence_team.Set_pitcher_record(defence_team.Get_now_pitcher(), 0, 2, 0, 0, 0, 1, 0, /**/  0, 0, 0, 0, 1, 0, 0);
