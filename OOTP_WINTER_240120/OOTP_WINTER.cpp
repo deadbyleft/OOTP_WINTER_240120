@@ -1409,7 +1409,7 @@ public:
 			for (int j = 0; j < 10; j++)
 				hitter_stat[i][j] = All_hitter_stat[i + team_sigvalue * 30][j];
 
-			hitter_stat[i][7] = (hitter_stat[i][2] * 1.3 + hitter_stat[i][3] * 2 + hitter_stat[i][4] * 0.7 + hitter_stat[i][5] * 0.5 + hitter_stat[i][6] * 0.5) / 5;
+			hitter_stat[i][7] = (hitter_stat[i][2] * 1.2 + hitter_stat[i][3] * 1.8 + hitter_stat[i][4] * 1 + hitter_stat[i][5] * 0.5 + hitter_stat[i][6] * 0.5) / 5;
 		}
 
 		for (int i = 0; i < pitcher.size(); i++)
@@ -2954,12 +2954,12 @@ int battle_hit_power_run_result(bool hit, int Save_hitter_index[], int Save_pitc
 
 	if (hit)
 	{
-		if (result > 30) return 40;
-		if (get_hitter_rand_stat(0, 4, Save_hitter_index) -
-			(get_pitcher_rand_stat(10, 3, Save_pitcher_index)) >= 10)
+		if (result > 26) return 40;
+
+		if (get_hitter_rand_stat(0, 4, Save_hitter_index) - (get_pitcher_rand_stat(10, 3, Save_pitcher_index)) >= 18)
 		{
 			if (get_hitter_rand_stat(0, 5, Save_hitter_index) + get_hitter_rand_stat(0, 5, Save_hitter_index) + get_hitter_rand_stat(0, 5, Save_hitter_index)
-		> rand() % 600 + 111) return 30;
+			> rand() % 600 + 111) return 30;
 
 			else return 20;
 		}
