@@ -98,23 +98,23 @@ int All_hitter_stat[300][10] = {
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {6, 3, 60, 60, 60, 60, 60, 60, 60, 60},
-{4, 3, 75, 70, 40, 85, 60, 60, 60, 60}, // NC
-{9, 3, 46, 88, 52, 70, 60, 60, 60, 60},
-{9, 3, 68, 88, 63, 65, 60, 60, 60, 60},
-{7, 3, 56, 70, 66, 52, 60, 60, 60, 60},
-{2, 3, 71, 68, 67, 48, 60, 60, 60, 60},
-{3, 3, 53, 37, 78, 45, 60, 60, 60, 60},
-{5, 3, 57, 63, 45, 73, 60, 60, 60, 60},
-{8, 3, 48, 71, 50, 63, 69, 60, 60, 60},
-{6, 3, 62, 54, 65, 65, 60, 60, 60, 60},
-{2, 3, 71, 33, 55, 46, 60, 60, 60, 60}, // NC º¥Ä¡
-{7, 3, 50, 60, 67, 43, 60, 60, 60, 60},
-{8, 3, 36, 45, 60, 57, 60, 60, 60, 60},
-{5, 3, 51, 42, 45, 64, 60, 60, 60, 60},
-{4, 3, 46, 63, 50, 66, 60, 60, 60, 60},
-{5, 3, 49, 35, 64, 58, 60, 60, 60, 60},
-{5, 3, 47, 53, 50, 62, 60, 60, 60, 60},
-{8, 3, 45, 44, 47, 54, 60, 60, 60, 60},
+{9, 3, 61, 93, 55, 70, 60, 60, 60, 60}, // NC
+{4, 3, 67, 78, 55, 78, 60, 60, 60, 60},
+{9, 3, 77, 76, 67, 61, 60, 60, 60, 60},
+{8, 3, 64, 67, 72, 72, 60, 60, 60, 60},
+{7, 3, 81, 62, 62, 63, 60, 60, 60, 60},
+{3, 3, 33, 65, 67, 57, 60, 60, 60, 60},
+{5, 3, 44, 74, 58, 56, 60, 60, 60, 60},
+{6, 3, 64, 45, 64, 74, 69, 60, 60, 60},
+{2, 3, 64, 34, 73, 54, 60, 60, 60, 60},
+{2, 3, 59, 45, 88, 54, 60, 60, 60, 60}, // NC º¥Ä¡
+{3, 3, 50, 49, 65, 43, 60, 60, 60, 60},
+{7, 3, 49, 44, 75, 66, 60, 60, 60, 60},
+{8, 3, 44, 51, 62, 57, 60, 60, 60, 60},
+{2, 3, 50, 30, 68, 52, 60, 60, 60, 60},
+{5, 3, 85, 43, 56, 60, 60, 60, 60, 60},
+{6, 3, 35, 43, 40, 54, 60, 60, 60, 60},
+{4, 3, 45, 61, 68, 58, 60, 60, 60, 60},
 {2, 3, 60, 60, 60, 60, 60, 60, 60, 60},
 {9, 3, 30, 30, 30, 30, 30, 60, 60, 60},
 {3, 3, 40, 40, 40, 40, 40, 60, 60, 60},
@@ -694,23 +694,23 @@ void Initialize_member_name(vector <pair<string, bool>>& All_hitter_name, vector
 	All_hitter_name[45].first = "¼Õ¼ººó";
 	All_hitter_name[46].first = "ÀÌÇÐÁÖ";
 
-	All_hitter_name[60].first = "¾È±Ç¼ö";
-	All_hitter_name[61].first = "±è¹Î¼®";
-	All_hitter_name[62].first = "¾ÈÄ¡È«";
-	All_hitter_name[63].first = "ÀüÁØ¿ì";
-	All_hitter_name[64].first = "Á¤  ÈÆ";
-	All_hitter_name[65].first = "±¸µå·³";
-	All_hitter_name[66].first = "À¯°­³²";
-	All_hitter_name[67].first = "³ëÁøÇõ";
-	All_hitter_name[68].first = "À±µ¿Èñ";
-	All_hitter_name[69].first = "¹Ú½Â¿í";
-	All_hitter_name[70].first = "°í½Â¹Î";
-	All_hitter_name[71].first = "ÀÌÁ¤ÈÆ";
-	All_hitter_name[72].first = "±¸µå·³";
-	All_hitter_name[73].first = "È²¼ººó";
-	All_hitter_name[74].first = "Á¤º¸±Ù";
-	All_hitter_name[75].first = "¼Õ¼ººó";
-	All_hitter_name[76].first = "ÀÌÇÐÁÖ";
+	All_hitter_name[60].first = "¼Õ¾Æ¼·";
+	All_hitter_name[61].first = "¹Ú¹Î¿ì";
+	All_hitter_name[62].first = "¹Ú°Ç¿ì";
+	All_hitter_name[63].first = "¸¶  Æ¾";
+	All_hitter_name[64].first = "±ÇÈñµ¿";
+	All_hitter_name[65].first = "À±ÇüÁØ";
+	All_hitter_name[66].first = "¼­È£Ã¶";
+	All_hitter_name[67].first = "±èÁÖ¿ø";
+	All_hitter_name[68].first = "¹Ú¼¼Çõ";
+	All_hitter_name[69].first = "±èÇüÁØ";
+	All_hitter_name[70].first = "¿À¿µ¼ö";
+	All_hitter_name[71].first = "±è¼º¿í";
+	All_hitter_name[72].first = "ÃµÀçÈ¯";
+	All_hitter_name[73].first = "¾ÈÁß¿­";
+	All_hitter_name[74].first = "µµÅÂÈÆ";
+	All_hitter_name[75].first = "±èÇÑº°";
+	All_hitter_name[76].first = "ÃÖÁ¤¿ø";
 
 	All_hitter_name[90].first = "¾È±Ç¼ö";
 	All_hitter_name[91].first = "±è¹Î¼®";
@@ -1432,6 +1432,15 @@ public:
 		else if (value <= 50) Set_FontColor(8);
 	}
 
+	void Set_ops_FontColor(double value)
+	{
+		if (value >= 1.0) Set_FontColor(14);
+		else if (value >= 0.9) Set_FontColor(12);
+		else if (value >= 0.8) Set_FontColor(9);
+		else if (value >= 0.75) Set_FontColor(10);
+		else if (value < 0.65) Set_FontColor(8);
+	}
+
 	void Set_ovr_FontColor(int value)
 	{
 		if (value >= 85) Set_FontColor(14);
@@ -1544,8 +1553,8 @@ public:
 		case 2: cout << "  NC  "; break;
 		case 3: cout << " µÎ»ê "; break;
 		case 4: cout << "  LG  "; break;
-		case 5: cout << " SSG "; break;
-		case 6: cout << " KIA "; break;
+		case 5: cout << "  SSG "; break;
+		case 6: cout << "  KIA "; break;
 		case 7: cout << " Å°¿ò "; break;
 		case 8: cout << "  kt  "; break;
 		case 9: cout << " ÇÑÈ­ "; break;
@@ -1797,9 +1806,14 @@ public:
 				cout << (hitter_record[i][3] / (double)hitter_record[i][2]) << setw(12);
 				cout << ((hitter_record[i][3] + hitter_record[i][7]) / (double)hitter_record[i][1]) << setw(12);
 				cout << ((hitter_record[i][3] + hitter_record[i][4] + hitter_record[i][6] * 3) / (double)hitter_record[i][2]) << setw(12);
+
+				Set_ops_FontColor(((hitter_record[i][3] + hitter_record[i][7]) / (double)hitter_record[i][1])
+					+ ((hitter_record[i][3] + hitter_record[i][4] + hitter_record[i][6] * 3) / (double)hitter_record[i][2]));
 				cout <<
 					((hitter_record[i][3] + hitter_record[i][7]) / (double)hitter_record[i][1])
 					+ ((hitter_record[i][3] + hitter_record[i][4] + hitter_record[i][6] * 3) / (double)hitter_record[i][2]) << setw(10);
+
+				Set_FontColor(15);
 
 				cout << hitter_record[i][15] << setw(13) << hitter_record[i][12] << setw(12);
 
@@ -3978,7 +3992,7 @@ void Initialize_setting()
 
 	Samsung.Initialize_teamset(0, 1, All_hitter_name, All_pitcher_name);
 	Lotte.Initialize_teamset(1, 1, All_hitter_name, All_pitcher_name);
-	NC.Initialize_teamset(2, 1, All_hitter_name, All_pitcher_name);
+	NC.Initialize_teamset(2, 0, All_hitter_name, All_pitcher_name);
 	Doosan.Initialize_teamset(3, 1, All_hitter_name, All_pitcher_name);
 	LG.Initialize_teamset(4, 2, All_hitter_name, All_pitcher_name);
 	SSG.Initialize_teamset(5, 1, All_hitter_name, All_pitcher_name);
