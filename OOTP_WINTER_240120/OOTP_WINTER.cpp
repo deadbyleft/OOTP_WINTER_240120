@@ -3780,7 +3780,7 @@ int show_mainmenu(option Option, team Samsung, team Lotte, team NC, team Doosan,
 	cout << " [ 5 ] 게임 종료"; col += col_gap; cur(row, col);
 
 
-	return sel(row + 28, col_initial, 4, 5);
+	return sel(row + 24, col_initial, 4, 5);
 }
 
 int setting_mainmenu(option Option, team Samsung, team Lotte, team NC, team Doosan, team LG,
@@ -3940,7 +3940,7 @@ int show_game_setting_menu()
 	cout << " [ 5 ] 게임 자동진행"; col += col_gap; cur(row, col);
 	cout << " [ 6 ] 뒤로 가기"; col += col_gap; cur(row, col);
 
-	return sel(row + 33, col_initial, 4, 6);
+	return sel(row + 26, col_initial, 4, 6);
 }
 
 bool show_game_auto_setting(option& Option)
