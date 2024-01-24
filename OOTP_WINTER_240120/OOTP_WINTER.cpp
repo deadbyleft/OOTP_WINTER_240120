@@ -2548,7 +2548,7 @@ void show_team_manage(bool Isingame, int value, team& selected_team)
 	system("cls");
 
 	cur(1, 1);
-	if (!Isingame) cout << "  [ Esc : 나가기 ] [ [1], [2], [3] : 타자 정보 ] [ [4], [5], [6] : 투수 정보 ] [ [7] : 선수 교체 ] [ [8] : 트레이드 (미완성) ] [ [9], [0] : 팀 정보 ] ";
+	if (!Isingame) cout << "  [ Esc : 나가기 ] [ [1], [2], [3] : 타자 정보 ] [ [4], [5], [6] : 투수 정보 ] [ [7] : 선수 교체 ] [ [8] : 트레이드 ] [ [9], [0] : 팀 정보 ] ";
 	cur(9, 4);
 
 
@@ -3775,7 +3775,7 @@ int show_mainmenu(option Option, team Samsung, team Lotte, team NC, team Doosan,
 	cout << " [     메 뉴     ]"; col += col_gap; cur(row, col);
 	cout << " [ 1 ] 경기 시작"; col += col_gap; cur(row, col);
 	cout << " [ 2 ] 선수 관리"; col += col_gap; cur(row, col);
-	cout << " [ 3 ] 선수 영입 (미완성)"; col += col_gap; cur(row, col);
+	cout << " [ 3 ] 선수 영입"; col += col_gap; cur(row, col);
 	cout << " [ 4 ] 게임 설정"; col += col_gap; cur(row, col);
 	cout << " [ 5 ] 게임 종료"; col += col_gap; cur(row, col);
 
@@ -3934,9 +3934,9 @@ int show_game_setting_menu()
 	cur(row, col);
 	cout << " [     설 정     ]"; col += col_gap; cur(row, col);
 	cout << " [ 1 ] 팀 변경"; col += col_gap; cur(row, col);
-	cout << " [ 2 ] 음악 설정 (미완성)"; col += col_gap; cur(row, col);
+	cout << " [ 2 ] 음악 설정"; col += col_gap; cur(row, col);
 	cout << " [ 3 ] 게임 속도"; col += col_gap; cur(row, col);
-	cout << " [ 4 ] 컨디션 사용 (미완성)"; col += col_gap; cur(row, col);
+	cout << " [ 4 ] 컨디션 사용"; col += col_gap; cur(row, col);
 	cout << " [ 5 ] 게임 자동진행"; col += col_gap; cur(row, col);
 	cout << " [ 6 ] 뒤로 가기"; col += col_gap; cur(row, col);
 
