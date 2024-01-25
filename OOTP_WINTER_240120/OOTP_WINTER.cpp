@@ -1385,7 +1385,10 @@ public:
 	int Get_change_pitcher_num() { return change_pitcher_num; }
 	int Get_team_sigvalue() { return team_sigvalue; }
 	int Get_pitched_ball() { return pitched_ball; }
-	int Get_win_rate() { (win * 100) / (double)(win + lose); }
+	int Get_win_value() { return win; }
+	int Get_draw_value() { return draw; }
+	int Get_lose_value() { return lose; }
+	int Get_win_rate() { return (win * 100) / (double)(win + lose); }
 	bool Get_Ischange_pitcher() { return Ischange_pitcher; }
 
 
@@ -1712,7 +1715,7 @@ public:
 		}
 	}
 
-	void Show_team_stat(int situation)
+	void Show_team_stat(int situation, option& Option)
 	{
 		if (situation == 1)
 		{
@@ -1721,7 +1724,7 @@ public:
 			cur(10, 6);
 
 			Show_myteam(false, team_sigvalue);
-			cout << right << setw(12) << win + draw + lose << setw(12) << win << setw(12) << draw << setw(12) << lose << setw(13)
+			cout << right << setw(12) << Option. << setw(12) << win << setw(12) << draw << setw(12) << lose << setw(13)
 				<< (win * 100) / (double)(win + lose) << " %" << setw(13);
 
 			cout << fixed;
@@ -2313,6 +2316,7 @@ private:
 	bool auto_play = true;
 	int my_team = 0;
 	int sleep_time = 60;
+	int team_result[10][5] = { 0, };
 
 public:
 	bool Get_Onauto_play() { return auto_play; }
@@ -2321,6 +2325,7 @@ public:
 	bool Get_Onmusic() { return music; }
 	int Get_my_team() { return my_team; }
 	int Get_sleep_time() { return sleep_time; }
+	int Get_team_result(int row, int col) { return team_result[row][col]; }
 
 	bool Check_Onauto_play(int team_sigvalue_home, int team_sigvalue_away)
 	{
@@ -2336,6 +2341,7 @@ public:
 	void Set_Onmusic(bool value) { music = value; }
 	void Set_my_team(int value) { my_team = value; }
 	void Set_sleep_time(int value) { sleep_time = value; }
+	void Set_team_result(int row, int col, int value) { team_result[row][col] = value; }
 };
 
 void cur(short x, short y) {
@@ -2602,7 +2608,7 @@ void show_today_stat()
 
 }
 
-void show_team_manage(bool Isingame, int value, team& selected_team)
+void show_team_manage(bool Isingame, int value, team& selected_team, option& Option)
 {
 	system("cls");
 
@@ -2687,7 +2693,7 @@ void show_team_manage(bool Isingame, int value, team& selected_team)
 	{
 		cout << "  [     팀  명    ]     [  경 기  ]   [  승  ]    [  무  ]    [  패  ]   [  승  률  ]   [ 타  율 ]  [ 출루율 ]  [ 장타율 ]  [ 평자책 ]  " << '\n' << '\n';
 		cur(0, 6);
-		selected_team.Show_team_stat(1);
+		selected_team.Show_team_stat(1, Option);
 	}
 
 	// 출장경기 이닝 삼진 볼넷 실점 땅볼 뜬공 / 피안타 피2루타 피3루타 피홈런 그러하다
@@ -3356,7 +3362,7 @@ void battle(team& attack_team, team& defence_team, option Option, scoreboard& Sc
 	Scoreboard.Set_out_count(out);
 }
 
-void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Scoreboard, option Option) // 홈팀 경기인가 아닌가
+void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Scoreboard, option& Option) // 홈팀 경기인가 아닌가
 {
 	int game = 0;
 	bool initialize = true;
@@ -3422,6 +3428,12 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 
 		home_team.Set_game_result(true, Scoreboard.Get_away_score(), Scoreboard.Get_home_score(), away_team.Get_team_sigvalue());
 		away_team.Set_game_result(false, Scoreboard.Get_away_score(), Scoreboard.Get_home_score(), home_team.Get_team_sigvalue());
+		Option.Set_team_result(home_team.Get_team_sigvalue(), 0, home_team.Get_win_value());
+		Option.Set_team_result(home_team.Get_team_sigvalue(), 1, home_team.Get_draw_value());
+		Option.Set_team_result(home_team.Get_team_sigvalue(), 2, home_team.Get_lose_value());
+		Option.Set_team_result(away_team.Get_team_sigvalue(), 0, away_team.Get_win_value());
+		Option.Set_team_result(away_team.Get_team_sigvalue(), 1, away_team.Get_draw_value());
+		Option.Set_team_result(away_team.Get_team_sigvalue(), 2, away_team.Get_lose_value());
 		home_team.Set_pitched_ball(0);
 		away_team.Set_pitched_ball(0);
 		Scoreboard.Initialize_scoreboard();
@@ -3461,7 +3473,7 @@ int show_game_select()
 }
 
 void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, team& LG,
-	team& SSG, team& KIA, team& Kiwoom, team& KT, team& Hanwha, scoreboard& Scoreboard, option Option)
+	team& SSG, team& KIA, team& Kiwoom, team& KT, team& Hanwha, scoreboard& Scoreboard, option& Option)
 {
 	static int acc_game = 0;
 	int game_num = 1;
