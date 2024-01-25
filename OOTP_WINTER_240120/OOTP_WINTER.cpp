@@ -1401,6 +1401,26 @@ public:
 		double check[10] = { 0, };
 		int check_my_team = -1;
 
+		if (team_result[0][0] == 0)
+		{
+			
+			if (rank == my_team)
+				Show_myteam(true, rank);
+			else
+				Show_myteam(false, rank);
+			cout << team_result[my_team][0] + team_result[my_team][1] + team_result[my_team][2] << setw(12);
+			cout << team_result[my_team][0] << setw(12) << team_result[my_team][1] << setw(12) << team_result[my_team][2] << setw(13);
+			cout << 100 * team_result[my_team][0] / (double)(team_result[my_team][0] + team_result[my_team][2]) << " % " << setw(12);	
+
+			return -1;
+						
+		}
+
+
+		if (team_result[rank][0] == 0 && team_result[rank][2] == 0)
+			return -1;
+		
+		
 
 		for (int i = 0; i < 10; i++)
 		{
@@ -1444,6 +1464,8 @@ public:
 			}
 			
 		}
+
+
 
 		
 		//cout << 100 * team_result[my_team][0] / (double)(team_result[my_team][0] + team_result[my_team][2]) << " % " << setw(12);
