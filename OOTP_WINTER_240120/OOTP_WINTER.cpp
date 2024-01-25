@@ -1251,13 +1251,6 @@ public:
 			Set_Isfull_3(false);
 			break;
 
-		case 51: // ∫¥ªÏ
-
-			Set_Isfull_3(false);
-			Set_now_scoreboard(1);
-			RBI++;
-			break;
-
 		case 52: // ∫¥ªÏ
 
 			Set_Isfull_1(false);
@@ -1283,7 +1276,7 @@ public:
 			Set_Isfull_2(false);
 			break;
 
-		case 61:
+		case 51: case 61: // »Ò«√/∂•∫º + ≈∏¡°
 			Set_now_scoreboard(1);
 			RBI++;
 			Set_Isfull_3(false);
