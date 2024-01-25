@@ -1553,10 +1553,9 @@ public:
 	bool Get_Ischange_pitcher() { return Ischange_pitcher; }
 
 
-	double Get_now_hitter_avg(int value = 10) {
-		if (value != 10) value = now_hitter;
-		if (hitter_record[value][2] == 0) return 0;
-		else return hitter_record[value][3] / hitter_record[value][2];
+	double Get_now_hitter_avg() {
+		if (hitter_record[now_hitter][2] == 0) return 0;
+		return hitter_record[now_hitter][3] / (double)hitter_record[now_hitter][2];
 	}
 
 	int Get_now_hitter_hr() { return hitter_record[now_hitter][6]; }
