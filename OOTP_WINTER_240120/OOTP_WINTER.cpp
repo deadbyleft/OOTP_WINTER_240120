@@ -1401,7 +1401,7 @@ public:
 		double check[10] = { 0, };
 		int check_my_team = -1;
 
-		if (team_result[0][0] == 0)
+		if (team_result[0][0] == 0 && team_result[0][2] == 0)
 		{
 			
 			if (rank == my_team)
@@ -1417,8 +1417,6 @@ public:
 		}
 
 
-		if (team_result[rank][0] == 0 && team_result[rank][2] == 0)
-			return -1;
 		
 		
 
