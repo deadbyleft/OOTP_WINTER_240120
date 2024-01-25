@@ -1803,22 +1803,21 @@ public:
 			
 
 			cur(10, 27); cout << " [ »ó´ëÀüÀû ] ";
+
 			for (int i = 0; i < 10; i++)
 			{
-				cout << "           ";
-				if (team_sigvalue != i)
-				{					
-					cout << "VS"; 
+				if (team_sigvalue == i) continue;
+				cout << '\n' << '\n' << "           " << "VS"; 
 
-					if (win_team[i] > lose_team[i]) Set_FontColor(10);
-					else if (win_team[i] < lose_team[i]) Set_FontColor(8);
+				if (win_team[i] > lose_team[i]) Set_FontColor(10);
+				else if (win_team[i] < lose_team[i]) Set_FontColor(8);
 
-					Show_myteam(false, i); Set_FontColor(15);
-					cout << setw(6) << win_team[i] << " ½Â " << setw(6) << draw_team[i] << " ¹« " << setw(6) << lose_team[i] << " ÆÐ ";
-				}
+				Show_myteam(false, i); Set_FontColor(15);
+				cout << setw(6) << win_team[i] << " ½Â " << setw(6) << draw_team[i] << " ¹« " << setw(6) << lose_team[i] << " ÆÐ ";
 
-				if (i % 2 == 0)
-					cout << '\n' << '\n';
+				
+				
+					
 			}
 		}
 
