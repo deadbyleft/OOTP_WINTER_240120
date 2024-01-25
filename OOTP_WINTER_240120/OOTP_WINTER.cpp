@@ -8,6 +8,7 @@
 #include <conio.h>
 #include <mmsystem.h>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -1323,8 +1324,11 @@ private:
 	bool condition = true;
 	bool auto_play = true;
 	int my_team = 0;
+	int my_team_rank = 0;
 	int sleep_time = 60;
 	int team_result[10][8] = { 0, };
+	double team_rank[10] = {0,};
+	double team_rank_save[10] = { 0, };
 
 public:
 	bool Get_Onauto_play() { return auto_play; }
@@ -1334,6 +1338,7 @@ public:
 	int Get_my_team() { return my_team; }
 	int Get_sleep_time() { return sleep_time; }
 	int Get_team_result(int row, int col) { return team_result[row][col]; }
+	int Get_my_team_rank() { return my_team_rank; }
 
 	bool Check_Onauto_play(int team_sigvalue_home, int team_sigvalue_away)
 	{
@@ -1350,12 +1355,103 @@ public:
 	void Set_my_team(int value) { my_team = value; }
 	void Set_sleep_time(int value) { sleep_time = value; }
 	void Set_team_result(int row, int col, int value) { team_result[row][col] = value; }
+	 
 
-	void Show_team_result(int my_team)
+	void Show_myteam(bool Iscolor, int team_num)
 	{
-		cout << team_result[my_team][0] + team_result[my_team][1] + team_result[my_team][2] << setw(12);
-		cout << team_result[my_team][0] << setw(12) << team_result[my_team][1] << setw(12) << team_result[my_team][2] << setw(13);
-		cout << 100 * team_result[my_team][0] / (double)(team_result[my_team][0] + team_result[my_team][2]) << " % " << setw(12);
+		if (Iscolor)
+		{
+			switch (my_team)
+			{
+			case 0: Set_FontColor(9); break;
+			case 1: Set_FontColor(12); break;
+			case 2: Set_FontColor(1); break;
+			case 3: Set_FontColor(1); break;
+			case 4: Set_FontColor(12); break;
+			case 5: Set_FontColor(12); break;
+			case 6: Set_FontColor(12); break;
+			case 7: Set_FontColor(4); break;
+			case 8: Set_FontColor(15); break;
+			case 9: Set_FontColor(6); break;
+			}
+		}
+
+		switch (team_num)
+		{
+		case 0: cout << " [ 삼성 라이온즈 ]"; break;
+		case 1: cout << " [ 롯데 자이언츠 ]"; break;
+		case 2: cout << " [  NC  다이노스 ]"; break;
+		case 3: cout << " [  두산 베어스  ]"; break;
+		case 4: cout << " [   LG 트윈스   ]"; break;
+		case 5: cout << " [   SSG 랜더스  ]"; break;
+		case 6: cout << " [ KIA  타이거즈 ]"; break;
+		case 7: cout << " [ 키움 히어로즈 ]"; break;
+		case 8: cout << " [    kt  위즈   ]"; break;
+		case 9: cout << " [  한화 이글스  ]"; break;
+		}
+
+		cout << setw(12);
+		Set_FontColor(15);
+	}
+	
+
+	int Show_team_result(int rank)
+	{
+		int check_rank = 0;
+		double check[10] = { 0, };
+		int check_my_team = -1;
+
+
+		for (int i = 0; i < 10; i++)
+		{
+			team_rank[i] = (double)team_result[i][0] * 100 / (team_result[i][0] + team_result[i][2]);
+			check[i] = team_rank[i] + 1000 * i;
+		}
+				
+		sort(team_rank, team_rank + 10);
+
+		for (int i = 0; i < 10; i++)
+		{
+			for (int j = 0; j < 10; j++)
+			{
+				if (check[j] == team_rank[9 - rank] + j * 1000)
+				{
+					if (check_rank == rank)
+					{
+						if (j == my_team)
+						{
+							Show_myteam(true, j);
+							my_team_rank = j;
+							check_my_team = check_rank;
+						}
+
+						else
+						{
+							Show_myteam(false, j);
+							check_my_team = -1;
+						}
+							
+
+						cout << setw(12)<<team_result[j][0] + team_result[j][1] + team_result[j][2] << setw(12);
+						cout << team_result[j][0] << setw(12) << team_result[j][1] << setw(12) << team_result[j][2] << setw(13);
+						cout << team_rank[9 - rank] << " % " << setw(11);
+
+						return check_my_team;
+					}
+					else
+						check_rank++;					
+				}
+			}
+			
+		}
+
+		
+		//cout << 100 * team_result[my_team][0] / (double)(team_result[my_team][0] + team_result[my_team][2]) << " % " << setw(12);
+		
+
+		//cout << team_result[my_team][0] + team_result[my_team][1] + team_result[my_team][2] << setw(12);
+		//cout << team_result[my_team][0] << setw(12) << team_result[my_team][1] << setw(12) << team_result[my_team][2] << setw(13);
+		//cout << 100 * team_result[my_team][0] / (double)(team_result[my_team][0] + team_result[my_team][2]) << " % " << setw(12);
 	}
 };
 
@@ -1762,6 +1858,7 @@ public:
 
 	void Show_team_stat(int situation, option& Option)
 	{
+		int check_my_team = -1;
 		if (situation == 1)
 		{
 			cout << fixed;
@@ -1774,15 +1871,16 @@ public:
 				cout.precision(1);
 
 				cur(10, 6 + i * 2);
-				if (i == team_sigvalue) Show_myteam(true, i);
-				else Show_myteam(false, i);
-				cout << right << setw(12); Option.Show_team_result(i); 
+				cout << right << setw(12); 
 
-				cout << fixed;
-				cout.precision(3);
+				check_my_team = Option.Show_team_result(i);
 
-				if (i == team_sigvalue)
+				if (check_my_team != -1)
 				{
+					cout << fixed;
+					cout.precision(3);
+					cur(93, 6 + check_my_team * 2);
+
 					cout << (team_hitter_record[3] / (double)team_hitter_record[2]) << setw(12);
 					cout << ((team_hitter_record[3] + team_hitter_record[7]) / (double)team_hitter_record[1]) << setw(12);
 					cout << ((team_hitter_record[3] + team_hitter_record[4] +
@@ -1793,7 +1891,9 @@ public:
 					cout << right << setw(12); cout << (team_pitcher_record[4] / (double)team_pitcher_record[1]) * 27;
 				}
 
-				
+				cout << fixed;
+				cout.precision(3);
+
 				
 				cout << '\n' << '\n';
 			}
