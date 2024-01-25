@@ -1029,7 +1029,10 @@ public:
 	void Show_scoreboard(bool Ishome, int inning) // 몇 회인지 업데이트
 	{
 		if (now_inning == inning) Set_FontColor(11);
-		cout << board[Ishome][inning]; Set_FontColor(15);
+
+		if (board[Ishome][inning] >= 10) cout << "X";
+		else cout << board[Ishome][inning]; 
+		Set_FontColor(15);
 	}
 
 	void Set_now_inning(int value)
@@ -1090,6 +1093,8 @@ public:
 	int Update_base(int value, int now_hitter, int now_hitter_spd)
 	{
 		int RBI = 0;
+
+		
 
 		switch (value)
 		{
@@ -1283,6 +1288,7 @@ public:
 
 			break;
 		}
+
 
 		return RBI;
 	}
