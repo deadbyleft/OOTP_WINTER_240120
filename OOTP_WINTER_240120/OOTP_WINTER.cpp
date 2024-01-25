@@ -14,6 +14,7 @@ using namespace std;
 
 void Set_FontColor(int value);
 void cur(short x, short y);
+class option;
 
 // 포지션 컨디션 선구안 정확도 파워 스피드 수비 오버롤
 
@@ -1314,6 +1315,50 @@ public:
 
 };
 
+class option
+{
+private:
+	bool recording = false;
+	bool music = true;
+	bool condition = true;
+	bool auto_play = true;
+	int my_team = 0;
+	int sleep_time = 60;
+	int team_result[10][8] = { 0, };
+
+public:
+	bool Get_Onauto_play() { return auto_play; }
+	bool Get_Onrecording() { return recording; }
+	bool Get_Oncondition() { return condition; }
+	bool Get_Onmusic() { return music; }
+	int Get_my_team() { return my_team; }
+	int Get_sleep_time() { return sleep_time; }
+	int Get_team_result(int row, int col) { return team_result[row][col]; }
+
+	bool Check_Onauto_play(int team_sigvalue_home, int team_sigvalue_away)
+	{
+		if (my_team == team_sigvalue_home || my_team == team_sigvalue_away)
+			return true;
+		else
+			return false;
+	}
+
+	void Set_Onauto_play(bool value) { auto_play = value; }
+	void Set_Onrecording(bool value) { recording = value; }
+	void Set_Oncondition(bool value) { condition = value; }
+	void Set_Onmusic(bool value) { music = value; }
+	void Set_my_team(int value) { my_team = value; }
+	void Set_sleep_time(int value) { sleep_time = value; }
+	void Set_team_result(int row, int col, int value) { team_result[row][col] = value; }
+
+	void Show_team_result(int my_team)
+	{
+		cout << team_result[my_team][0] + team_result[my_team][1] + team_result[my_team][2] << setw(12);
+		cout << team_result[my_team][0] << setw(12) << team_result[my_team][1] << setw(12) << team_result[my_team][2] << setw(13);
+		cout << 100 * team_result[my_team][0] / (double)(team_result[my_team][0] + team_result[my_team][2]) << " % " << setw(12);
+	}
+};
+
 class team
 {
 private:
@@ -1721,32 +1766,50 @@ public:
 		{
 			cout << fixed;
 			cout.precision(1);
-			cur(10, 6);
+			
 
-			Show_myteam(false, team_sigvalue);
-			cout << right << setw(12) << Option. << setw(12) << win << setw(12) << draw << setw(12) << lose << setw(13)
-				<< (win * 100) / (double)(win + lose) << " %" << setw(13);
-
-			cout << fixed;
-			cout.precision(3);
-
-			cout << (team_hitter_record[3] / (double)team_hitter_record[2]) << setw(12);
-			cout << ((team_hitter_record[3] + team_hitter_record[7]) / (double)team_hitter_record[1]) << setw(12);
-			cout << ((team_hitter_record[3] + team_hitter_record[4] +
-				team_hitter_record[6] * 3) / (double)team_hitter_record[2]) << setw(12);
-
-			cout << fixed;
-			cout.precision(2);
-			cout << right << setw(12); cout << (team_pitcher_record[4] / (double)team_pitcher_record[1]) * 27;
-
-			cur(5, 9); cout << " [ 상대전적 ] ";
 			for (int i = 0; i < 10; i++)
 			{
+				cout << fixed;
+				cout.precision(1);
+
+				cur(10, 6 + i * 2);
+				Show_myteam(false, i);
+				cout << right << setw(12); Option.Show_team_result(i); 
+
+				cout << fixed;
+				cout.precision(3);
+
+				cout << (team_hitter_record[3] / (double)team_hitter_record[2]) << setw(12);
+				cout << ((team_hitter_record[3] + team_hitter_record[7]) / (double)team_hitter_record[1]) << setw(12);
+				cout << ((team_hitter_record[3] + team_hitter_record[4] +
+					team_hitter_record[6] * 3) / (double)team_hitter_record[2]) << setw(12);
+
+				cout << fixed;
+				cout.precision(2);
+				cout << right << setw(12); cout << (team_pitcher_record[4] / (double)team_pitcher_record[1]) * 27;
+				
+				cout << '\n' << '\n';
+			}
+
+			
+
+			
+
+			cur(10, 27); cout << " [ 상대전적 ] ";
+			for (int i = 0; i < 10; i++)
+			{
+				cout << "           ";
 				if (team_sigvalue != i)
 				{
-					cout << '\n' << '\n' << "          ";
+					
 					cout << "VS"; Show_myteam(false, i);
 					cout << setw(6) << win_team[i] << " 승 " << setw(6) << draw_team[i] << " 무 " << setw(6) << lose_team[i] << " 패 ";
+				}
+
+				if (i % 2 == 0)
+				{
+					cout << '\n' << '\n';
 				}
 			}
 		}
@@ -2307,42 +2370,7 @@ public:
 
 };
 
-class option
-{
-private:
-	bool recording = false;
-	bool music = true;
-	bool condition = true;
-	bool auto_play = true;
-	int my_team = 0;
-	int sleep_time = 60;
-	int team_result[10][5] = { 0, };
 
-public:
-	bool Get_Onauto_play() { return auto_play; }
-	bool Get_Onrecording() { return recording; }
-	bool Get_Oncondition() { return condition; }
-	bool Get_Onmusic() { return music; }
-	int Get_my_team() { return my_team; }
-	int Get_sleep_time() { return sleep_time; }
-	int Get_team_result(int row, int col) { return team_result[row][col]; }
-
-	bool Check_Onauto_play(int team_sigvalue_home, int team_sigvalue_away)
-	{
-		if (my_team == team_sigvalue_home || my_team == team_sigvalue_away)
-			return true;
-		else
-			return false;
-	}
-
-	void Set_Onauto_play(bool value) { auto_play = value; }
-	void Set_Onrecording(bool value) { recording = value; }
-	void Set_Oncondition(bool value) { condition = value; }
-	void Set_Onmusic(bool value) { music = value; }
-	void Set_my_team(int value) { my_team = value; }
-	void Set_sleep_time(int value) { sleep_time = value; }
-	void Set_team_result(int row, int col, int value) { team_result[row][col] = value; }
-};
 
 void cur(short x, short y) {
 	COORD pos = { x, y };
@@ -2810,9 +2838,9 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 						while (1)
 						{
 							if (attack_team.Get_team_sigvalue() == Option.Get_my_team())
-								show_team_manage(true, 1, attack_team);
+								show_team_manage(true, 1, attack_team, Option);
 							else
-								show_team_manage(true, 1, defence_team);
+								show_team_manage(true, 1, defence_team, Option);
 
 							check_getch = _getch();
 							if (check_getch == 8) break;
@@ -2821,12 +2849,12 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 								if (attack_team.Get_team_sigvalue() == Option.Get_my_team())
 								{
 									change_hitter(true, attack_team);
-									show_team_manage(true, 1, attack_team);
+									show_team_manage(true, 1, attack_team, Option);
 								}
 								else
 								{
 									change_hitter(true, defence_team);
-									show_team_manage(true, 1, defence_team);
+									show_team_manage(true, 1, defence_team, Option);
 								}
 							}
 
@@ -2836,9 +2864,9 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 						while (1)
 						{
 							if (attack_team.Get_team_sigvalue() == Option.Get_my_team())
-								show_team_manage(true, 4, attack_team);
+								show_team_manage(true, 4, attack_team, Option);
 							else
-								show_team_manage(true, 4, defence_team);
+								show_team_manage(true, 4, defence_team, Option);
 							check_getch = _getch();
 							if (check_getch == 8) break;
 							if (check_getch == 52)
@@ -3865,12 +3893,12 @@ int setting_mainmenu(option Option, team Samsung, team Lotte, team NC, team Doos
 }
 
 
-void control_team_manage(team& selected_team)
+void control_team_manage(team& selected_team, option& Option)
 {
 	int key = 49;
 	int prev_key = 49;
 
-	show_team_manage(false, 1, selected_team);
+	show_team_manage(false, 1, selected_team, Option);
 
 	while (key != 27) {
 		key = _getch();
@@ -3878,18 +3906,18 @@ void control_team_manage(team& selected_team)
 		if (key != prev_key || key == 55 || key == 56)
 
 			if (key >= 49 && key <= 57 && key != 55 && key != 56)
-				show_team_manage(false, key - 48, selected_team);
+				show_team_manage(false, key - 48, selected_team, Option);
 
 			else if (key == 55 && prev_key >= 52 && prev_key <= 54)
 			{
 				change_pitcher(false, selected_team);
-				show_team_manage(false, prev_key - 48, selected_team);
+				show_team_manage(false, prev_key - 48, selected_team, Option);
 			}
 
 			else if (key == 55 && prev_key >= 49 && prev_key <= 51)
 			{
 				change_hitter(false, selected_team);
-				show_team_manage(false, prev_key - 48, selected_team);
+				show_team_manage(false, prev_key - 48, selected_team, Option);
 			}
 
 		if (key != 55)
@@ -4102,16 +4130,16 @@ void Initialize_setting()
 		{
 			switch (Option.Get_my_team())
 			{
-			case 0: control_team_manage(Samsung); break;
-			case 1: control_team_manage(Lotte); break;
-			case 2: control_team_manage(NC); break;
-			case 3: control_team_manage(Doosan); break;
-			case 4: control_team_manage(LG); break;
-			case 5: control_team_manage(SSG); break;
-			case 6: control_team_manage(KIA); break;
-			case 7: control_team_manage(Kiwoom); break;
-			case 8: control_team_manage(KT); break;
-			case 9: control_team_manage(Hanwha); break;
+			case 0: control_team_manage(Samsung, Option); break;
+			case 1: control_team_manage(Lotte, Option); break;
+			case 2: control_team_manage(NC, Option); break;
+			case 3: control_team_manage(Doosan, Option); break;
+			case 4: control_team_manage(LG, Option); break;
+			case 5: control_team_manage(SSG, Option); break;
+			case 6: control_team_manage(KIA, Option); break;
+			case 7: control_team_manage(Kiwoom, Option); break;
+			case 8: control_team_manage(KT, Option); break;
+			case 9: control_team_manage(Hanwha, Option); break;
 			}
 		}
 		//else if (menu_choice == 3) control_team_manage(Lotte);
