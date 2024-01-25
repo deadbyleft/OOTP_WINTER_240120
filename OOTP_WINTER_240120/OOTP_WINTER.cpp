@@ -249,7 +249,7 @@ int All_hitter_stat[300][10] = {
 {4, 5, 60, 60, 60, 60, 60, 60, 60, 60},
 {7, 5, 60, 60, 60, 60, 60, 60, 60, 60},
 {4, 5, 61, 90, 58, 84, 60, 60, 60, 60}, // 키움
-{8, 5, 62, 88, 69, 64, 60, 60, 60, 60},
+{7, 5, 39, 39, 54, 56, 60, 60, 60, 60},
 {8, 5, 77, 76, 63, 65, 60, 60, 60, 60},
 {7, 5, 64, 88, 59, 68, 60, 60, 60, 60},
 {6, 5, 64, 52, 65, 55, 60, 60, 60, 60},
@@ -263,8 +263,8 @@ int All_hitter_stat[300][10] = {
 {5, 5, 30, 71, 41, 54, 60, 60, 60, 60},
 {2, 5, 36, 61, 48, 51, 60, 60, 60, 60},
 {7, 5, 64, 43, 42, 56, 60, 60, 60, 60},
+{8, 5, 62, 88, 69, 64, 60, 60, 60, 60},
 {9, 5, 69, 34, 66, 53, 60, 60, 60, 60},
-{7, 5, 39, 39, 54, 56, 60, 60, 60, 60},
 {2, 5, 60, 60, 60, 60, 60, 60, 60, 60},
 {9, 5, 30, 30, 30, 30, 30, 60, 60, 60},
 {3, 5, 40, 40, 40, 40, 40, 60, 60, 60},
@@ -345,7 +345,19 @@ int All_hitter_stat[300][10] = {
 
 
 
-
+//All_pitcher_name[0].first = "뷰캐넌";
+//All_pitcher_name[1].first = "원태인";
+//All_pitcher_name[2].first = "수아레";
+//All_pitcher_name[3].first = "백정현";
+//All_pitcher_name[4].first = "최채흥";
+//All_pitcher_name[5].first = "이승현";
+//All_pitcher_name[6].first = "우규민";
+//All_pitcher_name[7].first = "최충연";
+//All_pitcher_name[8].first = "양창섭";
+//All_pitcher_name[9].first = "김대우";
+//All_pitcher_name[10].first = "장필준";
+//All_pitcher_name[11].first = "황동재";
+//All_pitcher_name[12].first = "오승환";
 
 double All_pitcher_stat[300][10] = {
 {1, 3, 60, 60, 70, 60, 60, 60, 60, 60}, // 삼성 선발
@@ -785,7 +797,7 @@ void Initialize_member_name(vector <pair<string, bool>>& All_hitter_name, vector
 	All_hitter_name[196].first = "고종욱";
 
 	All_hitter_name[210].first = "김혜성";
-	All_hitter_name[211].first = "이주형";
+	All_hitter_name[211].first = "이형종";
 	All_hitter_name[212].first = "이정후";
 	All_hitter_name[213].first = "도  슨"; 
 	All_hitter_name[214].first = "김휘집"; 
@@ -799,7 +811,7 @@ void Initialize_member_name(vector <pair<string, bool>>& All_hitter_name, vector
 	All_hitter_name[222].first = "김태진";
 	All_hitter_name[223].first = "이지영";
 	All_hitter_name[224].first = "김준완";
-	All_hitter_name[225].first = "이형종";
+	All_hitter_name[225].first = "이주형";
 	All_hitter_name[226].first = "박찬혁";
 
 	All_hitter_name[270].first = "최인호";
