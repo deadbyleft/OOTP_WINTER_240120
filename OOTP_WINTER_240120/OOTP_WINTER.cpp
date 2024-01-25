@@ -1774,20 +1774,26 @@ public:
 				cout.precision(1);
 
 				cur(10, 6 + i * 2);
-				Show_myteam(false, i);
+				if (i == team_sigvalue) Show_myteam(true, i);
+				else Show_myteam(false, i);
 				cout << right << setw(12); Option.Show_team_result(i); 
 
 				cout << fixed;
 				cout.precision(3);
 
-				cout << (team_hitter_record[3] / (double)team_hitter_record[2]) << setw(12);
-				cout << ((team_hitter_record[3] + team_hitter_record[7]) / (double)team_hitter_record[1]) << setw(12);
-				cout << ((team_hitter_record[3] + team_hitter_record[4] +
-					team_hitter_record[6] * 3) / (double)team_hitter_record[2]) << setw(12);
+				if (i == team_sigvalue)
+				{
+					cout << (team_hitter_record[3] / (double)team_hitter_record[2]) << setw(12);
+					cout << ((team_hitter_record[3] + team_hitter_record[7]) / (double)team_hitter_record[1]) << setw(12);
+					cout << ((team_hitter_record[3] + team_hitter_record[4] +
+						team_hitter_record[6] * 3) / (double)team_hitter_record[2]) << setw(12);
 
-				cout << fixed;
-				cout.precision(2);
-				cout << right << setw(12); cout << (team_pitcher_record[4] / (double)team_pitcher_record[1]) * 27;
+					cout << fixed;
+					cout.precision(2);
+					cout << right << setw(12); cout << (team_pitcher_record[4] / (double)team_pitcher_record[1]) * 27;
+				}
+
+				
 				
 				cout << '\n' << '\n';
 			}
@@ -1801,16 +1807,18 @@ public:
 			{
 				cout << "           ";
 				if (team_sigvalue != i)
-				{
-					
-					cout << "VS"; Show_myteam(false, i);
+				{					
+					cout << "VS"; 
+
+					if (win_team[i] > lose_team[i]) Set_FontColor(10);
+					else if (win_team[i] < lose_team[i]) Set_FontColor(8);
+
+					Show_myteam(false, i); Set_FontColor(15);
 					cout << setw(6) << win_team[i] << " ½Â " << setw(6) << draw_team[i] << " ¹« " << setw(6) << lose_team[i] << " ÆÐ ";
 				}
 
 				if (i % 2 == 0)
-				{
 					cout << '\n' << '\n';
-				}
 			}
 		}
 
