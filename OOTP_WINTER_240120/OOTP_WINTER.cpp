@@ -1025,7 +1025,7 @@ public:
 	{
 		if (now_inning == inning) Set_FontColor(11);
 
-		if (board[Ishome][inning] >= 10) cout << "X";
+		if (board[Ishome][inning] >= 10 && inning < 10) cout << "X";
 		else cout << board[Ishome][inning]; 
 		Set_FontColor(15);
 	}
@@ -1163,7 +1163,7 @@ public:
 
 			if (Get_Isfull_1())
 			{
-				if (base_1_spd >= rand() % 160 + 16)
+				if (base_1_spd >= rand() % 160 + 16 && Get_Isfull_3() == false)
 				{
 					Set_Isfull_3(true);
 					Set_Base_spd(3, base_1_spd);
@@ -3229,7 +3229,7 @@ int battle_hit_power_run_result(bool hit, int Save_hitter_index[], int Save_pitc
 	{
 		if (result > 0)
 		{
-			if (Scoreboard.Get_Isfull_3() && Scoreboard.Get_base_3_spd() > rand() % 110 + 11 &&
+			if (Scoreboard.Get_Isfull_3() && Scoreboard.Get_base_3_spd() > rand() % 130 + 21 &&
 				(get_hitter_rand_stat(0, 5, Save_hitter_index)) > 30 &&
 				Scoreboard.Get_out_count() != 2) return 61;
 			else return 6;
@@ -3558,6 +3558,7 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 			Scoreboard.Set_now_inning(i);
 
 			if (i == 9) Scoreboard.Set_Isfull_2(true);
+
 
 			while (Scoreboard.Get_out_count() != 3)
 			{
