@@ -194,19 +194,19 @@ int All_hitter_stat[300][10] = {
 {8, 5, 45, 66, 57, 75, 60, 60, 60, 60},
 {5, 5, 73, 70, 82, 67, 60, 60, 60, 60},
 {7, 5, 60, 85, 62, 65, 60, 60, 60, 60},
-{9, 5, 62, 62, 63, 56, 60, 60, 60, 60},
+{9, 5, 63, 75, 68, 72, 60, 60, 60, 60},
 {6, 5, 64, 58, 58, 63, 60, 60, 60, 60},
 {4, 5, 50, 50, 79, 55, 60, 60, 60, 60},
 {3, 5, 44, 52, 69, 63, 60, 60, 60, 60},
 {2, 5, 57, 40, 62, 51, 60, 60, 60, 60},
-{8, 5, 69, 40, 53, 58, 60, 60, 60, 60}, // SSG 벤치
+{8, 5, 70, 40, 53, 58, 60, 60, 60, 60}, // SSG 벤치
 {3, 5, 57, 32, 70, 55, 60, 60, 60, 60},
 {3, 5, 40, 64, 66, 56, 60, 60, 60, 60},
 {2, 5, 38, 30, 67, 53, 60, 60, 60, 60},
 {4, 5, 65, 59, 37, 57, 60, 60, 60, 60},
 {4, 5, 52, 63, 51, 63, 60, 60, 60, 60},
 {5, 5, 38, 49, 69, 55, 60, 60, 60, 60},
-{7, 5, 63, 75, 68, 72, 60, 60, 60, 60},
+{9, 5, 62, 62, 63, 56, 60, 60, 60, 60},
 {2, 5, 60, 60, 60, 60, 60, 60, 60, 60},
 {9, 5, 30, 30, 30, 30, 30, 60, 60, 60},
 {3, 5, 40, 40, 40, 40, 40, 60, 60, 60},
@@ -222,7 +222,7 @@ int All_hitter_stat[300][10] = {
 {7, 5, 60, 60, 60, 60, 60, 60, 60, 60},
 {6, 5, 52, 78, 54, 83, 60, 60, 60, 60}, // KIA
 {5, 5, 60, 75, 66, 77, 60, 60, 60, 60},
-{9, 5, 58, 91, 81, 56, 60, 60, 60, 60},
+{9, 5, 58, 90, 80, 56, 60, 60, 60, 60},
 {7, 5, 82, 69, 71, 46, 60, 60, 60, 60},
 {8, 5, 54, 69, 73, 70, 60, 60, 60, 60},
 {4, 5, 56, 87, 43, 63, 60, 60, 60, 60},
@@ -753,7 +753,7 @@ void Initialize_member_name(vector <pair<string, bool>>& All_hitter_name, vector
 	All_hitter_name[151].first = "최지훈";
 	All_hitter_name[152].first = "최  정";
 	All_hitter_name[153].first = "에레디";
-	All_hitter_name[154].first = "한유섬";
+	All_hitter_name[154].first = "하재훈";
 	All_hitter_name[155].first = "박성한";
 	All_hitter_name[156].first = "최주환";
 	All_hitter_name[157].first = "오태곤";
@@ -765,7 +765,7 @@ void Initialize_member_name(vector <pair<string, bool>>& All_hitter_name, vector
 	All_hitter_name[163].first = "김성현";
 	All_hitter_name[164].first = "안상현";
 	All_hitter_name[165].first = "김찬형";
-	All_hitter_name[166].first = "하재훈";
+	All_hitter_name[166].first = "한유섬";
 
 	All_hitter_name[180].first = "박찬호";
 	All_hitter_name[181].first = "김도영";
@@ -1145,7 +1145,7 @@ public:
 
 			if (Get_Isfull_2()) // 2루가 차있다면
 			{
-				if (base_2_spd >= rand() % 150 + 16)
+				if (base_2_spd >= rand() % 160 + 16)
 				{
 					Set_now_scoreboard(1);
 					RBI++;
@@ -1163,7 +1163,7 @@ public:
 
 			if (Get_Isfull_1())
 			{
-				if (base_1_spd >= rand() % 150 + 16)
+				if (base_1_spd >= rand() % 160 + 16)
 				{
 					Set_Isfull_3(true);
 					Set_Base_spd(3, base_1_spd);
@@ -1203,7 +1203,7 @@ public:
 
 			if (Get_Isfull_1())
 			{
-				if (base_1_spd >= rand() % 150 + 16)
+				if (base_1_spd >= rand() % 160 + 16)
 				{
 					Set_now_scoreboard(1);
 					RBI++;
@@ -3222,7 +3222,7 @@ int battle_hit_power_run_result(bool hit, int Save_hitter_index[], int Save_pitc
 	{
 		if (result > 0)
 		{
-			if (Scoreboard.Get_Isfull_3() && Scoreboard.Get_base_3_spd() > rand() % 100 + 11 &&
+			if (Scoreboard.Get_Isfull_3() && Scoreboard.Get_base_3_spd() > rand() % 110 + 11 &&
 				(get_hitter_rand_stat(0, 5, Save_hitter_index)) > 30 &&
 				Scoreboard.Get_out_count() != 2) return 61;
 			else return 6;
@@ -3237,7 +3237,7 @@ int battle_hit_power_run_result(bool hit, int Save_hitter_index[], int Save_pitc
 				if (Scoreboard.Get_out_count() == 1) return 52;
 				else return 53;
 			}
-			else if (Scoreboard.Get_base_3_spd() > rand() % 100 + 16 && Scoreboard.Get_out_count() != 2)
+			else if (Scoreboard.Get_base_3_spd() > rand() % 110 + 16 && Scoreboard.Get_out_count() != 2)
 				return 51;
 			else
 				return 5;
