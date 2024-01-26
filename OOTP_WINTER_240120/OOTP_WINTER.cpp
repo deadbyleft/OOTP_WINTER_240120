@@ -290,23 +290,23 @@ int All_hitter_stat[300][10] = {
 {3, 5, 60, 60, 60, 60, 60, 60, 60, 60},
 {4, 5, 60, 60, 60, 60, 60, 60, 60, 60},
 {7, 5, 60, 60, 60, 60, 60, 60, 60, 60},
-{4, 5, 75, 70, 40, 85, 60, 60, 60, 60}, // KT
-{9, 5, 46, 88, 52, 70, 60, 60, 60, 60},
-{9, 5, 68, 88, 63, 65, 60, 60, 60, 60},
-{7, 5, 56, 70, 66, 52, 60, 60, 60, 60},
-{2, 5, 71, 68, 67, 48, 60, 60, 60, 60},
-{3, 5, 53, 37, 78, 45, 60, 60, 60, 60},
-{5, 5, 57, 63, 45, 73, 60, 60, 60, 60},
-{8, 5, 48, 71, 50, 63, 60, 60, 60, 60},
-{6, 5, 62, 54, 65, 65, 60, 60, 60, 60},
-{2, 5, 71, 33, 55, 46, 60, 60, 60, 60}, // KT 벤치
-{7, 5, 50, 60, 67, 43, 60, 60, 60, 60},
-{8, 5, 36, 45, 60, 57, 60, 60, 60, 60},
-{5, 5, 51, 42, 45, 64, 60, 60, 60, 60},
-{4, 5, 46, 63, 50, 66, 60, 60, 60, 60},
-{5, 5, 49, 35, 64, 58, 60, 60, 60, 60},
-{5, 5, 47, 53, 50, 62, 60, 60, 60, 60},
-{8, 5, 45, 44, 47, 54, 60, 60, 60, 60},
+{9, 5, 56, 74, 56, 69, 60, 60, 60, 60}, // KT
+{5, 5, 61, 72, 61, 57, 60, 60, 60, 60},
+{9, 5, 63, 58, 69, 65, 60, 60, 60, 60},
+{3, 5, 57, 69, 69, 62, 60, 60, 60, 60},
+{7, 5, 58, 71, 71, 74, 60, 60, 60, 60},
+{2, 5, 53, 73, 64, 53, 60, 60, 60, 60},
+{8, 5, 63, 63, 53, 71, 60, 60, 60, 60},
+{4, 5, 54, 66, 54, 63, 60, 60, 60, 60},
+{6, 5, 66, 60, 53, 59, 60, 60, 60, 60},
+{3, 5, 33, 68, 69, 61, 60, 60, 60, 60}, // KT 벤치
+{3, 5, 49, 57, 68, 63, 60, 60, 60, 60},
+{4, 5, 69, 30, 61, 52, 60, 60, 60, 60},
+{9, 5, 67, 50, 35, 64, 60, 60, 60, 60},
+{9, 5, 40, 79, 44, 72, 60, 60, 60, 60},
+{2, 5, 73, 31, 67, 53, 60, 60, 60, 60},
+{8, 5, 76, 41, 41, 63, 60, 60, 60, 60},
+{6, 5, 45, 30, 57, 65, 60, 60, 60, 60},
 {2, 5, 60, 60, 60, 60, 60, 60, 60, 60},
 {9, 5, 30, 30, 30, 30, 30, 60, 60, 60},
 {3, 5, 40, 40, 40, 40, 40, 60, 60, 60},
@@ -357,19 +357,6 @@ int All_hitter_stat[300][10] = {
 
 
 
-//All_pitcher_name[0].first = "뷰캐넌";
-//All_pitcher_name[1].first = "원태인";
-//All_pitcher_name[2].first = "수아레";
-//All_pitcher_name[3].first = "백정현";
-//All_pitcher_name[4].first = "최채흥";
-//All_pitcher_name[5].first = "이승현";
-//All_pitcher_name[6].first = "우규민";
-//All_pitcher_name[7].first = "최충연";
-//All_pitcher_name[8].first = "양창섭";
-//All_pitcher_name[9].first = "김대우";
-//All_pitcher_name[10].first = "장필준";
-//All_pitcher_name[11].first = "황동재";
-//All_pitcher_name[12].first = "오승환";
 
 double All_pitcher_stat[300][10] = {
 {1, 3, 60, 60, 70, 60, 60, 60, 60, 60}, // 삼성 선발
@@ -825,6 +812,24 @@ void Initialize_member_name(vector <pair<string, bool>>& All_hitter_name, vector
 	All_hitter_name[224].first = "김준완";
 	All_hitter_name[225].first = "이주형";
 	All_hitter_name[226].first = "박찬혁";
+
+	All_hitter_name[240].first = "김민혁";
+	All_hitter_name[241].first = "황재균";
+	All_hitter_name[242].first = "강백호";
+	All_hitter_name[243].first = "박병호";
+	All_hitter_name[244].first = "알포드";
+	All_hitter_name[245].first = "장성우";
+	All_hitter_name[246].first = "배정대";
+	All_hitter_name[247].first = "이호연";
+	All_hitter_name[248].first = "김상수";
+	All_hitter_name[249].first = "문상철";
+	All_hitter_name[250].first = "오윤석";
+	All_hitter_name[251].first = "박경수";
+	All_hitter_name[252].first = "조용호";
+	All_hitter_name[253].first = "안치영";
+	All_hitter_name[254].first = "김준태";
+	All_hitter_name[255].first = "홍현빈";
+	All_hitter_name[256].first = "장준원";
 
 	All_hitter_name[270].first = "최인호";
 	All_hitter_name[271].first = "문현빈";
@@ -4245,7 +4250,7 @@ void Initialize_setting()
 	SSG.Initialize_teamset(5, 0, All_hitter_name, All_pitcher_name, Option.Get_Oncondition());
 	KIA.Initialize_teamset(6, 3, All_hitter_name, All_pitcher_name, Option.Get_Oncondition());
 	Kiwoom.Initialize_teamset(7, 1, All_hitter_name, All_pitcher_name, Option.Get_Oncondition());
-	KT.Initialize_teamset(8, 1, All_hitter_name, All_pitcher_name, Option.Get_Oncondition());
+	KT.Initialize_teamset(8, 2, All_hitter_name, All_pitcher_name, Option.Get_Oncondition());
 	Hanwha.Initialize_teamset(9, 4, All_hitter_name, All_pitcher_name, Option.Get_Oncondition());
 
 
