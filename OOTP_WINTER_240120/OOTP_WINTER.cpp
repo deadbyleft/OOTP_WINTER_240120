@@ -1404,7 +1404,9 @@ public:
 				Show_myteam(false, rank);
 			cout << team_result[my_team][0] + team_result[my_team][1] + team_result[my_team][2] << setw(12);
 			cout << team_result[my_team][0] << setw(12) << team_result[my_team][1] << setw(12) << team_result[my_team][2] << setw(13);
-			cout << 100 * team_result[my_team][0] / (double)(team_result[my_team][0] + team_result[my_team][2]) << " % " << setw(12);	
+
+			if ((team_result[my_team][0] + team_result[my_team][2]) == 0) cout << " 0.0 % " << setw(12);
+			else cout << 100 * team_result[my_team][0] / (double)(team_result[my_team][0] + team_result[my_team][2]) << " % " << setw(12);	
 
 			return -1;
 						
@@ -1894,10 +1896,17 @@ public:
 					cout.precision(3);
 					cur(93, 6 + check_my_team * 2);
 
-					cout << (team_hitter_record[3] / (double)team_hitter_record[2]) << setw(12);
-					cout << ((team_hitter_record[3] + team_hitter_record[7]) / (double)team_hitter_record[1]) << setw(12);
-					cout << ((team_hitter_record[3] + team_hitter_record[4] +
+					if (team_hitter_record[2] == 0) cout << "0.000" << setw(12);
+					else cout << (team_hitter_record[3] / (double)team_hitter_record[2]) << setw(12);					
+
+					if (team_hitter_record[2] == 0) cout << "0.000" << setw(12);
+					else cout << ((team_hitter_record[3] + team_hitter_record[7]) / (double)team_hitter_record[1]) << setw(12);
+
+					if (team_hitter_record[2] == 0) cout << "0.000" << setw(10);
+					else cout << ((team_hitter_record[3] + team_hitter_record[4] +
 						team_hitter_record[6] * 3) / (double)team_hitter_record[2]) << setw(12);
+					
+					
 
 					cout << fixed;
 					cout.precision(2);
@@ -2070,17 +2079,28 @@ public:
 					cout << hitter_record[i][j] << setw(12);
 
 				cout << setw(13);
-				cout << (hitter_record[i][3] / (double)hitter_record[i][2]) << setw(12);
-				cout << ((hitter_record[i][3] + hitter_record[i][7]) / (double)hitter_record[i][1]) << setw(12);
-				cout << ((hitter_record[i][3] + hitter_record[i][4] + hitter_record[i][6] * 3) / (double)hitter_record[i][2]) << setw(12);
 
-				Set_ops_FontColor(((hitter_record[i][3] + hitter_record[i][7]) / (double)hitter_record[i][1])
-					+ ((hitter_record[i][3] + hitter_record[i][4] + hitter_record[i][6] * 3) / (double)hitter_record[i][2]));
-				cout <<
-					((hitter_record[i][3] + hitter_record[i][7]) / (double)hitter_record[i][1])
-					+ ((hitter_record[i][3] + hitter_record[i][4] + hitter_record[i][6] * 3) / (double)hitter_record[i][2]) << setw(10);
+				if (hitter_record[i][2] == 0) cout << "0.000" << setw(12);
+				else cout << (hitter_record[i][3] / (double)hitter_record[i][2]) << setw(12);
 
-				Set_FontColor(15);
+				if (hitter_record[i][1] == 0) cout << "0.000" << setw(12);
+				else cout << ((hitter_record[i][3] + hitter_record[i][7]) / (double)hitter_record[i][1]) << setw(12);
+
+				if (hitter_record[i][2] == 0) cout << "0.000" << setw(12);
+				else cout << ((hitter_record[i][3] + hitter_record[i][4] + hitter_record[i][6] * 3) / (double)hitter_record[i][2]) << setw(12);
+
+				if (hitter_record[i][2] == 0) cout << "0.000" << setw(10);
+				else
+				{
+					Set_ops_FontColor(((hitter_record[i][3] + hitter_record[i][7]) / (double)hitter_record[i][1])
+						+ ((hitter_record[i][3] + hitter_record[i][4] + hitter_record[i][6] * 3) / (double)hitter_record[i][2]));
+					cout <<
+						((hitter_record[i][3] + hitter_record[i][7]) / (double)hitter_record[i][1])
+						+ ((hitter_record[i][3] + hitter_record[i][4] + hitter_record[i][6] * 3) / (double)hitter_record[i][2]) << setw(10);
+
+					Set_FontColor(15);
+				}
+
 
 				cout << hitter_record[i][15] << setw(13) << hitter_record[i][12] << setw(12);
 
@@ -2357,8 +2377,11 @@ public:
 
 				cout.precision(2); cout << fixed;
 
-				cout << right << setw(11); cout << pitcher_record[i][1] / 3 << "." << pitcher_record[i][1] % 3;
-				cout << right << setw(12); cout << (pitcher_record[i][4] / (double)pitcher_record[i][11]) * 27;
+				cout << right << setw(11); 
+				cout << pitcher_record[i][1] / 3 << "." << pitcher_record[i][1] % 3;
+
+				cout << right << setw(12); 
+				cout << (pitcher_record[i][4] / (double)pitcher_record[i][11]) * 27;
 
 				cout.precision(3); cout << fixed;
 
