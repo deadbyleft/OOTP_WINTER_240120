@@ -875,7 +875,7 @@ void Initialize_member_name(vector <pair<string, bool>>& All_hitter_name, vector
 class scoreboard
 {
 private:
-	int board[2][12] = { 0, };
+	int board[2][13] = { 0, };
 
 	int home_team[20] = { 0, };
 	int away_team[20] = { 0, };
@@ -921,7 +921,7 @@ public:
 	{
 		for (int i = 0; i < 2; i++)
 		{
-			for (int j = 0; j < 12; j++)
+			for (int j = 0; j < 13; j++)
 			{
 				board[i][j] = 0;
 			}
@@ -982,7 +982,7 @@ public:
 	{
 		int value = 0;
 
-		for (int i = 0; i < 9; i++)
+		for (int i = 0; i < 10; i++)
 			value += board[1][i];
 
 		return value;
@@ -992,7 +992,7 @@ public:
 	{
 		int value = 0;
 
-		for (int i = 0; i < 9; i++)
+		for (int i = 0; i < 10; i++)
 			value += board[0][i];
 
 		return value;
@@ -1072,17 +1072,17 @@ public:
 	{
 		board[Ishome][now_inning] += score;
 
-		board[Ishome][9] += score;
+		board[Ishome][10] += score;
 	}
 
 	void Set_now_hit(int value)
 	{
-		board[Ishome][10] += value;
+		board[Ishome][11] += value;
 	}
 
 	void Set_now_ball(int value)
 	{
-		board[Ishome][11] += value;
+		board[Ishome][12] += value;
 	}
 
 	int Update_base(int value, int now_hitter, int now_hitter_spd)
@@ -2718,11 +2718,11 @@ void show_scoreboard_art(scoreboard& Scoreboard, team& home_team, team& away_tea
 	cur(45, 16); cout << "│                                          │ ";
 	cur(45, 17); cout << "└──────────────────────────────────────────┘ ";
 
-	cur(25, 1); cout << ("┌───────────────────────────────────────────┌───────────────────────────────┐  ");
-	cur(25, 2); cout << ("│      [1] [2] [3] [4] [5] [6] [7] [8] [9]  │  [R]  [H]  [B]                │  ");
-	cur(25, 3); cout << ("│                                           │                               │  ");
-	cur(25, 4); cout << ("│                                           │                               │  ");
-	cur(25, 5); cout << ("└───────────────────────────────────────────└───────────────────────────────┘  ");
+	cur(25, 1); cout << ("┌───────────────────────────────────────────────┌──────────────────────────────┐  ");
+	cur(25, 2); cout << ("│      [1] [2] [3] [4] [5] [6] [7] [8] [9] [X]  │ [R]  [H]  [B]                │  ");
+	cur(25, 3); cout << ("│                                               │                              │  ");
+	cur(25, 4); cout << ("│                                               │                              │  ");
+	cur(25, 5); cout << ("└───────────────────────────────────────────────└──────────────────────────────┘  ");
 
 	cur(26, 3); home_team.Show_myteam_short(true);
 	cur(26, 4); away_team.Show_myteam_short(true);
@@ -2733,20 +2733,20 @@ void show_scoreboard_art(scoreboard& Scoreboard, team& home_team, team& away_tea
 
 
 
-	for (int i = 0; i < 12; i++)
+	for (int i = 0; i < 13; i++)
 	{
 		Scoreboard.Show_scoreboard(0, i); cout << "   ";
-		if (i == 8) cur(73, 3);
-		if (i >= 9 && Scoreboard.Get_scoreboard(0, i) < 10) cout << " ";
+		if (i == 9) cur(76, 3);
+		if (i >= 10 && Scoreboard.Get_scoreboard(0, i) < 10) cout << " ";
 	}
 
 	cur(33, 4);
 
-	for (int i = 0; i < 12; i++)
+	for (int i = 0; i < 13; i++)
 	{
 		Scoreboard.Show_scoreboard(1, i); cout << "   ";
-		if (i == 8) cur(73, 4);
-		if (i >= 9 && Scoreboard.Get_scoreboard(1, i) < 10) cout << " ";
+		if (i == 9) cur(76, 4);
+		if (i >= 10 && Scoreboard.Get_scoreboard(1, i) < 10) cout << " ";
 	}
 
 	cur(42, 8 + (away_team.Get_now_hitter() + 1) * 2 - 2); cout << "  ";
@@ -3052,9 +3052,16 @@ void show_scoreboard(bool Ishome, int strike, int ball, int out, int now_pitcher
 {
 	show_scoreboard_art(Scoreboard, home_team, away_team);
 
-	cout << " [ " << (Scoreboard.Get_now_inning()) << "회";
-	if (!Ishome) cout << " 초 ] " << '\n' << '\n' << '\n' << '\n' << '\n';
-	else cout << " 말 ] " << '\n' << '\n' << '\n' << '\n' << '\n';
+	if (Scoreboard.Get_now_inning() == 10)
+		cout << " [ 연장전 ]" << '\n' << '\n' << '\n' << '\n' << '\n';
+
+	else
+	{
+		cout << " [ " << (Scoreboard.Get_now_inning()) << "회";
+		if (!Ishome) cout << " 초 ] " << '\n' << '\n' << '\n' << '\n' << '\n';
+		else cout << " 말 ] " << '\n' << '\n' << '\n' << '\n' << '\n';
+	}
+	
 
 	away_team.Show_myteam(true, away_team.Get_team_sigvalue()); cout << right << setw(115);
 	home_team.Show_myteam(true, home_team.Get_team_sigvalue()); cout << '\n' << '\n';
@@ -3127,7 +3134,7 @@ void show_scoreboard(bool Ishome, int strike, int ball, int out, int now_pitcher
 	}
 
 	Set_FontColor(14);
-	cur(85, 2);
+	cur(88, 2);
 	cout << "  S ";
 	switch (strike) {
 	case 0:
@@ -3139,7 +3146,7 @@ void show_scoreboard(bool Ishome, int strike, int ball, int out, int now_pitcher
 	}
 
 	Set_FontColor(10);
-	cur(85, 3);
+	cur(88, 3);
 	cout << "  B ";
 	switch (ball) {
 	case 0:
@@ -3153,7 +3160,7 @@ void show_scoreboard(bool Ishome, int strike, int ball, int out, int now_pitcher
 	}
 
 	Set_FontColor(12);
-	cur(85, 4);
+	cur(88, 4);
 	cout << "  O ";
 	switch (Scoreboard.Get_out_count()) {
 	case 0:
@@ -3535,8 +3542,10 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 
 		battle(away_team, home_team, Option, Scoreboard, 0, true, 0);
 
-		for (int i = 0; i < 9; i++)
+		for (int i = 1; i < 10; i++)
 		{
+			
+
 			away_team.Set_Ischange_pitcher(false);
 			home_team.Set_Ischange_pitcher(false);
 			Scoreboard.Initialize_base();
@@ -3548,11 +3557,15 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 
 			Scoreboard.Set_now_inning(i);
 
+			if (i == 9) Scoreboard.Set_Isfull_2(true);
+
 			while (Scoreboard.Get_out_count() != 3)
 			{
 				battle(away_team, home_team, Option, Scoreboard, i, false, false);
 				initialize = false;
 			}
+
+			
 
 			away_team.Set_Ischange_pitcher(false);
 			home_team.Set_Ischange_pitcher(false);
@@ -3564,17 +3577,20 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 				&& !(i == 8 && (Scoreboard.Get_home_score() > Scoreboard.Get_away_score())))
 				system("cls");
 
-
+			
 			if (i == 8 && (Scoreboard.Get_home_score() > Scoreboard.Get_away_score()))
 				break;
+
+			if (i == 9) Scoreboard.Set_Isfull_2(true);
 
 			while (Scoreboard.Get_out_count() != 3)
 			{
 				battle(home_team, away_team, Option, Scoreboard, i, false, true);
-				if (i == 8 && (Scoreboard.Get_home_score() > Scoreboard.Get_away_score()))
+				if (i >= 8 && (Scoreboard.Get_home_score() > Scoreboard.Get_away_score()))
 					break;
 			}
 
+			if (i == 8 && Scoreboard.Get_home_score() != Scoreboard.Get_away_score()) break;
 		}
 
 
