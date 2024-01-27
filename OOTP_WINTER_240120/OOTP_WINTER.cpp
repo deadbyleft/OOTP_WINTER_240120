@@ -973,6 +973,16 @@ public:
 		return now_inning + 1;
 	}
 
+	int Get_strike_count()
+	{
+		return strike;
+	}
+
+	int Get_ball_count()
+	{
+		return ball;
+	}
+
 	int Get_out_count()
 	{
 		return out_count;
@@ -1083,6 +1093,16 @@ public:
 	void Set_now_ball(int value)
 	{
 		board[Ishome][12] += value;
+	}
+
+	void Set_strike_count(int value)
+	{
+		strike = value;
+	}
+
+	void Set_ball_count(int value)
+	{
+		ball = value;
 	}
 
 	int Update_base(int value, int now_hitter, int now_hitter_spd)
@@ -2873,6 +2893,49 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 
 	if (!Option.Get_Onauto_play() && Option.Check_Onauto_play(attack_team.Get_team_sigvalue(), defence_team.Get_team_sigvalue()))
 	{
+		Set_FontColor(14);
+		cur(88, 2);
+		cout << "  S ";
+		switch (Scoreboard.Get_strike_count()) {
+		case 0:
+			cout << " ○ ○" << '\n'; break;
+		case 1:
+			cout << " ● ○" << '\n'; break;
+		case 2: case 3:
+			cout << " ● ●" << '\n'; break;
+		}
+
+		Set_FontColor(10);
+		cur(88, 3);
+		cout << "  B ";
+		switch (Scoreboard.Get_ball_count()) {
+		case 0:
+			cout << " ○ ○ ○" << '\n'; break;
+		case 1:
+			cout << " ● ○ ○" << '\n'; break;
+		case 2:
+			cout << " ● ● ○" << '\n'; break;
+		case 3: case 4:
+			cout << " ● ● ●" << '\n'; break;
+		}
+
+		Set_FontColor(12);
+		cur(88, 4);
+		cout << "  O ";
+		switch (Scoreboard.Get_out_count()) {
+		case 0:
+			cout << " ○ ○" << '\n'; break;
+		case 1:
+			cout << " ● ○" << '\n'; break;
+		case 2: case 3:
+			cout << " ● ●" << '\n'; break;
+		}
+
+		Set_FontColor(15);
+
+		Scoreboard.Set_strike_count(0);
+		Scoreboard.Set_ball_count(0);
+
 		cur(60, line * 2 + 19);
 		switch (result) {
 		case 1: cout << "  [ 삼진 ]";
@@ -3376,6 +3439,9 @@ void battle(team& attack_team, team& defence_team, option Option, scoreboard& Sc
 	while (1)
 	{
 		pitching_value++;
+
+		Scoreboard.Set_strike_count(strike);
+		Scoreboard.Set_ball_count(ball);
 
 		// 2제구 3구위
 
