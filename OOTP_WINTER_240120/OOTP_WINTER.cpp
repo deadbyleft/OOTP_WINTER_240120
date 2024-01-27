@@ -1460,16 +1460,6 @@ public:
 			}
 			
 		}
-
-
-
-		
-		//cout << 100 * team_result[my_team][0] / (double)(team_result[my_team][0] + team_result[my_team][2]) << " % " << setw(12);
-		
-
-		//cout << team_result[my_team][0] + team_result[my_team][1] + team_result[my_team][2] << setw(12);
-		//cout << team_result[my_team][0] << setw(12) << team_result[my_team][1] << setw(12) << team_result[my_team][2] << setw(13);
-		//cout << 100 * team_result[my_team][0] / (double)(team_result[my_team][0] + team_result[my_team][2]) << " % " << setw(12);
 	}
 };
 
@@ -2859,7 +2849,7 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 
 		for (int i = 0; i < 10; i++)
 		{
-			Sleep(Option.Get_sleep_time());
+			Sleep(Option.Get_sleep_time() - 25);
 
 			if (_kbhit())
 			{
@@ -2894,7 +2884,7 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 	if (!Option.Get_Onauto_play() && Option.Check_Onauto_play(attack_team.Get_team_sigvalue(), defence_team.Get_team_sigvalue()))
 	{
 		Set_FontColor(14);
-		cur(88, 2);
+		cur(90, 2);
 		cout << "  S ";
 		switch (Scoreboard.Get_strike_count()) {
 		case 0:
@@ -2906,7 +2896,7 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 		}
 
 		Set_FontColor(10);
-		cur(88, 3);
+		cur(90, 3);
 		cout << "  B ";
 		switch (Scoreboard.Get_ball_count()) {
 		case 0:
@@ -2920,7 +2910,7 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 		}
 
 		Set_FontColor(12);
-		cur(88, 4);
+		cur(90, 4);
 		cout << "  O ";
 		switch (Scoreboard.Get_out_count()) {
 		case 0:
@@ -2940,19 +2930,19 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 		switch (result) {
 		case 1: cout << "  [ 삼진 ]";
 			if (Scoreboard.Get_out_count() == 2) {
-				cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 10); cout << " [ 공수교대 ] ";
-				Sleep(Option.Get_sleep_time() * 10); change_skip = true;
+				cur(49, line * 2 + 21); Sleep((Option.Get_sleep_time() - 25) * 10); cout << " [ 공수교대 ] ";
+				Sleep((Option.Get_sleep_time() - 25) * 10); change_skip = true;
 			} break;
 		case 2: cout << "  [ 볼넷 ]"; break;
 		case 5: case 51: cout << "  [ 땅볼 ]";
 			if (Scoreboard.Get_out_count() == 2) {
-				cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 10); cout << " [ 공수교대 ] ";
-				Sleep(Option.Get_sleep_time() * 10); change_skip = true;
+				cur(49, line * 2 + 21); Sleep((Option.Get_sleep_time() - 25) * 10); cout << " [ 공수교대 ] ";
+				Sleep((Option.Get_sleep_time() - 25) * 10); change_skip = true;
 			} break;
 		case 6: cout << "  [ 뜬공 ]";
 			if (Scoreboard.Get_out_count() == 2) {
-				cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 10); cout << " [ 공수교대 ] ";
-				Sleep(Option.Get_sleep_time() * 10); change_skip = true;
+				cur(49, line * 2 + 21); Sleep((Option.Get_sleep_time() - 25) * 10); cout << " [ 공수교대 ] ";
+				Sleep((Option.Get_sleep_time() - 25) * 10); change_skip = true;
 			} break;
 		case 10: cout << "  [ 안타 ]"; break;
 		case 20: cout << "  [ 2루타 ]"; break;
@@ -2960,8 +2950,8 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 		case 40: cout << "  [ 홈런 ]  [ "; cout << attack_team.Get_now_hitter_hr(); cout << "호 ]"; break;
 		case 52: case 53: cout << "  [ 병살 ]";
 			if (Scoreboard.Get_out_count() == 1) {
-				cur(49, line * 2 + 21); Sleep(Option.Get_sleep_time() * 10); cout << " [ 공수교대 ] ";
-				Sleep(Option.Get_sleep_time() * 10); change_skip = true;
+				cur(49, line * 2 + 21); Sleep((Option.Get_sleep_time() - 25) * 10); cout << " [ 공수교대 ] ";
+				Sleep((Option.Get_sleep_time() - 25) * 10); change_skip = true;
 			} break;
 		case 61: cout << "  [ 희플 ]"; break;
 
@@ -2970,7 +2960,7 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 
 		for (int i = 0; i < 10; i++)
 		{
-			Sleep(Option.Get_sleep_time());
+			Sleep(Option.Get_sleep_time() - 25);
 
 			if (_kbhit() || check_getch == 49 || check_getch == 51)
 			{
@@ -3053,8 +3043,11 @@ int show_hit_result(bool Initializing, bool Show_name, int change_line, int resu
 		if (line >= 9)
 		{
 			line = 0;
-			for (int i = 19; i <= 50; i++) // 칸 지우기
+			for (int i = 19; i <= 43; i++) // 칸 지우기
+			{
 				cur(44, i); cout << "                                     ";
+			}
+				
 		}
 	}
 
@@ -3150,7 +3143,7 @@ void show_scoreboard(bool Ishome, int strike, int ball, int out, int now_pitcher
 	}
 
 	Set_FontColor(14);
-	cur(88, 2);
+	cur(90, 2);
 	cout << "  S ";
 	switch (strike) {
 	case 0:
@@ -3162,7 +3155,7 @@ void show_scoreboard(bool Ishome, int strike, int ball, int out, int now_pitcher
 	}
 
 	Set_FontColor(10);
-	cur(88, 3);
+	cur(90, 3);
 	cout << "  B ";
 	switch (ball) {
 	case 0:
@@ -3176,7 +3169,7 @@ void show_scoreboard(bool Ishome, int strike, int ball, int out, int now_pitcher
 	}
 
 	Set_FontColor(12);
-	cur(88, 4);
+	cur(90, 4);
 	cout << "  O ";
 	switch (Scoreboard.Get_out_count()) {
 	case 0:
@@ -3369,15 +3362,6 @@ int update_game_record(int value, bool update_value, int& now_pitcher_hp, option
 	return out;
 }
 
-void test(team& attack_team, team& defence_team, int now_hp)
-{
-	defence_team.Show_pitcher_name(defence_team.Get_now_pitcher());
-	cout << " " << now_hp;
-	cout << '\n';
-
-	Sleep(1000);
-}
-
 void battle(team& attack_team, team& defence_team, option Option, scoreboard& Scoreboard, int inning, bool Isinitialize, bool Ishome)
 {
 	int Save_hitter_index[10] = { 0, };
@@ -3557,7 +3541,7 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 
 		battle(away_team, home_team, Option, Scoreboard, 0, true, 0);
 
-		for (int i = 0; i < 10; i++)
+		for (int i = 8; i < 10; i++)
 		{
 			
 
@@ -3609,6 +3593,39 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 			if (i == 8 && Scoreboard.Get_home_score() != Scoreboard.Get_away_score()) break;
 		}
 
+		if (!Option.Get_Onauto_play() && Option.Check_Onauto_play(home_team.Get_team_sigvalue(), away_team.Get_team_sigvalue()))
+		{
+			for (int i = 19; i <= 43; i++) // 칸 지우기
+			{
+				cur(44, i); cout << "                                     ";
+			}
+
+
+			cur(59, 19);
+			cout << " [ 경기 종료 ] ";
+
+			cur(44, 21); away_team.Show_myteam(false, away_team.Get_team_sigvalue()); 
+
+			if (Scoreboard.Get_away_score() > Scoreboard.Get_home_score()) Set_FontColor(10);
+			else if (Scoreboard.Get_away_score() < Scoreboard.Get_home_score()) Set_FontColor(8);
+
+			if (Scoreboard.Get_away_score() >= 10) cur(63, 21); 
+			else cur(64, 21); 
+
+			cout << Scoreboard.Get_away_score(); Set_FontColor(15);
+
+			cur(66, 21); cout << "VS";
+
+			if (Scoreboard.Get_away_score() < Scoreboard.Get_home_score()) Set_FontColor(10);
+			else if (Scoreboard.Get_away_score() > Scoreboard.Get_home_score()) Set_FontColor(8);
+
+			cur(69, 21); cout << Scoreboard.Get_home_score(); Set_FontColor(15);
+			
+			cur(71, 21); home_team.Show_myteam(false, home_team.Get_team_sigvalue());
+			cur(45, 26);
+			
+			system("PAUSE");
+		}
 
 		home_team.Set_game_result(true, Scoreboard.Get_away_score(), Scoreboard.Get_home_score(), away_team.Get_team_sigvalue());
 		away_team.Set_game_result(false, Scoreboard.Get_away_score(), Scoreboard.Get_home_score(), home_team.Get_team_sigvalue());
@@ -3624,6 +3641,8 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 
 		if (Option.Get_Oncondition()) home_team.Update_hitter_condition(); home_team.Update_pitcher_condition();
 		if (Option.Get_Oncondition()) away_team.Update_hitter_condition(); away_team.Update_pitcher_condition();
+
+
 
 		game++;
 
@@ -3849,8 +3868,7 @@ void game_select(int value, team& Samsung, team& Lotte, team& NC, team& Doosan, 
 
 
 
-		cur(50, 38);
-		if (!Option.Get_Onauto_play()) system("PAUSE");
+		
 	}
 
 
@@ -4143,7 +4161,7 @@ int show_game_speed_setting()
 	cout << " [ 4 ] 느림"; col += col_gap; cur(row, col);
 	cout << " [ 5 ] 매우 느림"; col += col_gap; cur(row, col);
 
-	return sel(row + 24, col_initial, 4, 5) * 20;
+	return sel(row + 24, col_initial, 4, 5) * 35;
 }
 
 int show_team_change()
