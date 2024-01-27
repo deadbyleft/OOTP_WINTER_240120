@@ -3541,7 +3541,7 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 
 		battle(away_team, home_team, Option, Scoreboard, 0, true, 0);
 
-		for (int i = 8; i < 10; i++)
+		for (int i = 0; i < 10; i++)
 		{
 			
 
