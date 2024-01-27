@@ -4174,6 +4174,7 @@ void game_setting(option& Option, team Samsung, team Lotte, team NC, team Doosan
 
 void Initialize_setting()
 {
+	system("mode con cols=285 lines=165");
 	srand((unsigned)time(NULL));
 
 	int menu_choice = 0;
