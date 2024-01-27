@@ -1320,7 +1320,7 @@ private:
 	bool auto_play = true;
 	int my_team = 0;
 	int my_team_rank = 0;
-	int sleep_time = 60;
+	int sleep_time = 90;
 	int team_result[10][8] = { 0, };
 	double team_rank[10] = {0,};
 	double team_rank_save[10] = { 0, };
@@ -2631,9 +2631,6 @@ void change_pitcher(bool Isingame, team& selected_team)
 {
 	int Save_index[10] = { 0, };
 
-	int pitcher_1 = sel(12, 6, 2, 14) - 1; if (pitcher_1 == 13) return;
-	int pitcher_2 = sel(12, 6, 2, 14) - 1; if (pitcher_2 == 13) return;
-
 	cur(1, 32); cout << "[  취소  ]";
 
 	if (Isingame)
@@ -2644,6 +2641,9 @@ void change_pitcher(bool Isingame, team& selected_team)
 		selected_team.Set_change_pitcher_num(pitcher_1);
 		return;
 	}
+
+	int pitcher_1 = sel(12, 6, 2, 14) - 1; if (pitcher_1 == 13) return;
+	int pitcher_2 = sel(12, 6, 2, 14) - 1; if (pitcher_2 == 13) return;
 
 	if (selected_team.IsStarter(pitcher_1) != selected_team.IsStarter(pitcher_2)) return;
 
@@ -4161,7 +4161,7 @@ int show_game_speed_setting()
 	cout << " [ 4 ] 느림"; col += col_gap; cur(row, col);
 	cout << " [ 5 ] 매우 느림"; col += col_gap; cur(row, col);
 
-	return sel(row + 24, col_initial, 4, 5) * 35;
+	return sel(row + 24, col_initial, 4, 5) * 30;
 }
 
 int show_team_change()
