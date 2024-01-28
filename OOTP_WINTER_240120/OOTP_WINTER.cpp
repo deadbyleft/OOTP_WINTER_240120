@@ -3604,7 +3604,7 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 			cur(59, 19);
 			cout << " [ 경기 종료 ] ";
 
-			cur(44, 21); away_team.Show_myteam(false, away_team.Get_team_sigvalue()); 
+			cur(44, 21); home_team.Show_myteam(false, home_team.Get_team_sigvalue()); 
 
 			if (Scoreboard.Get_away_score() > Scoreboard.Get_home_score()) Set_FontColor(10);
 			else if (Scoreboard.Get_away_score() < Scoreboard.Get_home_score()) Set_FontColor(8);
@@ -3621,7 +3621,7 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 
 			cur(69, 21); cout << Scoreboard.Get_away_score(); Set_FontColor(15);
 			
-			cur(71, 21); home_team.Show_myteam(false, home_team.Get_team_sigvalue());
+			cur(71, 21); away_team.Show_myteam(false, away_team.Get_team_sigvalue());
 			cur(45, 26);
 			
 			system("PAUSE");
