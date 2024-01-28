@@ -3606,8 +3606,8 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 
 			cur(44, 21); home_team.Show_myteam(false, home_team.Get_team_sigvalue()); 
 
-			if (Scoreboard.Get_away_score() > Scoreboard.Get_home_score()) Set_FontColor(10);
-			else if (Scoreboard.Get_away_score() < Scoreboard.Get_home_score()) Set_FontColor(8);
+			if (Scoreboard.Get_away_score() < Scoreboard.Get_home_score()) Set_FontColor(10);
+			else if (Scoreboard.Get_away_score() > Scoreboard.Get_home_score()) Set_FontColor(8);
 
 			if (Scoreboard.Get_away_score() >= 10) cur(63, 21); 
 			else cur(64, 21); 
@@ -3616,8 +3616,8 @@ void playball(int& acc_game, team& home_team, team& away_team, scoreboard& Score
 
 			cur(66, 21); cout << "VS";
 
-			if (Scoreboard.Get_away_score() < Scoreboard.Get_home_score()) Set_FontColor(10);
-			else if (Scoreboard.Get_away_score() > Scoreboard.Get_home_score()) Set_FontColor(8);
+			if (Scoreboard.Get_away_score() > Scoreboard.Get_home_score()) Set_FontColor(10);
+			else if (Scoreboard.Get_away_score() < Scoreboard.Get_home_score()) Set_FontColor(8);
 
 			cur(69, 21); cout << Scoreboard.Get_away_score(); Set_FontColor(15);
 			
