@@ -3081,8 +3081,18 @@ void show_scoreboard(bool Ishome, int strike, int ball, int out, int now_pitcher
 
 	if (Ishome)
 	{
-		cout << "  " << (away_team.Get_now_hitter() + 1) << "번 타자 : [ "; away_team.Show_hitter_name(away_team.Get_now_hitter()); cout << " ] " <<
-			" [ 타율 : " << away_team.Get_now_hitter_avg() << " ]  [ " << away_team.Get_now_hitter_hr() << " 홈런 ]";
+		if (away_team.Get_now_hitter_hr() >= 10)
+		{
+			cout << "  " << (away_team.Get_now_hitter() + 1) << "번 타자 : [ "; away_team.Show_hitter_name(away_team.Get_now_hitter()); cout << " ] " <<
+				" [ 타율 : " << away_team.Get_now_hitter_avg() << " ] [ " << away_team.Get_now_hitter_hr() << " 홈런 ]";
+		}
+
+		else
+		{
+			cout << "  " << (away_team.Get_now_hitter() + 1) << "번 타자 : [ "; away_team.Show_hitter_name(away_team.Get_now_hitter()); cout << " ] " <<
+				" [ 타율 : " << away_team.Get_now_hitter_avg() << " ]  [ " << away_team.Get_now_hitter_hr() << " 홈런 ]";
+		}
+		
 
 
 
@@ -3135,8 +3145,17 @@ void show_scoreboard(bool Ishome, int strike, int ball, int out, int now_pitcher
 		cout.precision(3);
 		cout << fixed;
 
-		cout << (home_team.Get_now_hitter() + 1) << "번 타자 : [ "; home_team.Show_hitter_name(home_team.Get_now_hitter()); cout << " ] " <<
-			" [ 타율 : " << home_team.Get_now_hitter_avg() << " ]  [ " << home_team.Get_now_hitter_hr() << " 홈런 ]" << '\n' << '\n';
+		if (home_team.Get_now_hitter_hr() >= 10)
+		{
+			cout << (home_team.Get_now_hitter() + 1) << "번 타자 : [ "; home_team.Show_hitter_name(home_team.Get_now_hitter()); cout << " ] " <<
+				" [ 타율 : " << home_team.Get_now_hitter_avg() << " ] [ " << home_team.Get_now_hitter_hr() << " 홈런 ]" << '\n' << '\n';
+		}
+		
+		else
+		{
+			cout << (home_team.Get_now_hitter() + 1) << "번 타자 : [ "; home_team.Show_hitter_name(home_team.Get_now_hitter()); cout << " ] " <<
+				" [ 타율 : " << home_team.Get_now_hitter_avg() << " ]  [ " << home_team.Get_now_hitter_hr() << " 홈런 ]" << '\n' << '\n';
+		}
 
 
 
