@@ -2667,15 +2667,15 @@ int get_hitter_rand_stat(int value, int selected_stat, int Save_hitter_index[])
 	switch (Save_hitter_index[1])
 	{
 	case 1:
-		return return_hitter_value * 1.12;
+		return return_hitter_value * 1.04;
 	case 2: case 3:
-		return return_hitter_value * 1.06;
+		return return_hitter_value * 1.02;
 	case 4: case 5: case 6: case 7:
 		return return_hitter_value * 1.0;
 	case 8: case 9:
-		return return_hitter_value * 0.94;
+		return return_hitter_value * 0.98;
 	case 10:
-		return return_hitter_value * 0.88;
+		return return_hitter_value * 0.96;
 	}
 }
 
