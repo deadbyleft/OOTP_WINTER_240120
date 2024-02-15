@@ -136,11 +136,11 @@ int All_hitter_stat[300][10] = {
 {2, 5, 74, 74, 67, 67, 60, 60, 60, 60},
 {7, 5, 78, 37, 65, 61, 60, 60, 60, 60},
 {4, 5, 47, 63, 65, 67, 60, 60, 60, 60},
-{9, 5, 56, 39, 45, 78, 60, 60, 60, 60},
+{9, 5, 57, 40, 44, 91, 60, 60, 60, 60},
 {6, 5, 71, 66, 56, 64, 60, 60, 60, 60},
 {5, 5, 54, 60, 63, 67, 60, 60, 60, 60},
 {4, 5, 53, 52, 53, 72, 60, 60, 60, 60}, // 두산 벤치
-{9, 5, 57, 40, 44, 91, 60, 60, 60, 60},
+{2, 5, 39, 39, 30, 61, 60, 60, 60, 60},
 {2, 5, 35, 30, 54, 55, 60, 60, 60, 60},
 {5, 5, 47, 44, 78, 57, 60, 60, 60, 60},
 {9, 5, 75, 52, 57, 58, 60, 60, 60, 60},
@@ -723,7 +723,7 @@ void Initialize_member_name(vector <pair<string, bool>>& All_hitter_name, vector
 	All_hitter_name[97].first = "김재호";
 	All_hitter_name[98].first = "허경민";
 	All_hitter_name[99].first = "이유찬";
-	All_hitter_name[100].first = "조수행";
+	All_hitter_name[100].first = "안승한";
 	All_hitter_name[101].first = "장승현";
 	All_hitter_name[102].first = "박준영";
 	All_hitter_name[103].first = "김인태";
@@ -2667,15 +2667,15 @@ int get_hitter_rand_stat(int value, int selected_stat, int Save_hitter_index[])
 	switch (Save_hitter_index[1])
 	{
 	case 1:
-		return return_hitter_value * 1.2;
+		return return_hitter_value * 1.12;
 	case 2: case 3:
-		return return_hitter_value * 1.1;
+		return return_hitter_value * 1.06;
 	case 4: case 5: case 6: case 7:
 		return return_hitter_value * 1.0;
 	case 8: case 9:
-		return return_hitter_value * 0.9;
+		return return_hitter_value * 0.94;
 	case 10:
-		return return_hitter_value * 0.8;
+		return return_hitter_value * 0.88;
 	}
 }
 
