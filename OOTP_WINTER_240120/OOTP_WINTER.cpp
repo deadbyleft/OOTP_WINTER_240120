@@ -2667,15 +2667,15 @@ int get_hitter_rand_stat(int value, int selected_stat, int Save_hitter_index[])
 	switch (Save_hitter_index[1])
 	{
 	case 1:
-		return return_hitter_value * 1.04;
+		return return_hitter_value * 1.05;
 	case 2: case 3:
-		return return_hitter_value * 1.02;
+		return return_hitter_value * 1.03;
 	case 4: case 5: case 6: case 7:
 		return return_hitter_value * 1.0;
 	case 8: case 9:
 		return return_hitter_value * 0.98;
 	case 10:
-		return return_hitter_value * 0.96;
+		return return_hitter_value * 0.95;
 	}
 }
 
@@ -3255,7 +3255,7 @@ int battle_hit_power_run_result(bool hit, int Save_hitter_index[], int Save_pitc
 	{
 		if (result > 0)
 		{
-			if (Scoreboard.Get_Isfull_3() && Scoreboard.Get_base_3_spd() > rand() % 130 + 21 &&
+			if (Scoreboard.Get_Isfull_3() && Scoreboard.Get_base_3_spd() > rand() % 120 + 21 &&
 				(get_hitter_rand_stat(0, 5, Save_hitter_index)) > 30 &&
 				Scoreboard.Get_out_count() != 2) return 61;
 			else return 6;
@@ -3265,12 +3265,12 @@ int battle_hit_power_run_result(bool hit, int Save_hitter_index[], int Save_pitc
 		{
 			if (get_hitter_rand_stat(0, 5, Save_hitter_index) + get_hitter_rand_stat(0, 5, Save_hitter_index)
 				+ get_hitter_rand_stat(0, 5, Save_hitter_index) + get_hitter_rand_stat(0, 5, Save_hitter_index)
-				< rand() % 100 + 76 && Scoreboard.Get_Isfull_1() && (Scoreboard.Get_out_count() != 2))
+				< rand() % 100 + 71 && Scoreboard.Get_Isfull_1() && (Scoreboard.Get_out_count() != 2))
 			{
 				if (Scoreboard.Get_out_count() == 1) return 52;
 				else return 53;
 			}
-			else if (Scoreboard.Get_base_3_spd() > rand() % 110 + 16 && Scoreboard.Get_out_count() != 2)
+			else if (Scoreboard.Get_base_3_spd() > rand() % 95 + 16 && Scoreboard.Get_out_count() != 2)
 				return 51;
 			else
 				return 5;
