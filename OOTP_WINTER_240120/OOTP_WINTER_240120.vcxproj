@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="OOTP_24.cpp" />
     <ClCompile Include="OOTP_PREV.cpp" />
     <ClCompile Include="OOTP_WINTER.cpp" />
     <ClCompile Include="team_select.cpp" />
